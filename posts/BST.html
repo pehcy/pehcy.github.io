@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html lang="EN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:600|Rubik&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/articles_page.css">
+        <meta charset="UTF-8">
+        <title>Binary Search Tree</title>
+    </head>
+    <body>
+        <!-- Side Bar -->
+        <div id="menuSidebar" class="menuSidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+            <a href="https://cheeyungpeh.github.io/">Main Page</a>
+            <a href="https://github.com/cheeyungpeh">My Github Repository</a>
+            <a href="Recursive.html">Recursion</a>
+            <a href="Comparator.html">Comparator Interface</a>
+            <a href="Stack.html">Stack</a>
+            <a href="Queue.html">Queue</a>
+            <a href="Lists.html">Lists</a>
+            <a href="BST.html">Binary Search Tree</a>
+        </div>
+        <div id="page-content" class="page-content">
+            <nav class="crumbs">
+                <ol>
+                    <li class="crumb">About Me</li>
+                    <li class="crumb">|  Github Repository</li>
+                </ol>
+            </nav>
+            <div class="item" id="item">
+                <article class="main">
+                 <h2>Binary Search Tree</h2>
+                 Unlike the linear data structures like arrays, stacks, queues and linked lists, a binary tree 
+                 is a hierarchical structure. 
+                 It is either empty or consists of an element, 
+                 it's called the <strong>root</strong>, and two distinct binary trees, called the left subtree 
+                 and right subtree.
+                 <h2>Implementation of Tree in Java</h2>
+                 Here is how we decleared a class called TreeNode,<br/><br/>
+<div class="snippet-container" id="snippet-container">
+<pre class="code-snippet" id="code-snippet">
+<span class="type">class</span> TreeNode&lt;<span class="type">E</span>&gt; {
+    <span class="type">E</span> element;
+    TreeNode&lt;<span class="type">E</span>&gt; left;
+    TreeNode&lt;<span class="type">E</span>&gt; right;
+    <span class="field">public</span> TreeNode(<span class="type">E</span> o){
+        element = o;
+    }
+}
+</pre>
+</div>
+                 <h2>How to search for an element in Binary Tree?</h2>
+                 To search for a specified element, we start from the root and scan down from it until a match is found, or 
+                 until it arrive at an empty subtree.
+                 The following steps are:
+                 <ul>
+                     <li>If that element is less than current element, assign the left subtree to current.</li>
+                     <li>If that element is greater than current element, assign the right subtree to current.</li>
+                     <li>If that element is equal to current element, return true.</li>
+                 </ul>
+<div class="snippet-container" id="snippet-container">
+<pre class="code-snippet" id="code-snippet">
+<span class="field">public</span> <span class="type">boolean</span> search(&lt;<span class="type">E</span>&gt; element) {
+    <span class="comment">//We start from root of the tree</span>
+    TreeNode&lt;<span class="type">E</span>&gt; current = root;
+    <span class="field">while</span> (current != <span class="type">null</span>)
+        <span class="field">if</span> (element < current.element) {
+            current = current.left; <span class="comment">// go left if smaller</span>
+        }
+        <span class="field">else if</span> (element > current.element) {
+            <span class="comment">// go right if greater</span>
+            current = current.right;
+        }
+        <span class="field">else</span>
+            <span class="field">return</span> <span class="type">true</span>;
+    }
+}
+</pre>
+</div>
+                <h2>How to insert an element into Binary Tree?</h2>
+                We can locate the parent for the new node if a binary tree is <strong>empty</strong>, we 
+                create a root node with the new element. Otherwise, we locate the parent node for the 
+                new element node.<br/><br/>
+                If the new element is less than the parent element, the node for the new element will 
+                become the left child of the parent.<br/><br/>
+                If the new element is greater than the parent element, the node for the new element will 
+                become the right child of the parent.<br/><br/>
+<div class="snippet-container" id="snippet-container">
+<pre class="code-snippet" id="code-snippet">
+    <span class="field">if</span> (root == <span class="type">null</span>)
+        root = <span class="field">new</span> TreeNode(element);
+    <span class="field">else</span> {
+        <span class="comment">// Locate the parent node</span>
+        current = root;
+        <span class="field">while</span> (current != <span class="type">null</span>){
+            <span class="field">if</span> (element value < value in current.element){
+                parent = current;
+                current = current.left;
+            }
+            <span class="field">else if</span> (element value > value in current.element) {
+                parent = current;
+                current = current.right;
+            }
+            <span class="field">else</span>
+                <span class="field">return</span> <span class="type">false</span>;
+            
+            <span class="comment">/* Create the new node, and attach it</span>
+            <span class="comment">to the parent node */</span>
+            <span class="field">if</span> (element < parent.element)
+                parent.left = <span class="field">new</span> TreeNode(element);
+            <span class="field">else</span>
+                parent.right = <span class="field">new</span> TreeNode(element);
+            
+            <span class="comment">// element inserted to the tree</span>
+            <span class="field">return</span> <span class="type">true</span>;
+        } 
+    }
+</pre>
+</div>
+                </article>
+            </div>
+            <footer>
+                <div style="position: fixed; right: 20px; bottom : 70px; width: 32px; height: 30px">
+                    <button class="openbtn" onclick="openNav()">☰</button>
+                </div>
+            </footer>
+            <script>
+                function openNav(){
+                    document.getElementById("menuSidebar").style.width = "250px";
+                    document.getElementById("page-content").style.marginLeft = "250px";
+                }
+                function closeNav(){
+                    document.getElementById("menuSidebar").style.width = "0px";
+                    document.getElementById("page-content").style.marginLeft = "0px";
+                }
+            </script>
+        </div>
+    </body>
+</html>

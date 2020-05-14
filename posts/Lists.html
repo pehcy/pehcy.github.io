@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html lang="EN">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:600|Rubik&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/articles_page.css">
+        <meta charset="UTF-8">
+        <title>Lists</title>
+    </head>
+    <body>
+        <!-- Side Bar -->
+        <div id="menuSidebar" class="menuSidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+            <a href="https://cheeyungpeh.github.io/">Main Page</a>
+            <a href="https://github.com/cheeyungpeh">My Github Repository</a>
+            <a href="Recursive.html">Recursion</a>
+            <a href="Comparator.html">Comparator Interface</a>
+            <a href="Stack.html">Stack</a>
+            <a href="Queue.html">Queue</a>
+            <a href="Lists.html">Lists</a>
+            <a href="BST.html">Binary Search Tree</a>
+        </div>
+        <div id="page-content" class="page-content">
+            <nav class="crumbs">
+                <ol>
+                    <li class="crumb">About Me</li>
+                    <li class="crumb">Github Repository</li>
+                </ol>
+            </nav>
+            <div class="item" id="item">
+                <article class="main">
+                 <h2>What's Lists?</h2>
+                 A list is a popular data structure that can store data in sequential order. For instances, a list of 
+                 available rooms, a list of cities, etc.<br/>
+                 <h2>Methods to Implement Lists</h2>
+                 Commonly, there are 2 ways to implement a list.<br/><br/>
+                 We can use arrays. An array is dynamically created to store the elements. If the capacity of the array is
+                exceeded. We just need to create another larger array and copy all the elements from the current array to 
+                the new array.<br>
+                <br/>
+                Another way is using Linked List. A linked structure consists of multiple nodes, and each of them is 
+                dynamically created to store an element.<br/>Hence, all the nodes are linked together to form a list.
+                 <hr>
+                 <h2>ArrayLists and LinkedList</h2>
+                 The array is dynamically created, if the capacity of the array is exceeded, another larger new 
+                 array is created and all the elements from the current array will be copied to the new array.
+
+                 <h2>Circular Linked Lists</h2>
+                 <img src="resources/CircularLinked.png"><br/>
+                 A circular, singly linked list is like a single linked list, except that the pointer of the last node 
+                 will points back to the first node.
+                 <h2>Doubly Linked Lists</h2>
+                 <img src="resources/DoublyLinked.png"><br/>
+                 A <strong>doubly linked list</strong>  contains the nodes with two pointers, which are forward pointer and backward pointer. Forward 
+                 pointer connects to the next node and the backward pointer connects to the previos node.<br/>
+                 <br/>Therefore, a doubly linked list can be traversed forward and backward.
+                 <h2>Circular Doubly Linked Lists</h2>
+                 <img src="resources/CircularDoubly.png">
+                 <br/>
+                 A <strong>circular doubly linked list</strong>  is a type of doubly linked list, which the forward pointer of the last node 
+                 connected to the first node, and the backward pointer of the first node connected to the last node.
+                </article>
+            </div>
+            <footer>
+                <div style="position: fixed; right: 20px; bottom : 70px; width: 32px; height: 30px">
+                    <button class="openbtn" onclick="openNav()">☰</button>
+                </div>
+            </footer>
+            <script>
+                function openNav(){
+                    document.getElementById("menuSidebar").style.width = "250px";
+                    document.getElementById("page-content").style.marginLeft = "250px";
+                }
+                function closeNav(){
+                    document.getElementById("menuSidebar").style.width = "0px";
+                    document.getElementById("page-content").style.marginLeft = "0px";
+                }
+            </script>
+        </div>
+    </body>
+</html>

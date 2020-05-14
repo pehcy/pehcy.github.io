@@ -1,0 +1,123 @@
+h1, h2, h3, p{
+    font-family: 'Oswald', sans-serif;
+}
+
+.page-content{
+    transition: margin-left .5s;
+    padding: 38px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    color: rgb(47, 47, 49)
+}
+
+.snippet-container{
+    border: 2px solid #000;
+    justify-content: left;
+    padding-left: 12px;
+    width: 51.25%;
+}
+
+.code-snippet{
+    justify-content: left;
+    font-family: 'Ubuntu Mono', monospace;
+    color: #393C39;
+}
+
+.type{
+    color: #E34715;
+}
+
+.field{
+    color: #592FF2;
+}
+
+.comment{
+    color: #2CC639;
+}
+
+footer {
+    justify-content: left;
+    padding: 5px;
+    background-color: #F4F6F7;
+    color: #fff;
+}
+
+.self-photo{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+nav {
+    border-bottom: 1px solid black;
+}
+
+.crumbs ol {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.crumb{
+    display: inline-block;
+}
+
+.crumb a::after {
+    display: inline-block;
+    color: #000;
+    content: '>';
+    font-size: 80%;
+    font-weight: bold;
+    padding : 0 3px;
+}
+
+.menuSidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    font-family: sans-serif;
+}
+
+.menuSidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #b6b2b2;
+    display: block;
+    transition: 0.3s;
+}
+
+.menuSidebar a:hover{
+    color: #f1f1f1;
+}
+
+.menuSidebar .closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn{
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgba(17, 17, 17, 0.048) transparent;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover{
+    background-color: rgba(68, 68, 68, 0.041) transparent;
+}
+
+@media screen and (max-height: 450px){
+    .menuSidebar {padding-top: 15px;}
+    .menuSidebar a {font-size: 18px;}
+}
