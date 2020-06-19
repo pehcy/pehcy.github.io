@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/inside_notes.css">
+    <title>Introduction to Operating System</title>
+    <!-- font -->
+</head>
+<body>
+    <header>
+        Header
+    </header>
+    <div class="split left table-of-content">
+        <p>List of contents<p>
+        <span>Introduction</span>
+    </div>
+    <div class="split right content">
+        <header></header>
+        <main>
+            <section id="request-response">
+                <h3>Small Title</h3>
+                <p>The article goes here <a href="">aaa</a></p>
+            </section>
+            <section id="authentication">
+                <h3>Authentication</h3>
+                <p>The another article goes here</p>
+            </section>
+        </main>
+    </div>
+    <script>
+        (function() {
+            document.addEventListener('DOMContentLoaded', function(){
+                document.body.getElementsByClassName("split right").classList.add('ani-fade-in');
+            });
+        }).call(this);
+    </script>
+</body>
+</html>

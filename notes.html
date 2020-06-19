@@ -1,0 +1,430 @@
+<!DOCTYPE HTML>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link rel="stylesheet" type="text/css" href="css/notes.css" -->
+    <style>
+        body {
+            padding: 2rem;
+            text-rendering: optimizeLegibility;
+            margin: auto;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .aside-box {
+            margin: 1em;
+            overflow: hidden;
+        }
+        
+        .photo-container {
+            float:left;
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .self-photo{
+            max-width: 150px;
+            max-height: 150px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .photo-container > .logo-bar {
+            width: 100%; 
+            overflow: hidden; 
+            display: flex; 
+            color: lightgray; 
+            margin: 0.8rem;
+        }
+        
+        .photo-container > .logo-bar i {
+            font-size: 30px;
+        }
+
+        .intro {
+            display: block;
+            font-size: 82%;
+            position: relative;
+            max-width: 21rem;
+            color: #1b1b1c;
+            width: 100%;
+            letter-spacing: 0.025rem;
+        }
+        
+        .nav-sections {
+            color: #1b1b1c;
+            margin-left: initial;
+            font-size: 85%;
+            display: block;
+            position: relative;
+        }
+        
+        .nav-sections ul {
+            list-style-type: none;
+            left: 0;
+            display: block;
+            padding: 1em 0em;
+        }
+        
+        .nav-sections ul li a{
+            display: list-item;
+            padding: 0.5em;
+            font-weight: 700;
+            outline: none;
+            text-decoration: none;
+            color: rgb(47, 45, 53);
+        }
+        
+        .nav-sections ul li a:hover{
+            border-left: 2px solid rgba(189, 201, 226, 0.63);
+            background-color: rgba(139, 245, 208, 0.452);
+        }
+        
+        .nav-sections ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        
+        .active {
+            border-left: 1px solid rgb(76, 86, 106);
+        }
+        
+        .split {
+            height: 100%;
+            z-index: 1;
+            position: fixed;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        
+        .left {
+            left: 0;
+            padding: 2.8rem;
+            width: 362px;
+            overflow: auto;
+            float: none;
+        }
+        
+        .right {
+            right: 0;
+            width: 68%;
+        }
+        
+        .notes-gallery {
+            display: grid;
+            grid-gap: 3em;
+            width: auto;
+            grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+            grid-template-rows: repeat(auto-fill, minmax(15em, 1fr));
+            grid-auto-flow: row;
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .container-sc {
+            font-family: 'Varela', sans-serif;
+            margin-block-start: 1em;
+            border-left: 2px solid #1b1b1c1e;
+            margin: 1em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container-sc > .notes-box {
+            width: 100%; 
+            overflow: hidden; 
+            display: flex;
+        }
+
+        .container-sc > .notes-box > .notes-icon-container {
+            padding: 1em;
+            left: 2rem;
+        }
+
+        .notes-caption {
+            font-size: 82.5%;
+            color: #1B1B1C;
+        }
+
+        .container {
+            margin: 1em;
+            position: relative;
+            border: 1px solid lightgrey;
+            border-radius: 8px 8px 8px 8px;
+            overflow: hidden;
+        }
+        
+        .container > .subject-title{
+            color: black;
+            position: relative;
+            padding: 0em;
+            display: block;
+            height: 20%;
+            border-bottom: 1px solid lightslategray;
+        }
+        
+        .container > .description {
+            color: azure;
+            font-size: 90%;
+        }
+        
+        .image {
+            display: block;
+            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+            height: 100%;
+            position: absolute;
+            opacity: 0.95;
+            z-index: -5;
+            border-radius: 8px 8px 8px 8px;
+        }
+        
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            background-color: rgba(40, 43, 56, 0.589);
+            overflow: hidden;
+            transition: .5s ease;
+        }
+        
+        .container-sc:hover .overlay {
+            height: 100%;
+            cursor: pointer;
+        }
+        
+        .overlay > .hover-text{
+            color: aliceblue;
+            font-size: 20px;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        
+        .arcylic {
+            backdrop-filter: blur(20px);
+            background-color: rgba(255, 255, 255, .3);
+            /* for Microsoft Edge */
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px) saturate(125%);
+            background-color: rgba(255, 255, 255, .3);
+        }
+
+        /* Desktops, big landscape tablets and laptops(Large, Extra large) */
+        @media screen and (min-width: 1024px){}
+    
+        /* Tablet(medium) */
+        @media screen and (min-width : 768px) and (max-width : 1023px){
+            .notes-gallery {
+                grid-template-columns: .64fr;
+            }
+        }
+    
+        /* Smartphones (portrait and landscape)(small) */
+        @media screen and (min-width : 0px) and (max-width : 767px){
+        /*Style*/
+            .split {
+                position: relative;
+            }
+            
+            .left {
+                padding: 0rem;
+                max-width: 100%;
+            }
+
+            .self-photo {
+                max-width: 100px;
+                max-height: 100px;
+            }
+
+            .intro {
+                font-size: 80%;
+                width: 100%;
+            }
+
+            .photo-container > .logo-bar i {
+                font-size: 26px;
+            }
+
+            .right {
+                position: relative;
+                padding: 0rem;
+            }
+
+            .container {
+                width: 100%;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="split left">
+        <div class="aside-box">
+            <h3>pehcy.github.io</h3>
+            <div class="photo-container">
+                <img class="self-photo" src="../resources/pic2.jpg" alt="self-picture">
+                <div class="logo-bar">
+                    <div style="float: left;">
+                        <a href="https://github.com/pehcy"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+                    </div>
+                    <div style="margin-left: 1rem;">
+                        <i class="fa fa-twitter"></i>
+                    </div>
+                    <div style="margin-left: 1rem;">
+                        <i class="fa fa-linkedin-square"></i>
+                    </div>
+                </div>
+                <div class="intro">
+                    I am a student who currently studying applied mathematics and computer science. I'm interested in web development, 
+                    functional programming and I wished to become a software engineer in the future. 
+                    <br/><br/>
+                    I will pushed myself to improve my coding skill and hardware knowledges. Feel free to 
+                    <a href="mailto:cheeyung.peh@gmail.com">contact me</a> if have any suggestions.
+                </div>
+                <div class="nav-sections">
+                    <ul>
+                        <li><a href="../index.html">Profiles & articles</a></li>
+                        <li><a aria-current="page" class="active" href="notes.html">Self-learning notes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="split right">
+    <main>
+        Self-learning notes
+        <h3>Computer Sciences</h3>
+        <div class="notes-gallery">
+            <div class="container-sc">
+                <div class="notes-box">
+                    <div class="notes-icon-container">
+                        <i class="fa fa-cogs" aria-hidden="true" style="z-index: -5; font-size: 4em;
+                        color: #1b1b1c;"></i>
+                    </div>
+                    <div>
+                        <h3>Operating Systems</h3>
+                        <p class="notes-caption">
+                            These notes covered the theory of interests, mean-variance portfolios, pricing models and options Greek.
+                            <br/><br/>
+                            In fact, these notes was prepared for the actuarial exams.
+                        </p>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <div class="hover-text">Click to view</div>
+                </div>
+            </div>
+            <div class="container-sc">
+                <div class="notes-box">
+                    <div class="notes-icon-container">
+                        <i class="fa fa-cloud" aria-hidden="true" style="z-index: -5; font-size: 4em;
+                        color: #1b1b1c;"></i>
+                    </div>
+                    <div>
+                        <h3>Artificial Intelligent</h3>
+                        <p class="notes-caption">
+                            How did a computer can think rationally like human? Can Turing test confused humans?
+                        </p>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <div class="hover-text">Click to view</div>
+                </div>
+            </div>
+            <div class="container-sc">
+                <div class="notes-box">
+                    <div class="notes-icon-container">
+                        <i class="fa fa-gamepad" aria-hidden="true" style="z-index: -5; font-size: 4em;
+                        color: #1b1b1c;"></i>
+                    </div>
+                    <div>
+                        <h3>Game Development with Unity Engine</h3>
+                        <p class="notes-caption">
+                            Game development with C# and Unity game engine.  
+                            <br/><br/>
+                            <strong>Still in progress...</strong>
+                        </p>
+                    </div>
+                </div>
+                <!-- 
+                <div class="overlay">
+                    <div class="hover-text">Click to view</div>
+                </div>
+                -->
+            </div>
+            <div class="container-sc">
+                <div class="notes-box">
+                    <div class="notes-icon-container">
+                        <i class="fa fa-cubes" aria-hidden="true" style="z-index: -5; font-size: 4em;
+                        color: #1b1b1c;"></i>
+                    </div>
+                    <div>
+                        <h3>Data Structures, Algorithms</h3>
+                        <p class="notes-caption">
+                            Using data structures to enhanced the complexity.active
+                            <br/><br/>
+                            <strong>Still in progress...</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>Applied Mathematics</h3>
+        <div class="notes-gallery">
+            <div class="container-sc">
+                <div class="notes-box">
+                    <div class="notes-icon-container">
+                        <i class="fa fa-coffee" aria-hidden="true" style="z-index: -5; font-size: 4em;
+                        color: #1b1b1c;"></i>
+                    </div>
+                    <div>
+                        <h3>Introduction to Topology & Commutative Algebra</h3>
+                        <p class="notes-caption">
+                            These notes covered the theory of interests, mean-variance portfolios, pricing models and options Greek.
+                        </p>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <div class="hover-text">Click to view</div>
+                </div>
+            </div>
+            <div class="container-sc">
+                <div class="notes-box">
+                    <div class="notes-icon-container">
+                        <i class="fa fa-university" aria-hidden="true" style="z-index: -5; font-size: 4em;
+                        color: #1b1b1c;"></i>
+                    </div>
+                    <div>
+                        <h3>Quantitave Finance</h3>
+                        <p class="notes-caption">
+                            These notes covered the theory of interests, mean-variance portfolios, pricing models and options Greek.
+                            <br/><br/>
+                            In fact, these notes was prepared for the actuarial exams.
+                        </p>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <div class="hover-text">Click to view</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div>
+</body>
+</html>
