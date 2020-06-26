@@ -1,0 +1,539 @@
+<!DOCTYPE HTML>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- link rel="stylesheet" type="text/css" href="../css/inside_notes.css" -->
+    <title>Introduction to Operating System</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <!-- highlight.js for code snippet -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-light.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <!-- link rel="stylesheet" type="text/css" href="css/notes.css" -->
+    <style>
+        /* Scroll bar */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+            margin: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(136, 136, 136, 0.493);
+            border-radius: 4px;
+            margin: 3px;
+            position: absolute;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(136, 136, 136, 0.774);
+        }
+
+        body {
+            padding: 2rem;
+            text-rendering: optimizeLegibility;
+            margin: auto;
+            text-align: left;
+            font-family: 'Inter', Helvatica, Arial, sans-serif;
+            font-size: 86.5%;
+            line-height: 1.4rem;
+            color: #444;
+        }
+
+        main {
+            padding: 2rem;
+            margin: auto;
+            position: static;
+            width: 100vw;
+        }
+
+        .aside-box {
+            margin: 1em;
+            overflow: hidden;
+        }
+        
+        .photo-container {
+            float:left;
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .self-photo{
+            max-width: 150px;
+            max-height: 150px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .photo-container > .logo-bar {
+            width: 100%; 
+            overflow: hidden; 
+            display: flex; 
+            color: lightgray; 
+            margin: 0.8rem;
+        }
+        
+        .photo-container > .logo-bar i {
+            font-size: 30px;
+        }
+
+        .intro {
+            display: block;
+            font-size: 82%;
+            position: relative;
+            max-width: 21rem;
+            color: #1b1b1c;
+            width: 100%;
+            letter-spacing: 0.025rem;
+        }
+        
+        .nav-sections {
+            color: #1b1b1c;
+            margin-left: initial;
+            font-size: 85%;
+            display: block;
+            position: relative;
+        }
+        
+        .nav-sections ul {
+            list-style-type: none;
+            left: 0;
+            display: block;
+            padding: 1em 0em;
+        }
+        
+        .nav-sections ul li a{
+            display: list-item;
+            padding: 0.5em;
+            font-weight: 700;
+            outline: none;
+            text-decoration: none;
+            color: rgb(47, 45, 53);
+        }
+        
+        .nav-sections ul li a:hover{
+            border-left: 2px solid rgba(189, 201, 226, 0.63);
+            background-color: rgba(139, 245, 208, 0.452);
+        }
+        
+        .nav-sections ul li:not(:last-child){
+            margin-bottom: 10px;
+        }
+        
+        .active {
+            border-left: 1px solid rgb(76, 86, 106);
+        }
+        
+        .split {
+            height: 100%;
+            z-index: 1;
+            position: fixed;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+        
+        .left {
+            left: 0;
+            padding: 2.8rem;
+            width: 362px;
+            overflow: auto;
+            float: none;
+        }
+        
+        .right {
+            right: 0;
+            width: 68%;
+            padding: 1rem;
+            margin: 0.1rem;
+        }
+
+        @font-face {
+            font-family: 'JetBrains Mono';
+            src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+              url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff');
+            font-display: swap;
+        }
+
+        .code-snippet {
+            font-family: 'JetBrains Mono';
+            font-size: 92%;
+            line-height: 1.25rem;
+            background-color: transparent;
+        }
+
+        .unity-object {
+            color:rgb(221, 97, 66);
+        }
+
+        .snapshots-container {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            text-align: center;
+            padding: 3px;
+        }
+
+        .snapshots-container img {
+            vertical-align: middle;
+            max-width: 85%;
+            max-height: 85%;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        /* Desktops, big landscape tablets and laptops(Large, Extra large) */
+        @media screen and (min-width: 1024px){}
+    
+        /* Tablet(medium) */
+        @media screen and (min-width : 768px) and (max-width : 1023px){
+            .notes-gallery {
+                grid-template-columns: .64fr;
+            }
+        }
+    
+        /* Smartphones (portrait and landscape)(small) */
+        @media screen and (min-width : 0px) and (max-width : 767px){
+        /*Style*/
+            body {
+                padding: 1rem;
+            }
+
+            .split {
+                position: relative;
+            }
+            
+            .left {
+                padding: 0rem;
+                max-width: 100%;
+            }
+
+            .self-photo {
+                max-width: 100px;
+                max-height: 100px;
+            }
+
+            .intro {
+                font-size: 80%;
+                width: 100%;
+            }
+
+            .photo-container > .logo-bar i {
+                font-size: 26px;
+            }
+
+            .right {
+                position: relative;
+                padding: 1rem;
+                margin: 0;
+                max-width: 100%;
+                overflow: hidden;
+                font-size: 85%;
+            }
+
+            main {
+                position: static;
+                overflow: hidden;
+                float: left;
+                object-fit: cover;
+                width: 100%;
+                padding: 0.5rem;
+            }
+
+            .container {
+                width: 100%;
+                position: relative;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="split left">
+        <div class="aside-box">
+            <h3>Game Development with<br/> Unity Engine</h3>
+            <div class="photo-container">
+                <div class="nav-sections">
+                    <ul>
+                        <li><a aria-current="page" class="active" href="https://pehcy.github.io">Profiles & articles</a></li>
+                        <li><a href="https://pehcy.github.io/notes">Self-learning notes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="split right">
+    <header>
+        <h3>Create your first 3D Game</h3>
+    </header>
+    <main>
+        <p style="border-left: 1px solid #c8ccd1; padding-left: 1em;">
+            This documentation is served as a note for myself to learn 
+            game development. And I think you had learned object-oriented programming before.
+        </p>
+        <p>
+            Before we proceed, there are some prerequisites you'll need to followed:
+            <ul>
+                <li>Unity 2019.01 or above</li>
+                <li>C# or JavaScript programming, in this notes every scripts were written 
+                    in C#.
+                </li>
+                <li>For 64-bit Windows 10, you might need a graphics card with DirectX10 capabilities 
+                    (NVIDIA GeForce series I guessed, maybe you can find other graphics card beside of these). For more details about 
+                    the requirements for Unity, you can check at 
+                    <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/system-requirements.html">here</a>.
+                </li>
+            </ul>
+            <strong>Be caution if your laptop or computer start heating up!🔥</strong> Sometimes I need to closed my Unity project 
+            when the fan spinning rapidly.
+        </p>
+        <h2>Some Basics Object-Oriented programming</h2>
+
+        <h2>Player Object</h2>
+        <p>On the Hierachy tab, create an empty object and named it as <code>Player</code>, Create > 3D Object > Capsule, this capsule will be player body.</p>
+        Grab it and placed it inside the capsule body.
+        <div class="snapshots-container">
+            <img src="images/player_01.PNG" class="snapshots">
+        </div>
+        <p>Now, you are going to write your first script in this project.</p>
+        <p>Do make sure that you always assigned negative value to gravity variable, otherwise the player body
+            will keep flying upwards.
+            <br>
+            <br>
+            After finished scripting, drags to the corresponding game objects. 
+            Once you successfully set up the steps above, you can start wandering around with this capsule body.
+        </p>
+        <pre>
+            <code class="code-snippet">
+                using UnityEngine;
+                using System.Collections;
+
+                public class MouseCameraMovement : MonoBehaviour {
+                    [SerializeField]
+                    public float sensitivity = 100.0f;
+                    public Transform playerBody;
+                    public float xRotation = 0.0f;
+
+                    // Start is called before the first frame update
+                    void Start() {
+                        // fixed your in-game screen view
+                        Cursor.lockState = CursorLockMode.Locked;
+                    }
+
+                    // Update is called once per frame
+                    void Update() {
+                        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+                        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
+
+                        // x-rotation is opposite direction with y-direction
+                        xRotation -= mouseY;
+                        // clamped your view
+                        xRotation = Mathf.Clamp(xRotation, -90.0f, 90.0f);
+
+                        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+                        playerBody.Rotate(Vector3.up * mouseX);
+                    }
+                }
+            </code>
+        </pre>
+        <img src="images/distance-formula.png">
+        <p>The y here denotes the distance (or displacement) of a freely falling object travelled, g, the accerelation 
+            due to gravity of earth. And at last, of course, t is the time calculated in seconds.
+            <br/>
+            In order to get velocity, you just need to differentiate the formula above.
+        </p>
+        <img src="images/velocity.png">
+        <p>You might learnt this before in high school physics, </p>
+        <pre>
+            <code class="code-snippet language-csharp">
+                void Update() {
+                    // update per frame
+                    var mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+                    var accelerate = sensitivity * smoothing;
+                    mouseDelta = Vector2.Scale(mouseDelta, new Vector2(accelerate, accelerate));
+
+                    smoothView.x = Mathf.Lerp(smoothView, mouseDelta, 1 / smoothing);
+                    smoothView.y = Mathf.Lerp(smoothView, mouseDelta, 1 / smoothing);
+
+                    mouseView += smoothView;
+
+                    transform.localRotation = Quaternion.AngleAxis(-mouseView.y, Vector3.right);
+                    character.transform.localRotation = Quaternion.AngleAxis(mouseView.x, character.transform.up);
+                }
+            </code>
+        </pre>
+        <h2>Sounds Effect (Audio source)</h2>
+        <pre>
+            <code class="code-snippet">
+                using System.Collections;
+                using System.Collections.Generic;
+                using UnityEngine;
+
+                public class daylight : MonoBehaviour {
+                    // Update is called once per frame
+                    void Update() {
+                        transform.RotateAround(<span class="unity-object">Vector3</span>.zero, <span class="unity-object">Vector3</span>.right,
+                            10.5f * <span class="unity-object">Time</span>.deltaTime);
+                        //fixed the light direction on world origin
+                        transform.LookAt(<span class="unity-object">Vector3</span>.zero); 
+                    }
+                }
+            </code>
+        </pre>
+        <h2>Day/Night cycle</h2>
+        <p>Unlike our real world, the "earth" I builded here is flatten. But how did the sun and moon brighten up our flat world? 
+        <pre>
+            <code>
+                if (Mathf.sin(transform.eulerAngle));
+            </code>
+        </pre>
+        </p>
+        <div class="snapshots-container">
+            <img src="images/moon.png">
+        </div>
+        <div class="snapshots-container">
+            <img src="images/cycle.gif">
+        </div>
+        The yellow light source indicates the "sun", while the blue one is moon. circular motion around the world origin
+        <p>
+            Since this game is quite boring without any NPC, now we are going to create a hostile mob to make this game more interesting (The mob word
+            here referred to the game objects that are moveable. Yes, I used to be a Minecraft fans before!). 
+
+
+            Unfortunately, the AI packages does not included in the Unity Packages at first. But you can download it from this github repo.</p>
+        <div class="snapshots-container">
+            <img src="images/baked.png">
+        </div>
+        <p>Click the <code>Bake</code> button, the navigation mesh surface (the glass-texture like layer) will generate</p>
+        <div class="snapshots-container">
+            <img src="images/baked2.png">
+        </div>
+        <pre>
+            <code class="code-snippet language-csharp">
+                using System.Collections;
+                using System.Collections.Generic;
+                using UnityEngine;
+
+                public class PlayerManager : MonoBehaviour {
+                    #region Singleton
+
+                    public static PlayerManager instance;
+
+                    void Awake() {
+                        instance = this;
+                    }
+                    #endregion
+
+                    public GameObject player;
+                }
+            </code>
+        </pre>
+        <p>A singleton (not simpleton😂) is a class which allowed only one instance. The <code>#region</code> keyword 
+            is just allowed you to collapse the code block, you can ignore it since it is not important. 
+        </p>
+        <pre>
+            <code class="code-snippet">
+                using UnityEngine;
+                using UnityEngine.AI;
+                
+                public class MonsterController : MonoBehaviour {
+                    public float awareRadius = 6.0f;
+                    private Transform target;
+                    private NavMeshAgent agent;
+                    private WaitForSeconds = new WaitForSeconds(0.05f);
+                    private static anim;
+
+                    // Start is called before the first frame update
+                    void Start() {}
+
+                    // Update is called once per frame
+                    void Update() {}
+
+                    // Draw Spherical wire around enemy entity
+                    void OnDrawGizmosSelected() {}
+                }
+            </code>
+        </pre>
+        <p>
+            How far can this blocky monster observed player? Let's see, inside the 
+            <code>OnDrawGizmosSelected</code> function, we can start drawing a wire sphere around the 
+            monster with the awareness radius 6 unit.
+        </p>
+            <pre>
+            <code class="code-snippet">
+            void OnDrawGizmosSelected() {
+                // draw cyan colored gizmos around hostile monster
+                <span class="unity-object">Gizmos</span>.color = <span class="unity-object">Color</span>.cyan;
+                <span class="unity-object">Gizmos</span>.DrawWireSphere(transform.position, awareRadius);
+            }
+            </code>
+        </pre>
+        <p>
+            Usually when you imported some mobs model from asset store, you can find some animations for 
+            the 3D character.
+        </p>
+        <div class="snapshot-container">
+            <img src="images/idle.gif">
+        </div>
+            inside the <code>Start()</code> function, add in this command to initialize an animator object.
+            <pre>
+                <code class="code-snippet language-csharp">
+                    void Start() {
+                        target = PlayerManager.instance.player.transform;
+                        agent = GetComponent&lt;<span class="unity-object">NavMeshAgent</span>&gt;();
+
+                        anim = GetComponent&lt;<span class="unity-object">Animator</span>&gt;();
+                    }
+                </code>
+            </pre>
+        <div class="snapshots-container">
+            <img src="images/idle-walk-state.gif">
+        </div>
+
+        <section id="references">
+            <h4>References</h4>
+            <ol>
+                <li>
+                    Brackeys, 2019 Oct 27, FIRST PERSON MOVEMENT in Unity - FPS Controller [Video]. Youtube<br/>
+                    https://www.youtube.com/watch?v=_QajrabyTJc
+                </li>
+                <li>
+                    Unity, 
+                    <br/>
+                    https://learn.unity.com/tutorial/let-s-try-shooting-with-raycasts#5c7f8528edbc2a002053b468
+                </li>
+                <li>https://csharpindepth.com/articles/singleton</li>
+            </ol>
+        </section>
+        <footer>
+            <div class="flyout-nextpage">
+                <div><h1>What's Next?</h1></div>
+                <div>FPS Raycast shooting</div>
+            </div>
+        </footer>
+    </main>
+    </div>
+    <script>
+        (function() {
+            let flyOut = document.body.getElementsByClassName("flyout-nextpage");
+            if(isElementInViewport(flyOut)) {
+                flyOut.classList.add('ani-fade-in');
+            }
+            else {
+                flyOut.classList.remove('ani-fade-in');
+            }
+        }).call(this);
+    </script>
+</body>
+</html>
