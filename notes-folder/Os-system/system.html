@@ -50,8 +50,8 @@
         }
 
         main {
-            padding: 2rem;
-            margin: auto;
+            padding: 0rem;
+            margin: 0;
             position: static;
             width: 90%;
         }
@@ -158,6 +158,7 @@
             width: 65%;
             padding: 1.5rem;
             margin: auto;
+            z-index: -1;
         }
 
         @font-face {
@@ -195,15 +196,21 @@
         }
 
         /* Desktops, big landscape tablets and laptops(Large, Extra large) */
-        @media screen and (min-width: 977px){}
+        @media screen and (min-width: 1170px){
+            .right {
+                width: 70%;
+                padding: 2.75rem;
+            }
+        }
     
         /* Tablet(medium) */
-        @media screen and (min-width : 420px) and (max-width : 976px){
+        @media screen and (min-width : 420px) and (max-width : 1169px){
             .split {
                 position: relative;
             }
             .right {
                 width: 90%;
+                padding: 1.5rem;
             }
         }
     
