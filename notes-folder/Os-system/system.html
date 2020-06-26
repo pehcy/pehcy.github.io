@@ -155,9 +155,9 @@
         
         .right {
             right: 0;
-            width: 68%;
-            padding: 1rem;
-            margin: 0.1rem;
+            width: 65%;
+            padding: 1.5rem;
+            margin: auto;
         }
 
         @font-face {
@@ -195,17 +195,20 @@
         }
 
         /* Desktops, big landscape tablets and laptops(Large, Extra large) */
-        @media screen and (min-width: 1024px){}
+        @media screen and (min-width: 977px){}
     
         /* Tablet(medium) */
-        @media screen and (min-width : 768px) and (max-width : 1023px){
-            .notes-gallery {
-                grid-template-columns: .64fr;
+        @media screen and (min-width : 420px) and (max-width : 976px){
+            .split {
+                position: relative;
+            }
+            .right {
+                width: 90%;
             }
         }
     
         /* Smartphones (portrait and landscape)(small) */
-        @media screen and (min-width : 0px) and (max-width : 767px){
+        @media screen and (min-width : 0px) and (max-width : 419px){
         /*Style*/
             body {
                 padding: 1rem;
@@ -237,7 +240,7 @@
             .right {
                 position: relative;
                 margin: 0 auto;
-                width: 15.5rem;
+                width: 95%;
                 overflow: auto;
                 float: none;
                 left: 0;
@@ -249,7 +252,7 @@
                 overflow: hidden;
                 float: left;
                 object-fit: cover;
-                width: 100%;
+                width: 90%;
                 padding: 0.5rem;
             }
 
