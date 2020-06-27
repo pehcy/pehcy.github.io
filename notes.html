@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="EN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +29,13 @@
             text-rendering: optimizeLegibility;
             margin: auto;
             font-family: 'Open Sans', sans-serif;
+        }
+
+        main {
+            padding: 0rem;
+            margin: 0;
+            position: static;
+            width: 80%;
         }
 
         .aside-box {
@@ -113,7 +120,6 @@
         
         .split {
             height: 100%;
-            z-index: 1;
             position: fixed;
             top: 0;
             overflow-x: hidden;
@@ -130,7 +136,9 @@
         
         .right {
             right: 0;
-            width: 68%;
+            width: auto;
+            padding: 1.5rem;
+            margin: auto;
         }
         
         .notes-gallery {
@@ -169,42 +177,6 @@
             color: #1B1B1C;
         }
 
-        /*
-        .container {
-            margin: 1em;
-            position: relative;
-            border: 1px solid lightgrey;
-            border-radius: 8px 8px 8px 8px;
-            overflow: hidden;
-        }
-        
-        .container > .subject-title{
-            color: black;
-            position: relative;
-            padding: 0em;
-            display: block;
-            height: 20%;
-            border-bottom: 1px solid lightslategray;
-        }
-        
-        .container > .description {
-            color: azure;
-            font-size: 90%;
-        }
-        
-        .image {
-            display: block;
-            object-fit: cover;
-            max-width: 100%;
-            max-height: 100%;
-            height: 100%;
-            position: absolute;
-            opacity: 0.95;
-            z-index: -5;
-            border-radius: 8px 8px 8px 8px;
-        }
-        */
-
         .overlay {
             position: absolute;
             bottom: 0;
@@ -234,22 +206,50 @@
         }
 
         /* Desktops, big landscape tablets and laptops(Large, Extra large) */
-        @media screen and (min-width: 1024px){}
+        @media screen and (min-width: 1024px){
+            .right {
+                width: auto;
+                left: 21rem;
+                padding: 2.75rem;
+            }
+        }
     
         /* Tablet(medium) */
-        @media screen and (min-width : 768px) and (max-width : 1023px){
+        @media screen and (min-width : 420px) and (max-width : 1023px){
+            .split {
+                position: relative;
+            }
+
+            .right {
+                width: 90%;
+                padding: 1.5rem;
+            }
+            
             .notes-gallery {
-                grid-template-columns: .64fr;
+                grid-template-columns: 1fr;
             }
         }
     
         /* Smartphones (portrait and landscape)(small) */
-        @media screen and (min-width : 0px) and (max-width : 767px){
+        @media screen and (min-width : 0px) and (max-width : 419px){
         /*Style*/
+            body {
+                padding: 1rem;
+            }
+
             .split {
                 position: relative;
             }
             
+            main {
+                position: static;
+                overflow: hidden;
+                float: left;
+                object-fit: cover;
+                width: 90%;
+                padding: 0.5rem;
+            }
+
             .left {
                 padding: 0rem;
                 max-width: 100%;
@@ -271,7 +271,16 @@
 
             .right {
                 position: relative;
+                padding: 0 auto;
+                width: 95%;
+                overflow: auto;
+                float: none;
+                left: 0;
                 padding: 0rem;
+                font-size: 85%;
+            }
+
+            .notes-gallery {
             }
 
             .container {
@@ -409,7 +418,7 @@
         </div>
         <h3>Applied Mathematics</h3>
         <div class="notes-gallery">
-            <div class="container-sc">
+            <!-- div class="container-sc">
                 <div class="notes-box">
                     <div class="notes-icon-container">
                         <i class="fa fa-coffee" aria-hidden="true" style="z-index: -5; font-size: 4em;
@@ -425,7 +434,7 @@
                 <div class="overlay">
                     <div class="hover-text">Click to view PDF</div>
                 </div>
-            </div>
+            </div -->
             <div class="container-sc">
                 <div class="notes-box">
                     <div class="notes-icon-container">
