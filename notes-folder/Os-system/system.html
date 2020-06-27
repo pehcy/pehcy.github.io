@@ -53,7 +53,7 @@
             padding: 0rem;
             margin: 0;
             position: static;
-            width: 90%;
+            width: 80%;
         }
 
         .aside-box {
@@ -194,15 +194,17 @@
         }
 
         /* Desktops, big landscape tablets and laptops(Large, Extra large) */
-        @media screen and (min-width: 1170px){
+        @media screen and (min-width: 1024px){
             .right {
-                width: 70%;
+                width: auto;
                 padding: 2.75rem;
+                /* added */
+                left: 21rem;
             }
         }
     
         /* Tablet(medium) */
-        @media screen and (min-width : 420px) and (max-width : 1169px){
+        @media screen and (min-width : 420px) and (max-width : 1023px){
             .split {
                 position: relative;
             }
@@ -295,7 +297,7 @@
 <body>
     <div class="split left">
         <div class="aside-box">
-            <h3>Game Development with<br/> Unity Engine</h3>
+            <h3>Game Development <br/>with Unity Engine</h3>
             <div class="photo-container">
                 <div class="nav-sections">
                     <ul>
