@@ -36,16 +36,17 @@
     <!-- link rel="stylesheet" type="text/css" href="css/notes.css" -->
     <style>
         body {
-            padding: 2rem;
+            padding: 1.5rem;
             text-rendering: optimizeLegibility;
             margin: auto;
             font-family: 'Open Sans', sans-serif;
         }
 
         main {
-            padding: 2rem;
-            margin: auto;
+            padding: 0rem;
+            margin: 0;
             position: static;
+            width: 80%;
         }
 
         .aside-box {
@@ -130,7 +131,6 @@
         
         .split {
             height: 100%;
-            z-index: 1;
             position: fixed;
             top: 0;
             overflow-x: hidden;
@@ -143,11 +143,14 @@
             width: 362px;
             overflow: auto;
             float: none;
+            overflow-y: auto;
         }
         
         .right {
             right: 0;
-            width: 68%;
+            width: auto;
+            padding: 1.5rem;
+            margin: auto;
         }
         
         .notes-gallery {
@@ -249,25 +252,60 @@
         }
 
         /* Desktops, big landscape tablets and laptops(Large, Extra large) */
-        @media screen and (min-width: 1024px){}
+        @media screen and (min-width: 1024px){
+            .right {
+                width: auto;
+                left: 26rem;
+                padding: 2.75rem;
+            }
+        }
     
         /* Tablet(medium) */
-        @media screen and (min-width : 768px) and (max-width : 1023px){
+        @media screen and (min-width : 870px) and (max-width : 1023px){
+            .right {
+                width: 50%;
+                padding: 2.75rem;
+            }
+            
             .notes-gallery {
-                grid-template-columns: .64fr;
+                grid-template-columns: 1fr;
             }
         }
     
         /* Smartphones (portrait and landscape)(small) */
-        @media screen and (min-width : 0px) and (max-width : 767px){
+        @media screen and (min-width : 0px) and (max-width : 869px){
         /*Style*/
+            body{
+                padding: 1rem;
+            }
+
             .split {
                 position: relative;
             }
             
+            main {
+                position: static;
+                overflow: hidden;
+                float: left;
+                object-fit: cover;
+                width: 90%;
+                padding: 0.5rem
+            }
+
             .left {
                 padding: 0rem;
                 max-width: 100%;
+            }
+
+            .right {
+                position: relative;
+                padding: 0 auto;
+                width: 95%;
+                overflow: auto;
+                float: none;
+                left: 0;
+                padding: 0rem;
+                font-size: 85%;
             }
 
             .self-photo {
@@ -282,11 +320,6 @@
 
             .photo-container > .logo-bar i {
                 font-size: 26px;
-            }
-
-            .right {
-                position: relative;
-                padding: 0rem;
             }
 
             .container {
@@ -314,15 +347,17 @@
                     </div>
                 </div>
                 <div class="intro">
-                    I am a student who currently studying applied mathematics and computer science. I'm interested in web development, 
-                    functional programming and I wished to become a software engineer in the future. 
+                    I am an applied mathematics student who interested with web development, 
+                    functional programming and wished to become a software engineer in the future. 
                     <br/><br/>
                     I constantly pushing myself to improve my coding skill and hardware knowledges. Feel free to 
                     <a href="mailto:cheeyung.peh@gmail.com">contact me</a> if have any suggestions.
                 </div>
                 <div class="nav-sections">
                     <ul>
-                        <li><a aria-current="page" class="active" href="https://pehcy.github.io">Profiles & articles</a></li>
+                        <li>
+                            <a aria-current="page" class="active" href="https://pehcy.github.io">Profiles & articles</a>
+                        </li>
                         <li><a href="https://pehcy.github.io/notes">Self-learning notes</a></li>
                     </ul>
                 </div>
@@ -333,13 +368,15 @@
     <main>
         <h3>Experience</h3>
         I have previously worked as an intern in a startup company for around 3 months. During these 3 months, 
-        I'm helping to develop a bitcoin application for cryptomining, real-time airflight ticket booking system and dashboard.
+        I'm helping to develop an Android application for cryptocurrency mining (legally), 
+        which used Java and Android studio.
         <br/><br/>
+        The second project is a real-time airflight booking system, 
         Currently I'm learning Haskell and Topology so that I can assists my brother to work on a compiler 
         project.
         
         <h3>Affiliations</h3>
-        I am one of the members of Functional Programming Club Malaysia, which is founded by my elder brother.
+        I am one of the members of Functional Programming Club Malaysia.
         <hr>
         <h3>Articles</h3>
         Not yet...

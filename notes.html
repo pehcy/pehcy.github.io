@@ -29,8 +29,16 @@
             text-rendering: optimizeLegibility;
             margin: auto;
             font-family: 'Open Sans', sans-serif;
+            -webkit-box-direction: normal;
+            -webkit-box-orient: vertical;
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
         }
 
+        * {
+            box-sizing: border-box;
+        }
         main {
             padding: 0rem;
             margin: 0;
@@ -38,11 +46,6 @@
             width: 80%;
         }
 
-        .aside-box {
-            margin: 1em;
-            overflow: hidden;
-        }
-        
         .photo-container {
             float:left;
             position: relative;
@@ -117,27 +120,29 @@
         .active {
             border-left: 1px solid rgb(76, 86, 106);
         }
-        
-        .split {
-            height: 100%;
-            position: fixed;
-            top: 0;
-            overflow-x: hidden;
-            padding-top: 20px;
+
+        .page-layout {
+            clear: both;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
-        .left {
-            left: 0;
+
+        .left-sidebar {
             padding: 2.8rem;
-            width: 362px;
-            overflow: auto;
-            float: none;
+            width: 21rem;
+            clear: both;
+            float: left;
+            top: 0;
         }
         
+        .sticky {
+            height: calc(100vh - 2em - 2em);
+        }
+
         .right {
             right: 0;
-            width: auto;
-            padding: 1.5rem;
+            float: right;
+            padding-right: 0.75rem;
             margin: auto;
         }
         
@@ -183,7 +188,7 @@
             left: 0;
             right: 0;
             height: 0;
-            background-color: rgba(46, 40, 56, 0.473);
+            background-color: #62687585;
             overflow: hidden;
             transition: .5s ease;
         }
@@ -208,29 +213,29 @@
         .layout-footer {
             padding-bottom: 1em;
             text-align: center;
+            color: #8d99ae;
+            font-size: 90%;
         }
 
         /* Desktops, big landscape tablets and laptops(Large, Extra large) */
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: 870px){
             .right {
-                width: auto;
-                left: 26rem;
-                padding: 2.75rem;
+                width: calc(100% - 21em);
+                float: right;
+                padding: 0.75rem;
+            }
+
+            .left-sidebar {
+                height: calc(100vh - 2em - 2em);
+                position: sticky;
+            }
+
+            .sticky {
+                overflow-y: auto;
+                
             }
         }
-    
-        /* Tablet(medium) */
-        @media screen and (min-width : 870px) and (max-width : 1023px){
-            .right {
-                width: 50%;
-                padding: 2.75rem;
-            }
-            
-            .notes-gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-    
+
         /* Smartphones (portrait and landscape)(small) */
         @media screen and (min-width : 0px) and (max-width : 869px){
         /*Style*/
@@ -238,10 +243,6 @@
                 padding: 1rem;
             }
 
-            .split {
-                position: relative;
-            }
-            
             main {
                 position: static;
                 overflow: hidden;
@@ -251,8 +252,12 @@
                 padding: 0.5rem;
             }
 
-            .left {
-                padding: 0rem;
+            .sticky {
+                height: auto;
+            }
+
+            .left-sidebar {
+                padding: 1.5rem;
                 max-width: 100%;
             }
 
@@ -280,25 +285,12 @@
                 padding: 0rem;
                 font-size: 85%;
             }
-
-            .notes-gallery {
-                /*
-                display: flex;
-                flex-direction: column;
-                padding: 1.5rem;
-                */
-            }
-
-            .container {
-                width: 100%;
-                position: relative;
-            }
         }
     </style>
 </head>
 <body>
-    <div class="Layout">
-    <div class="split left">
+    <div class="page-layout">
+    <div class="left-sidebar sticky">
         <div class="aside-box">
             <h3>pehcy.github.io</h3>
             <div class="photo-container">
@@ -330,11 +322,17 @@
             </div>
         </div>
     </div>
-    <div class="split right">
+    <div class="right">
     <main>
         <header>
             <h2>Self-learning notes</h2>
-            <p>Notes that you might need to tap for 2 times in the mobile version.</p>
+            <p>The notes for computer sciences will be written as HTML webpages or markdown, while
+                the mathematics notes will be PDF version. Since I preferred using LaTeX to type out 
+                equations instead of using Markdown, just for sharing here.
+                <br/>
+                For mobile device, you might need to tap twice to view them.
+                <br/>
+            </p>
         </header>
         <h3>Computer Sciences</h3>
         <div class="notes-gallery">
@@ -383,7 +381,8 @@
                     <div>
                         <h3>Game Development with Unity Engine</h3>
                         <p class="notes-caption">
-                            Game development with C# and Unity game engine.
+                            Game development with C# and Unity game engine. Mostly based on object-oriented 
+                            programming concepts.
                         </p>
                     </div>
                 </div>
@@ -466,5 +465,8 @@
     </main>
     </div>
     </div>
+    <footer class="layout-footer">
+        &copy; 2020 pehcy
+    </footer>
 </body>
 </html>
