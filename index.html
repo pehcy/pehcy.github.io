@@ -42,16 +42,17 @@
             text-rendering: optimizeLegibility;
             margin: auto;
             font-family: 'Inter', sans-serif;
-            -webkit-box-direction: normal;
-            -webkit-box-orient: vertical;
-            display: flex;
             min-height: 100vh;
             flex-direction: column;
             color: #111;
+            -webkit-box-direction: normal;
+            -webkit-box-orient: vertical;
+            display: flex;
         }
 
         * {
             box-sizing: border-box;
+            padding: 0px;
         }
 
         main {
@@ -62,26 +63,23 @@
         }
         
         .photo-container {
-            float:left;
-            position: relative;
             display: block;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+            width: auto;
+            height: auto;
         }
         
         .self-photo{
-            max-width: 150px;
-            max-height: 150px;
+            max-width: 110px;
+            max-height: 110px;
             border-radius: 50%;
-            display: inline-block;
+            /* display: inline-block; */
         }
 
         .photo-container > .logo-bar {
             width: 100%; 
             overflow: hidden; 
             display: flex; 
-            color: lightgray; 
+            color: lightgray;
             margin: 0.8rem;
         }
         
@@ -95,7 +93,7 @@
         }
 
         .svg-fa-social path:hover {
-            fill: #1b1b1c;
+            fill: #111;
         }
 
         .intro {
@@ -131,8 +129,8 @@
         }
         
         .nav-sections ul li a:hover{
-            border-left: 2px solid rgba(189, 201, 226, 0.63);
             background-color: rgba(139, 245, 208, 0.452);
+            width: fit-content;
         }
         
         .nav-sections ul li:not(:last-child){
@@ -140,13 +138,22 @@
         }
         
         .active {
-            border-left: 1px solid rgb(76, 86, 106);
+            border: 2px solid rgb(76, 86, 106);
+            width: fit-content;
+        }
+
+        .page-layout-packed {
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            margin: auto;
         }
 
         .page-layout {
             clear: both;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
+            -webkit-box-pack: center;
+            display: flex;
+            justify-content: center;
         }
         
         .left-sidebar {
@@ -157,8 +164,15 @@
             top: 0;
         }
 
+
         .sticky {
             height: calc(100vh - 2em - 2em);
+        }
+
+
+        .aside-box-content {
+            margin-top: 1em;
+            margin-bottom: 1em;
         }
         
         .right {
@@ -303,7 +317,7 @@
         /* Desktops, big landscape tablets and laptops(Large, Extra large) */
         @media screen and (min-width: 870px){
             .right {
-                width: calc(100% - 21em);
+                max-width: 681px;
                 float: right;
                 padding: 0.75rem;
             }
@@ -335,6 +349,10 @@
 
             .sticky{
                 height: auto;
+            }
+
+            .page-layout {
+                flex-direction: column;
             }
 
             .left-sidebar {
@@ -373,54 +391,53 @@
     </script>
 </head>
 <body>
+    <div class="page-layout-packed">
     <div class="page-layout">
         <div class="left-sidebar sticky">
-            <div class="aside-box">
+            <div class="aside-box-content">
                 <h3>pehcy.github.io</h3>
                 <div class="photo-container">
-                    <img class="self-photo" src="resources/pic2.jpg" alt="self-picture">
-                    <div class="logo-bar">
-                        <div style="float: left;">
-                            <svg class="svg-fa-social" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                                <a href="https://github.com/pehcy" class="icon-info">
-                                    <path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 
-                                        57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 
-                                        113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 
-                                        9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 
-                                        1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 
-                                        7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"/>
-                                </a>
-                            </svg>
-                            <!-- i class="fa fa-github" aria-hidden="true"></i></a -->
-                        </div>
-                        <div style="margin-left: 0.8rem;">
-                            <svg class="svg-fa-social" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                                <a href="https://twitter.com/CheeYungPeh" class="icon-info">
-                                    <path class="svg-path-social" d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 
-                                    54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 
-                                    146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 
-                                    205-78-37 115-142 178 93-10 186-50z"/>
-                                </a>
-                            </svg>
+                    <!-- img class="self-photo" src="resources/pic2.jpg" alt="self-picture"-->
+                </div>
+                <div class="logo-bar">
+                    <div style="float: left;">
+                        <svg class="svg-fa-social" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                            <a href="https://github.com/pehcy" class="icon-info">
+                                <path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 
+                                    57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 
+                                    113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 
+                                    9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 
+                                    1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 
+                                    7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"/>
                             </a>
-                        </div>
-                        <!-- div style="margin-left: 1rem;">
-                            <svg width="20" height="20" class="css-vfpo4o" fill="currentColor"><g fill="none" fill-rule="evenodd"><path fill="#0084FF" d="M15.234 0C18.125 0 20 1.875 20 4.766v10.468C20 18.125 18.125 20 15.234 20H4.766C1.875 20 0 18.125 0 15.234V4.766C0 1.875 1.875 0 4.766 0h10.468z"></path><path d="M0 0h20v20H0z"></path><path fill="#FFF" d="M10.313 10.352c0-.012-.004-1.036-.328-1.055h-2.26a48.42 48.42 0 0 0 .095-3.164h2.21c0-.003.084-.982-.37-.977H5.837c.15-.563.34-1.15.566-1.758 0 0-1.039 0-1.393.937-.146.386-.57 1.87-1.325 3.388.254-.028 1.095-.05 1.59-.963.091-.255.109-.289.222-.627h1.246c0 .452-.051 2.897-.072 3.164H4.414c-.507.019-.672 1.043-.672 1.055h2.832c-.19 2.15-1.209 3.972-3.058 5.413.884.253 1.766-.04 2.202-.43 0 0 .992-.906 1.536-3.004l2.33 2.817s.342-1.166-.053-1.734c-.328-.387-1.212-1.434-1.589-1.814l-.631.504a7.686 7.686 0 0 0 .34-1.752h2.662zM10.898 5v9.441h1.015l.334 1.145 1.82-1.144h2.144V5h-5.313zm4.258 8.398h-1.214l-1.212.782-.22-.782h-.518V6.016h3.164v7.382z"></path></g></svg>
-                        </div -->
+                        </svg>
+                        <!-- i class="fa fa-github" aria-hidden="true"></i></a -->
                     </div>
-                    <div class="intro">
-                        I am a student who currently studying applied mathematics and computer science. I'm interested in web development, 
-                        functional programming and I wished to become a software engineer in the future. 
-                        <br/><br/>
-                        I will pushed myself to improve my coding skill and hardware knowledges. Feel free to 
-                        <a href="mailto:cheeyung.peh@gmail.com" rel="nofollow noopener noreferrer">contact me</a> if have any suggestions.
+                    <div style="margin-left: 0.8rem;">
+                        <svg class="svg-fa-social" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                            <a href="https://twitter.com/CheeYungPeh" class="icon-info">
+                                <path class="svg-path-social" d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 
+                                54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 
+                                146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 
+                                205-78-37 115-142 178 93-10 186-50z"/>
+                            </a>
+                        </svg>
+                        </a>
                     </div>
-                    <div class="nav-sections">
-                        <ul>
-                            <li><a aria-current="page" class="active" href="https://pehcy.github.io">Profiles & articles</a></li>
-                            <li><a href="https://pehcy.github.io/notes">Self-learning notes</a></li>
-                        </ul>
-                    </div>
+                    <!-- div style="margin-left: 1rem;">
+                        <svg width="20" height="20" class="css-vfpo4o" fill="currentColor"><g fill="none" fill-rule="evenodd"><path fill="#0084FF" d="M15.234 0C18.125 0 20 1.875 20 4.766v10.468C20 18.125 18.125 20 15.234 20H4.766C1.875 20 0 18.125 0 15.234V4.766C0 1.875 1.875 0 4.766 0h10.468z"></path><path d="M0 0h20v20H0z"></path><path fill="#FFF" d="M10.313 10.352c0-.012-.004-1.036-.328-1.055h-2.26a48.42 48.42 0 0 0 .095-3.164h2.21c0-.003.084-.982-.37-.977H5.837c.15-.563.34-1.15.566-1.758 0 0-1.039 0-1.393.937-.146.386-.57 1.87-1.325 3.388.254-.028 1.095-.05 1.59-.963.091-.255.109-.289.222-.627h1.246c0 .452-.051 2.897-.072 3.164H4.414c-.507.019-.672 1.043-.672 1.055h2.832c-.19 2.15-1.209 3.972-3.058 5.413.884.253 1.766-.04 2.202-.43 0 0 .992-.906 1.536-3.004l2.33 2.817s.342-1.166-.053-1.734c-.328-.387-1.212-1.434-1.589-1.814l-.631.504a7.686 7.686 0 0 0 .34-1.752h2.662zM10.898 5v9.441h1.015l.334 1.145 1.82-1.144h2.144V5h-5.313zm4.258 8.398h-1.214l-1.212.782-.22-.782h-.518V6.016h3.164v7.382z"></path></g></svg>
+                    </div -->
+                </div>
+                <div class="intro">
+                    I am a computer science student who interested in web development and wished to become a software engineer 
+                    in the future. Feel free to <a href="mailto:cheeyung.peh@gmail.com" rel="nofollow noopener noreferrer"> 
+                    contact me</a> if have any suggestions.
+                </div>
+                <div class="nav-sections">
+                    <ul>
+                        <li><a aria-current="page" class="active" href="https://pehcy.github.io">Profiles & articles</a></li>
+                        <li><a href="https://pehcy.github.io/notes">Self-learning notes</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -442,6 +459,7 @@
             Not yet...
         </main>
         </div>
+    </div>
     </div>
     <footer class="layout-footer">
         &copy; 2020 pehcy
