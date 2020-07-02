@@ -32,7 +32,7 @@
     <meta name="twitter:url" content="https://pehcy.github.io"/>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
-    <!-- link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- link rel="stylesheet" type="text/css" href="css/notes.css" -->
     <style>
         @import url('https://rsms.me/inter/inter.css');
@@ -47,6 +47,7 @@
             display: flex;
             min-height: 100vh;
             flex-direction: column;
+            color: #111;
         }
 
         * {
@@ -60,11 +61,6 @@
             width: 80%;
         }
         
-        .div-article-box a{
-            text-decoration: none;
-            color: inherit;
-        }
-
         .photo-container {
             float:left;
             position: relative;
@@ -104,16 +100,14 @@
 
         .intro {
             display: block;
-            font-size: 15px;
+            font-size: 82%;
             position: relative;
             max-width: 21rem;
-            color: #111;
             width: 100%;
             letter-spacing: 0.025rem;
         }
         
         .nav-sections {
-            color: #111;
             margin-left: initial;
             font-size: 85%;
             display: block;
@@ -173,7 +167,7 @@
             padding-right: 0.75rem;
             margin: auto;
         }
-
+        
         .notes-gallery {
             display: grid;
             grid-gap: 3em;
@@ -277,19 +271,6 @@
             text-align: center;
             color: #8d99ae;
             font-size: 90%;
-        }
-
-        @keyframes slide-up {
-            /*
-            0% {
-                -webkit-transform: translateY(0);
-                        transform: translateY(0);
-            }
-            100% {
-                -webkit-transform: translateY(-100px);
-                        transform: translateY(-100px);
-            }
-            */
         }
 
         @-webkit-keyframes slide-bottom {
@@ -436,40 +417,30 @@
                     </div>
                     <div class="nav-sections">
                         <ul>
-                            <li><a aria-current="page" class="active" href="https://pehcy.github.io">Profiles & articles</a></li>
-                            <li><a href="https://pehcy.github.io/notes">Self-learning notes</a></li>
+                            <li><a href="https://pehcy.github.io">Profiles & articles</a></li>
+                            <li><a aria-current="page" class="active" href="https://pehcy.github.io/notes">Self-learning notes</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
         <div class="right">
-            <main>
-                <h2>Experience</h2>
-                I have previously worked as an intern in a startup company for around 3 months. During these 3 months, 
-                I'm helping to develop an Android application for cryptocurrency mining (legally), 
-                which used Java and Android studio.
-                <br/><br/>
-                The second project is a real-time airflight booking system, 
-                Currently I'm learning Haskell and Topology so that I can assists my brother to work on a compiler 
-                project.
-                
-                <h2>Affiliations</h2>
-                I am one of the members of Functional Programming Club Malaysia.
-                <hr>
-                <section>
-                    <h2>Articles</h2>
-                    <div class="div-article-box">
-                        <a href="">
-                            <div>
-                                <h3>A Quick Notes on Laravel Framework</h3>
-                            </div>
-                            
-                            <p>Read more</p>
-                        </a>
-                    </div>
-                </section>
-            </main>
+        <main>
+            <h3>Experience</h3>
+            I have previously worked as an intern in a startup company for around 3 months. During these 3 months, 
+            I'm helping to develop an Android application for cryptocurrency mining (legally), 
+            which used Java and Android studio.
+            <br/><br/>
+            The second project is a real-time airflight booking system, 
+            Currently I'm learning Haskell and Topology so that I can assists my brother to work on a compiler 
+            project.
+            
+            <h3>Affiliations</h3>
+            I am one of the members of Functional Programming Club Malaysia.
+            <hr>
+            <h3>Articles</h3>
+            Not yet...
+        </main>
         </div>
     </div>
     <footer class="layout-footer">
