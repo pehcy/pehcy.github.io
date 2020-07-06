@@ -4,37 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>CheeYung (pehcy)</title>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170135302-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-170135302-1');
-    </script>
-    <link rel="canonical" href="https://pehcy.github.io">
-    <meta name="description" content="I am a student who currently studying applied mathematics and computer science. I'm interested in web development, 
-    functional programming and I wished to become a software engineer in the future."/>
-    <meta name="og:description" content="I am a student who currently studying applied mathematics and computer science. I'm interested in web development, 
-    functional programming and I wished to become a software engineer in the future."/>
-    <meta property="og:title" content="CheeYung (pehcy)"/>
-    <meta property="og:site_name" content="pehcy's github blog"/>
-    <meta property="og:url" content="https://pehcy.github.io"/>
+    <title>Game Development with Unity Engine - pehcy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+    <!-- link rel="stylesheet" type="text/css" href="css/notes.css" -->
+    <!-- Open Graph protocol-->
+    <meta name="description" content="pehcy's notes"/>
+    <meta name="og:description" content="pehcy's notes"/>
+    <meta property="og:title" content="CheeYung's notes (pehcy)"/>
+    <meta property="og:site_name" content="pehcy's github notes"/>
+    <meta property="og:url" content="https://pehcy.github.io/notes"/>
     <meta property="og:image" content="https://pehcy.github.io/resources/pic2.jpg"/>
     <meta property="og:type" content="website"/>
     <meta name="twitter:card" content="summary"/>
     <meta property="twitter:site" content="@CheeYungPeh"/>
     <meta property="twitter:creator" content="@CheeYungPeh"/>
-    <meta name="twitter:title" content="CheeYung (pehcy)"/>
-    <meta name="twitter:description" content="I am a student who currently studying applied mathematics and computer science. I'm interested in web development, 
-    functional programming and I wished to become a software engineer in the future."/>
-    <meta name="twitter:url" content="https://pehcy.github.io"/>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- link rel="stylesheet" type="text/css" href="css/notes.css" -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/atom-one-light.min.css">
+    <meta name="twitter:title" content="CheeYung's notes (pehcy)"/>
+    <meta name="twitter:description" content="pehcy's notes"/>
+    <meta name="twitter:url" content="https://pehcy.github.io/notes"/>
+    <!-- highlight.js for code snippet -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/vs.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <style>
@@ -50,61 +39,83 @@
             display: flex;
             min-height: 100vh;
             flex-direction: column;
-            color: #111;
-            overflow-x: hidden;
         }
 
         img {
-            width: 50%;
-            height: 50%;
+            max-width: 100%;
+            max-height: auto;
         }
 
         * {
             box-sizing: border-box;
+            padding: 0px;
         }
+
+        @font-face {
+            font-family: 'JetBrains Mono';
+            src: url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2') format('woff2'),
+              url('https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Regular.woff') format('woff');
+            font-display: swap;
+        }
+
+        pre, pre code {
+            display: block;
+            overflow: auto;
+            white-space: pre-wrap;
+            word-break: normal;
+            word-spacing: normal;
+            line-height: 1.5;
+            font-weight: 400;
+            padding: 0;
+            margin: 1.2rem 0;
+            tab-size: 2;
+            hyphens: none;
+            font-family: 'JetBrains Mono';
+            -webkit-hyphens: none;
+        }
+
+        /*
+        pre > code {
+            padding: 0;
+            word-wrap: normal;
+            white-space: pre;
+        }
+        */
 
         main {
             padding: 0rem;
             margin: 0;
             position: static;
-            width: 80%;
+            /*width: 90%;*/
         }
-        
+
         .photo-container {
-            float:left;
-            position: relative;
             display: block;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+            width: auto;
+            height: auto;
         }
         
         .self-photo{
-            max-width: 150px;
-            max-height: 150px;
+            max-width: 110px;
+            max-height: 110px;
             border-radius: 50%;
-            display: inline-block;
         }
 
         .photo-container > .logo-bar {
             width: 100%; 
             overflow: hidden; 
             display: flex; 
-            color: lightgray; 
+            color: #8d99ae70; 
             margin: 0.8rem;
         }
-        
-        .svg-fa-social {
+
+        .svg-fa-arrow {
             width: 2.5rem;
             height: 2.0rem;
         }
 
-        .svg-fa-social path {
-            fill: #bcc7daa1;
-        }
-
-        .svg-fa-social path:hover {
-            fill: #1b1b1c;
+        .svg-fa-arrow path {
+            fill: #111;
         }
 
         .intro {
@@ -149,15 +160,24 @@
         }
         
         .active {
-            border-left: 1px solid rgb(76, 86, 106);
+            border: 1px solid rgb(76, 86, 106);
+            width: fit-content;
+        }
+
+        .page-layout-packed {
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            margin: auto;
         }
 
         .page-layout {
             clear: both;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
+            -webkit-box-pack: center;
+            display: flex;
+            justify-content: center;
         }
-        
+
         .left-sidebar {
             padding: 2.8rem;
             width: 21rem;
@@ -165,114 +185,21 @@
             float: left;
             top: 0;
         }
-
+        
         .sticky {
             height: calc(100vh - 2em - 2em);
         }
-        
+
+        .aside-box-content {
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+
         .right {
             right: 0;
             float: right;
             padding-right: 0.75rem;
             margin: auto;
-        }
-        
-        .notes-gallery {
-            display: grid;
-            grid-gap: 3em;
-            width: auto;
-            grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-            grid-template-rows: repeat(auto-fill, minmax(15em, 1fr));
-            grid-auto-flow: row;
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .container-sc {
-            font-family: 'Varela', sans-serif;
-            margin-block-start: 1em;
-            border-left: 2px solid #1b1b1c1e;
-            margin: 1em;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .container-sc > .notes-box {
-            width: 100%; 
-            overflow: hidden; 
-            display: flex;
-        }
-
-        .container-sc > .notes-box > .notes-icon-container {
-            padding: 1em;
-            left: 2rem;
-        }
-
-        .notes-caption {
-            font-size: 82.5%;
-            color: #1B1B1C;
-        }
-
-        .container {
-            margin: 1em;
-            position: relative;
-            border: 1px solid lightgrey;
-            border-radius: 8px 8px 8px 8px;
-            overflow: hidden;
-        }
-        
-        .container > .subject-title{
-            color: black;
-            position: relative;
-            padding: 0em;
-            display: block;
-            height: 20%;
-            border-bottom: 1px solid lightslategray;
-        }
-        
-        .container > .description {
-            color: azure;
-            font-size: 90%;
-        }
-        
-        .image {
-            display: block;
-            object-fit: cover;
-            max-width: 100%;
-            max-height: 100%;
-            height: 100%;
-            position: absolute;
-            opacity: 0.95;
-            z-index: -5;
-            border-radius: 8px 8px 8px 8px;
-        }
-        
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 0;
-            background-color: rgba(40, 43, 56, 0.589);
-            overflow: hidden;
-            transition: .5s ease;
-        }
-        
-        .container-sc:hover .overlay {
-            height: 100%;
-            cursor: pointer;
-        }
-        
-        .overlay > .hover-text{
-            color: aliceblue;
-            font-size: 20px;
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
         }
 
         .layout-footer {
@@ -281,42 +208,21 @@
             color: #8d99ae;
             font-size: 90%;
         }
-        @-webkit-keyframes slide-bottom {
-            0% {
-              -webkit-transform: translateY(0);
-                      transform: translateY(0);
-            }
-            100% {
-              -webkit-transform: translateY(100px);
-                      transform: translateY(100px);
-            }
-        }
-
-        @keyframes slide-bottom {
-            0% {
-              -webkit-transform: translateY(0);
-                      transform: translateY(0);
-            }
-            100% {
-              -webkit-transform: translateY(100px);
-                      transform: translateY(100px);
-            }
-        }
-
-        .ani {
-            -webkit-animation: slide-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse forwards;
-	        animation: slide-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse forwards;
-        }
 
         /* Desktops, big landscape tablets and laptops(Large, Extra large) */
         @media screen and (min-width: 870px){
             .right {
-                width: calc(100% - 21em);
+                max-width: 681px;
                 float: right;
                 padding: 0.75rem;
             }
 
+            pre, pre code {
+                font-size: 13.5px;
+            }
+
             .left-sidebar {
+                /*height: calc(100vh - 2em - 2em);*/
                 position: sticky;
             }
 
@@ -326,10 +232,14 @@
         }
 
         /* Smartphones (portrait and landscape)(small) */
-        @media screen and (min-width : 0px) and (max-width : 869px) {
+        @media screen and (min-width : 0px) and (max-width : 869px){
         /*Style*/
-            body{
+            body {
                 padding: 1rem;
+            }
+
+            pre, pre code {
+                font-size: 12.5px;
             }
 
             main {
@@ -338,16 +248,30 @@
                 float: left;
                 object-fit: cover;
                 width: 90%;
-                padding: 0.5rem
+                padding: 0.5rem;
             }
 
-            .sticky{
+            .sticky {
                 height: auto;
+            }
+
+            .page-layout{
+                flex-direction: column;
             }
 
             .left-sidebar {
                 padding: 1.5rem;
                 max-width: 100%;
+            }
+
+            .self-photo {
+                max-width: 100px;
+                max-height: 100px;
+            }
+
+            .intro {
+                font-size: 80%;
+                width: 100%;
             }
 
             .right {
@@ -360,328 +284,272 @@
                 padding: 0rem;
                 font-size: 85%;
             }
-
-            .self-photo {
-                max-width: 100px;
-                max-height: 100px;
-            }
-
-            .intro {
-                font-size: 80%;
-                width: 100%;
-            }
         }
     </style>
-    <script>
-        (function() {
-            document.addEventListener("DOMContentLoaded", function(){
-                document.body.getElementsByClassName("right")[0].classList.add('ani');
-            });
-        }).call(this);
-    </script>
 </head>
 <body>
-    <div class="page-layout">
-        <div class="left-sidebar sticky">
-            <div class="aside-box">
-                <h3>pehcy.github.io</h3>
-                <div class="photo-container">
-                    <img class="self-photo" src="resources/pic2.jpg" alt="self-picture">
-                    <div class="logo-bar">
-                        <div style="float: left;">
-                            <svg class="svg-fa-social" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                                <a href="https://github.com/pehcy" class="icon-info">
-                                    <path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 
-                                        57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 
-                                        113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 
-                                        9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 
-                                        1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 
-                                        7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"/>
-                                </a>
+    <div class="page-layout-packed">
+        <div class="page-layout">
+            <div class="left-sidebar sticky">
+                <div class="aside-box-content">
+                    <div style="display: block; width: auto; height: auto;">
+                        <div style="float: left">
+                            <svg class="svg-fa-arrow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1664 896v128q0 53-32.5 90.5t-84.5 37.5h-704l293 294q38 36 38 90t-38 90l-75 76q-37 37-90 37-52 
+                                    0-91-37l-651-652q-37-37-37-90 0-52 37-91l651-650q38-38 91-38 52 0 90 38l75 74q38 38 38 91t-38 91l-293 
+                                    293h704q52 0 84.5 37.5t32.5 90.5z"/></svg>
                             </svg>
-                            <!-- i class="fa fa-github" aria-hidden="true"></i></a -->
                         </div>
                         <div style="margin-left: 0.8rem;">
-                            <svg class="svg-fa-social" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                                <a href="https://twitter.com/CheeYungPeh" class="icon-info">
-                                    <path class="svg-path-social" d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 
-                                    54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 
-                                    146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 
-                                    205-78-37 115-142 178 93-10 186-50z"/>
-                                </a>
-                            </svg>
-                            </a>
+                            <h3>Back to notes</h3>
                         </div>
-                        <!-- div style="margin-left: 1rem;">
-                            <svg width="20" height="20" class="css-vfpo4o" fill="currentColor"><g fill="none" fill-rule="evenodd"><path fill="#0084FF" d="M15.234 0C18.125 0 20 1.875 20 4.766v10.468C20 18.125 18.125 20 15.234 20H4.766C1.875 20 0 18.125 0 15.234V4.766C0 1.875 1.875 0 4.766 0h10.468z"></path><path d="M0 0h20v20H0z"></path><path fill="#FFF" d="M10.313 10.352c0-.012-.004-1.036-.328-1.055h-2.26a48.42 48.42 0 0 0 .095-3.164h2.21c0-.003.084-.982-.37-.977H5.837c.15-.563.34-1.15.566-1.758 0 0-1.039 0-1.393.937-.146.386-.57 1.87-1.325 3.388.254-.028 1.095-.05 1.59-.963.091-.255.109-.289.222-.627h1.246c0 .452-.051 2.897-.072 3.164H4.414c-.507.019-.672 1.043-.672 1.055h2.832c-.19 2.15-1.209 3.972-3.058 5.413.884.253 1.766-.04 2.202-.43 0 0 .992-.906 1.536-3.004l2.33 2.817s.342-1.166-.053-1.734c-.328-.387-1.212-1.434-1.589-1.814l-.631.504a7.686 7.686 0 0 0 .34-1.752h2.662zM10.898 5v9.441h1.015l.334 1.145 1.82-1.144h2.144V5h-5.313zm4.258 8.398h-1.214l-1.212.782-.22-.782h-.518V6.016h3.164v7.382z"></path></g></svg>
-                        </div -->
                     </div>
-                    <div class="intro">
-                        I am a student who currently studying applied mathematics and computer science. I'm interested in web development, 
-                        functional programming and I wished to become a software engineer in the future. 
-                        <br/><br/>
-                        I will pushed myself to improve my coding skill and hardware knowledges. Feel free to 
-                        <a href="mailto:cheeyung.peh@gmail.com" rel="nofollow noopener noreferrer">contact me</a> if have any suggestions.
-                    </div>
-                    <div class="nav-sections">
-                        <ul>
-                            <li><a href="https://pehcy.github.io">Profiles & articles</a></li>
-                            <li><a aria-current="page" class="active" href="https://pehcy.github.io/notes">Self-learning notes</a></li>
-                        </ul>
-                    </div>
+                    <h3>Game Development with Unity Engine</h3>
                 </div>
             </div>
-        </div>
-        <div class="right">
-            <header>
-                <h3>Create your first 3D Game</h3>
-            </header>
-            <main>
-                <p style="border-left: 1px solid #c8ccd1; padding-left: 1em;">
-                    This documentation is served as a note for myself to learn 
-                    game development. And I think you had learned object-oriented programming before.
-                </p>
-                <p>
-                    Before we proceed, there are some prerequisites you'll need to followed:
-                    <ul>
-                        <li>Unity 2019.01 or above</li>
-                        <li>C# or JavaScript programming, in this notes every scripts were written 
-                            in C#.
-                        </li>
-                        <li>For 64-bit Windows 10, you might need a graphics card with DirectX10 capabilities 
-                            (NVIDIA GeForce series I guessed, maybe you can find other graphics card beside of these). For more details about 
-                            the requirements for Unity, you can check at 
-                            <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/system-requirements.html">here</a>.
-                        </li>
-                    </ul>
-                    <strong>Be caution if your laptop or computer start heating up!🔥</strong> Sometimes I need to closed my Unity project 
-                    when the fan spinning rapidly.
-                </p>
-                <h2>Some Basics Object-Oriented programming</h2>
+            <div class="right">
+                <header>
+                    <h3>Create your first 3D Game</h3>
+                </header>
+                <main>
+                    <p style="border-left: 1px solid #c8ccd1; padding-left: 1em;">
+                        This documentation is served as a note for myself to learn 
+                        game development. And I think you had learned object-oriented programming before.
+                    </p>
+                    <p>
+                        Before we proceed, there are some prerequisites you'll need to followed:
+                        <ul>
+                            <li>Unity 2019.01 or above</li>
+                            <li>C# or JavaScript programming, in this notes every scripts were written 
+                                in C#.
+                            </li>
+                            <li>For 64-bit Windows 10, you might need a graphics card with DirectX10 capabilities 
+                                (NVIDIA GeForce series I guessed, maybe you can find other graphics card beside of these). For more details about 
+                                the requirements for Unity, you can check at 
+                                <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/system-requirements.html">here</a>.
+                            </li>
+                        </ul>
+                        <strong>Be caution if your laptop or computer start heating up!🔥</strong> Sometimes I need to closed my Unity project 
+                        when the fan spinning rapidly.
+                    </p>
+                    <h2>Some Basics Object-Oriented programming</h2>
+            
+                    <h2>Player Object</h2>
+                    <p>On the Hierachy tab, create an empty object and named it as <code>Player</code>, Create > 3D Object > Capsule, this capsule will be player body.</p>
+                    Grab it and placed it inside the capsule body.
+                    <!--div class="snapshots-container">
+                        <img src="images/player_01.PNG" class="snapshots">
+                    </div -->
+                    <p>Now, you are going to write your first script in this project.</p>
+                    <p>Do make sure that you always assigned negative value to gravity variable, otherwise the player body
+                        will keep flying upwards.
+                        <br>
+                        <br>
+                        After finished scripting, drags to the corresponding game objects. 
+                        Once you successfully set up the steps above, you can start wandering around with this capsule body.
+                    </p>
+<pre><code class="csharp">
+using UnityEngine;
+using System.Collections;
+
+public class MouseCameraMovement : MonoBehaviour {
+    [SerializeField]
+    public float sensitivity = 100.0f;
+    public Transform playerBody;
+    public float xRotation = 0.0f;
         
-                <h2>Player Object</h2>
-                <p>On the Hierachy tab, create an empty object and named it as <code>Player</code>, Create > 3D Object > Capsule, this capsule will be player body.</p>
-                Grab it and placed it inside the capsule body.
-                <div class="snapshots-container">
-                    <img src="images/player_01.PNG" class="snapshots">
-                </div>
-                <p>Now, you are going to write your first script in this project.</p>
-                <p>Do make sure that you always assigned negative value to gravity variable, otherwise the player body
-                    will keep flying upwards.
-                    <br>
-                    <br>
-                    After finished scripting, drags to the corresponding game objects. 
-                    Once you successfully set up the steps above, you can start wandering around with this capsule body.
-                </p>
-                <pre>
-                    <code class="code-snippet">
-                        using UnityEngine;
-                        using System.Collections;
+    // Start is called before the first frame update
+    void Start() {
+        // fixed your in-game screen view
+        Cursor.lockState = CursorLockMode.Locked;
+    }
         
-                        public class MouseCameraMovement : MonoBehaviour {
-                            [SerializeField]
-                            public float sensitivity = 100.0f;
-                            public Transform playerBody;
-                            public float xRotation = 0.0f;
+    // Update is called once per frame
+    void Update() {
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
         
-                            // Start is called before the first frame update
-                            void Start() {
-                                // fixed your in-game screen view
-                                Cursor.lockState = CursorLockMode.Locked;
-                            }
+        // x-rotation is opposite direction with y-direction
+        xRotation -= mouseY;
+        // clamped your view
+        xRotation = Mathf.Clamp(xRotation, -90.0f, 90.0f);
         
-                            // Update is called once per frame
-                            void Update() {
-                                float mouseX = Input.GetAxis("Mouse X") * sensitivity * Time.deltaTime;
-                                float mouseY = Input.GetAxis("Mouse Y") * sensitivity * Time.deltaTime;
-        
-                                // x-rotation is opposite direction with y-direction
-                                xRotation -= mouseY;
-                                // clamped your view
-                                xRotation = Mathf.Clamp(xRotation, -90.0f, 90.0f);
-        
-                                transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
-                                playerBody.Rotate(Vector3.up * mouseX);
-                            }
-                        }
-                    </code>
-                </pre>
-                <img src="images/distance-formula.png">
-                <p>The y here denotes the distance (or displacement) of a freely falling object travelled, g, the accerelation 
-                    due to gravity of earth. And at last, of course, t is the time calculated in seconds.
-                    <br/>
-                    In order to get velocity, you just need to differentiate the formula above.
-                </p>
-                <img src="images/velocity.png">
-                <p>You might learnt this before in high school physics, </p>
-                <pre>
-                    <code class="code-snippet language-csharp">
-                        void Update() {
-                            // update per frame
-                            var mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
-                            var accelerate = sensitivity * smoothing;
-                            mouseDelta = Vector2.Scale(mouseDelta, new Vector2(accelerate, accelerate));
-        
-                            smoothView.x = Mathf.Lerp(smoothView, mouseDelta, 1 / smoothing);
-                            smoothView.y = Mathf.Lerp(smoothView, mouseDelta, 1 / smoothing);
-        
-                            mouseView += smoothView;
-        
-                            transform.localRotation = Quaternion.AngleAxis(-mouseView.y, Vector3.right);
-                            character.transform.localRotation = Quaternion.AngleAxis(mouseView.x, character.transform.up);
-                        }
-                    </code>
-                </pre>
-                <h2>Sounds Effect (Audio source)</h2>
-                <pre>
-                    <code class="code-snippet">
+        transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
+        playerBody.Rotate(Vector3.up * mouseX);
+    }
+}</code></pre>
+                    <!-- img src="images/distance-formula.png"-->
+                    <p>The y here denotes the distance (or displacement) of a freely falling object travelled, g, the accerelation 
+                        due to gravity of earth. And at last, of course, t is the time calculated in seconds.
+                        <br/>
+                        In order to get velocity, you just need to differentiate the formula above.
+                    </p>
+                    <!-- img src="images/velocity.png"-->
+                    <p>You might learnt this before in high school physics, </p>
+<pre><code class="language-csharp">
+void Update() {
+    // update per frame
+    var mouseDelta = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
+    var accelerate = sensitivity * smoothing;
+    mouseDelta = Vector2.Scale(mouseDelta, new Vector2(accelerate, accelerate));
+            
+    smoothView.x = Mathf.Lerp(smoothView, mouseDelta, 1 / smoothing);
+    smoothView.y = Mathf.Lerp(smoothView, mouseDelta, 1 / smoothing);
+            
+    mouseView += smoothView;
+            
+    transform.localRotation = Quaternion.AngleAxis(-mouseView.y, Vector3.right);
+    character.transform.localRotation = Quaternion.AngleAxis(mouseView.x, character.transform.up);
+}</code></pre>
+                    <h2>Sounds Effect (Audio source)</h2>
+                    <!-- pre><code>
                         using System.Collections;
                         using System.Collections.Generic;
                         using UnityEngine;
-        
+            
                         public class daylight : MonoBehaviour {
-                            // Update is called once per frame
-                            void Update() {
-                                transform.RotateAround(<span class="unity-object">Vector3</span>.zero, <span class="unity-object">Vector3</span>.right,
-                                    10.5f * <span class="unity-object">Time</span>.deltaTime);
-                                //fixed the light direction on world origin
-                                transform.LookAt(<span class="unity-object">Vector3</span>.zero); 
+                        // Update is called once per frame
+                        void Update() {
+                            transform.RotateAround(<span class="unity-object">Vector3</span>.zero, <span class="unity-object">Vector3</span>.right,
+                                10.5f * <span class="unity-object">Time</span>.deltaTime);
+                            //fixed the light direction on world origin
+                            transform.LookAt(<span class="unity-object">Vector3</span>.zero); 
                             }
                         }
-                    </code>
-                </pre>
-                <h2>Day/Night cycle</h2>
-                <p>Unlike our real world, the "earth" I builded here is flatten. But how did the sun and moon brighten up our flat world? 
-                <pre>
-                    <code>
-                        if (Mathf.sin(transform.eulerAngle));
-                    </code>
-                </pre>
-                </p>
-                <div class="snapshots-container">
-                    <img src="images/moon.png">
-                </div>
-                <div class="snapshots-container">
-                    <img src="images/cycle.gif">
-                </div>
-                The yellow light source indicates the "sun", while the blue one is moon. circular motion around the world origin
-                <p>
-                    Since this game is quite boring without any NPC, now we are going to create a hostile mob to make this game more interesting (The mob word
-                    here referred to the game objects that are moveable. Yes, I used to be a Minecraft fans before!). 
-        
-        
-                    Unfortunately, the AI packages does not included in the Unity Packages at first. But you can download it from this github repo.</p>
-                <div class="snapshots-container">
-                    <img src="images/baked.png">
-                </div>
-                <p>Click the <code>Bake</code> button, the navigation mesh surface (the glass-texture like layer) will generate</p>
-                <div class="snapshots-container">
-                    <img src="images/baked2.png">
-                </div>
-                <pre>
-                    <code class="code-snippet language-csharp">
-                        using System.Collections;
-                        using System.Collections.Generic;
-                        using UnityEngine;
-        
-                        public class PlayerManager : MonoBehaviour {
-                            #region Singleton
-        
-                            public static PlayerManager instance;
-        
-                            void Awake() {
-                                instance = this;
-                            }
-                            #endregion
-        
-                            public GameObject player;
-                        }
-                    </code>
-                </pre>
-                <p>A singleton (not simpleton😂) is a class which allowed only one instance. The <code>#region</code> keyword 
-                    is just allowed you to collapse the code block, you can ignore it since it is not important. 
-                </p>
-                <pre>
-                    <code class="code-snippet">
-                        using UnityEngine;
-                        using UnityEngine.AI;
-                        
-                        public class MonsterController : MonoBehaviour {
-                            public float awareRadius = 6.0f;
-                            private Transform target;
-                            private NavMeshAgent agent;
-                            private WaitForSeconds = new WaitForSeconds(0.05f);
-                            private static anim;
-        
-                            // Start is called before the first frame update
-                            void Start() {}
-        
-                            // Update is called once per frame
-                            void Update() {}
-        
-                            // Draw Spherical wire around enemy entity
-                            void OnDrawGizmosSelected() {}
-                        }
-                    </code>
-                </pre>
-                <p>
-                    How far can this blocky monster observed player? Let's see, inside the 
-                    <code>OnDrawGizmosSelected</code> function, we can start drawing a wire sphere around the 
-                    monster with the awareness radius 6 unit.
-                </p>
-                    <pre>
-                    <code class="code-snippet">
-                    void OnDrawGizmosSelected() {
-                        // draw cyan colored gizmos around hostile monster
-                        <span class="unity-object">Gizmos</span>.color = <span class="unity-object">Color</span>.cyan;
-                        <span class="unity-object">Gizmos</span>.DrawWireSphere(transform.position, awareRadius);
-                    }
-                    </code>
-                </pre>
-                <p>
-                    Usually when you imported some mobs model from asset store, you can find some animations for 
-                    the 3D character.
-                </p>
-                <div class="snapshot-container">
-                    <img src="images/idle.gif">
-                </div>
-                    inside the <code>Start()</code> function, add in this command to initialize an animator object.
-                    <pre>
-                        <code class="code-snippet language-csharp">
-                            void Start() {
-                                target = PlayerManager.instance.player.transform;
-                                agent = GetComponent&lt;<span class="unity-object">NavMeshAgent</span>&gt;();
-        
-                                anim = GetComponent&lt;<span class="unity-object">Animator</span>&gt;();
+                    </code></pre -->
+                    <h2>Day/Night cycle</h2>
+                    <p>Unlike our real world, the "earth" I builded here is flatten. But how did the sun and moon brighten up our flat world? 
+                    <!-- pre>
+                        <code>
+                            if (Mathf.sin(transform.eulerAngle));
+                        </code>
+                    </pre -->
+                    </p>
+                    <!-- div class="snapshots-container">
+                        <img src="images/moon.png">
+                    </div -->
+                    <!-- div class="snapshots-container">
+                        <img src="images/cycle.gif">
+                    </div -->
+                    The yellow light source indicates the "sun", while the blue one is moon. circular motion around the world origin
+                    <p>
+                        Since this game is quite boring without any NPC, now we are going to create a hostile mob to make this game more interesting (The mob word
+                        here referred to the game objects that are moveable. Yes, I used to be a Minecraft fans before!). 
+            
+            
+                        Unfortunately, the AI packages does not included in the Unity Packages at first. But you can download it from this github repo.</p>
+                    <!--div class="snapshots-container">
+                        <img src="images/baked.png">
+                    </div -->
+                    <p>Click the <code>Bake</code> button, the navigation mesh surface (the glass-texture like layer) will generate</p>
+                    <!--div class="snapshots-container">
+                        <img src="images/baked2.png">
+                    </div -->
+                    <!-- pre>
+                        <code class="language-csharp">
+                            using System.Collections;
+                            using System.Collections.Generic;
+                            using UnityEngine;
+            
+                            public class PlayerManager : MonoBehaviour {
+                                #region Singleton
+            
+                                public static PlayerManager instance;
+            
+                                void Awake() {
+                                    instance = this;
+                                }
+                                #endregion
+            
+                                public GameObject player;
                             }
                         </code>
-                    </pre>
-                <div class="snapshots-container">
-                    <img src="images/idle-walk-state.gif">
-                </div>
-        
-                <section id="references">
-                    <h4>References</h4>
-                    <ol>
-                        <li>
-                            Brackeys, 2019 Oct 27, FIRST PERSON MOVEMENT in Unity - FPS Controller [Video]. Youtube<br/>
-                            https://www.youtube.com/watch?v=_QajrabyTJc
-                        </li>
-                        <li>
-                            Unity, 
-                            <br/>
-                            https://learn.unity.com/tutorial/let-s-try-shooting-with-raycasts#5c7f8528edbc2a002053b468
-                        </li>
-                        <li>https://csharpindepth.com/articles/singleton</li>
-                    </ol>
-                </section>
-                <footer>
-                    <div class="flyout-nextpage">
-                        <div><h1>What's Next?</h1></div>
-                        <div>FPS Raycast shooting</div>
-                    </div>
-                </footer>
-            </main>
+                    </pre -->
+                    <p>A singleton (not simpleton😂) is a class which allowed only one instance. The <code>#region</code> keyword 
+                        is just allowed you to collapse the code block, you can ignore it since it is not important. 
+                    </p>
+                    <!-- pre>
+                        <code>
+                            using UnityEngine;
+                            using UnityEngine.AI;
+                            
+                            public class MonsterController : MonoBehaviour {
+                                public float awareRadius = 6.0f;
+                                private Transform target;
+                                private NavMeshAgent agent;
+                                private WaitForSeconds = new WaitForSeconds(0.05f);
+                                private static anim;
+            
+                                // Start is called before the first frame update
+                                void Start() {}
+            
+                                // Update is called once per frame
+                                void Update() {}
+            
+                                // Draw Spherical wire around enemy entity
+                                void OnDrawGizmosSelected() {}
+                            }
+                        </code>
+                    </pre -->
+                    <p>
+                        How far can this blocky monster observed player? Let's see, inside the 
+                        <code>OnDrawGizmosSelected</code> function, we can start drawing a wire sphere around the 
+                        monster with the awareness radius 6 unit.
+                    </p>
+                        <!-- pre>
+                        <code class="code-snippet">
+                        void OnDrawGizmosSelected() {
+                            // draw cyan colored gizmos around hostile monster
+                            <span class="unity-object">Gizmos</span>.color = <span class="unity-object">Color</span>.cyan;
+                            <span class="unity-object">Gizmos</span>.DrawWireSphere(transform.position, awareRadius);
+                        }
+                        </code>
+                    </pre -->
+                    <p>
+                        Usually when you imported some mobs model from asset store, you can find some animations for 
+                        the 3D character.
+                    </p>
+                    <!-- div class="snapshot-container">
+                        <img src="images/idle.gif">
+                    </div -->
+                        inside the <code>Start()</code> function, add in this command to initialize an animator object.
+                        <!-- pre>
+                            <code class="language-csharp">
+                                void Start() {
+                                    target = PlayerManager.instance.player.transform;
+                                    agent = GetComponent&lt;<span class="unity-object">NavMeshAgent</span>&gt;();
+            
+                                    anim = GetComponent&lt;<span class="unity-object">Animator</span>&gt;();
+                                }
+                            </code>
+                        </pre -->
+                    <!--div class="snapshots-container">
+                        <img src="images/idle-walk-state.gif">
+                    </div -->
+            
+                    <section id="references">
+                        <h4>References</h4>
+                        <ol>
+                            <li>
+                                Brackeys, 2019 Oct 27, FIRST PERSON MOVEMENT in Unity - FPS Controller [Video]. Youtube<br/>
+                                https://www.youtube.com/watch?v=_QajrabyTJc
+                            </li>
+                            <li>
+                                Unity, 
+                                <br/>
+                                https://learn.unity.com/tutorial/let-s-try-shooting-with-raycasts#5c7f8528edbc2a002053b468
+                            </li>
+                            <li>https://csharpindepth.com/articles/singleton</li>
+                        </ol>
+                    </section>
+                    <section>
+                        <div class="flyout-nextpage">
+                            <div><h1>What's Next?</h1></div>
+                            <div>FPS Raycast shooting</div>
+                        </div>
+                    </section>
+                </main>
+            </div>
         </div>
     </div>
     <footer class="layout-footer">
