@@ -5,29 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Game Development with Unity Engine - pehcy</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
     <!-- link rel="stylesheet" type="text/css" href="css/notes.css" -->
     <!-- Open Graph protocol-->
-    <meta name="description" content="pehcy's notes"/>
-    <meta name="og:description" content="pehcy's notes"/>
-    <meta property="og:title" content="CheeYung's notes (pehcy)"/>
-    <meta property="og:site_name" content="pehcy's github notes"/>
-    <meta property="og:url" content="https://pehcy.github.io/notes"/>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170135302-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-170135302-1');
+    </script>
+    <link rel="canonical" href="https://pehcy.github.io">
+    <meta name="description" content="I am a student who currently studying applied mathematics and computer science. I'm interested in web development, 
+    functional programming and I wished to become a software engineer in the future."/>
+    <meta name="og:description" content="I am a student who currently studying applied mathematics and computer science. I'm interested in web development, 
+    functional programming and I wished to become a software engineer in the future."/>
+    <meta property="og:title" content="CheeYung (pehcy)"/>
+    <meta property="og:site_name" content="pehcy's github blog"/>
+    <meta property="og:url" content="https://pehcy.github.io"/>
     <meta property="og:image" content="https://pehcy.github.io/resources/pic2.jpg"/>
     <meta property="og:type" content="website"/>
     <meta name="twitter:card" content="summary"/>
     <meta property="twitter:site" content="@CheeYungPeh"/>
     <meta property="twitter:creator" content="@CheeYungPeh"/>
-    <meta name="twitter:title" content="CheeYung's notes (pehcy)"/>
-    <meta name="twitter:description" content="pehcy's notes"/>
-    <meta name="twitter:url" content="https://pehcy.github.io/notes"/>
+    <meta name="twitter:title" content="CheeYung (pehcy)"/>
+    <meta name="twitter:description" content="I am a student who currently studying applied mathematics and computer science. I'm interested in web development, 
+    functional programming and I wished to become a software engineer in the future."/>
+    <meta name="twitter:url" content="https://pehcy.github.io"/>
     <!-- highlight.js for code snippet -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/vs.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <style>
         @import url('https://rsms.me/inter/inter.css');
+        
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             padding: 1.5rem;
@@ -44,6 +57,22 @@
         img {
             max-width: 100%;
             max-height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            font-size: small;
+        }
+
+        nav ul li a {
+            display: block;
+            color: rgba(141, 135, 135, 0.541);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+        }
+
+        nav ul li a.current {
+            color: #111;
         }
 
         * {
@@ -74,6 +103,17 @@
             -webkit-hyphens: none;
         }
 
+        .layout-go-back {
+            display: block;
+            width: auto;
+            height: auto;
+        }
+
+        .layout-go-back a {
+            text-decoration: none;
+            color: inherit;
+            outline: none;
+        }
         /*
         pre > code {
             padding: 0;
@@ -227,7 +267,8 @@
             }
 
             .sticky {
-                overflow: auto;
+                /*overflow: auto;*/
+                overflow: hidden;
             }
         }
 
@@ -292,19 +333,28 @@
         <div class="page-layout">
             <div class="left-sidebar sticky">
                 <div class="aside-box-content">
-                    <div style="display: block; width: auto; height: auto;">
-                        <div style="float: left">
-                            <svg class="svg-fa-arrow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1664 896v128q0 53-32.5 90.5t-84.5 37.5h-704l293 294q38 36 38 90t-38 90l-75 76q-37 37-90 37-52 
-                                    0-91-37l-651-652q-37-37-37-90 0-52 37-91l651-650q38-38 91-38 52 0 90 38l75 74q38 38 38 91t-38 91l-293 
-                                    293h704q52 0 84.5 37.5t32.5 90.5z"/></svg>
-                            </svg>
-                        </div>
-                        <div style="margin-left: 0.8rem;">
-                            <h3>Back to notes</h3>
-                        </div>
+                    <div class="layout-go-back">
+                        <a href="../notes">
+                            <div style="float: left">
+                                <svg class="svg-fa-arrow" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1664 896v128q0 53-32.5 90.5t-84.5 37.5h-704l293 294q38 36 38 90t-38 90l-75 76q-37 37-90 37-52 
+                                        0-91-37l-651-652q-37-37-37-90 0-52 37-91l651-650q38-38 91-38 52 0 90 38l75 74q38 38 38 91t-38 91l-293 
+                                        293h704q52 0 84.5 37.5t32.5 90.5z"/></svg>
+                                </svg>
+                            </div>
+                            <div style="margin-left: 0.8rem;">
+                                <h3>Back to notes</h3>
+                            </div>
+                        </a>
                     </div>
                     <h3>Game Development with Unity Engine</h3>
+                    <nav>
+                        <ul>
+                            <li><a href="#basics-oo">Some Basics Object-Oriented programming</a></li>
+                            <li><a href="#player-object">Player Object</a></li>
+                            <li><a href="#sound-effect">Sound Effect</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
             <div class="right">
@@ -332,14 +382,16 @@
                         <strong>Be caution if your laptop or computer start heating up!🔥</strong> Sometimes I need to closed my Unity project 
                         when the fan spinning rapidly.
                     </p>
-                    <h2>Some Basics Object-Oriented programming</h2>
-            
-                    <h2>Player Object</h2>
+                    <section id="basics-oo">
+                        <h2>Some Basics Object-Oriented programming</h2>
+                    </section>
+                    <section id="player-object">
+                        <h2>Player Object</h2>
                     <p>On the Hierachy tab, create an empty object and named it as <code>Player</code>, Create > 3D Object > Capsule, this capsule will be player body.</p>
                     Grab it and placed it inside the capsule body.
-                    <!--div class="snapshots-container">
-                        <img src="images/player_01.PNG" class="snapshots">
-                    </div -->
+
+                    <img src="images/player_01.PNG" class="snapshots">
+
                     <p>Now, you are going to write your first script in this project.</p>
                     <p>Do make sure that you always assigned negative value to gravity variable, otherwise the player body
                         will keep flying upwards.
@@ -401,7 +453,12 @@ void Update() {
     transform.localRotation = Quaternion.AngleAxis(-mouseView.y, Vector3.right);
     character.transform.localRotation = Quaternion.AngleAxis(mouseView.x, character.transform.up);
 }</code></pre>
-                    <h2>Sounds Effect (Audio source)</h2>
+                    </section>
+            
+                    <section id="sound-effect">
+                        <h2>Sounds Effect (Audio source)</h2>
+                        aa
+                    </section>
                     <!-- pre><code>
                         using System.Collections;
                         using System.Collections.Generic;
@@ -438,13 +495,9 @@ void Update() {
             
             
                         Unfortunately, the AI packages does not included in the Unity Packages at first. But you can download it from this github repo.</p>
-                    <!--div class="snapshots-container">
-                        <img src="images/baked.png">
-                    </div -->
+                    <img src="images/baked.png">
                     <p>Click the <code>Bake</code> button, the navigation mesh surface (the glass-texture like layer) will generate</p>
-                    <!--div class="snapshots-container">
-                        <img src="images/baked2.png">
-                    </div -->
+                    <img src="images/baked2.png">
                     <!-- pre>
                         <code class="language-csharp">
                             using System.Collections;
@@ -509,10 +562,9 @@ void Update() {
                         Usually when you imported some mobs model from asset store, you can find some animations for 
                         the 3D character.
                     </p>
-                    <!-- div class="snapshot-container">
-                        <img src="images/idle.gif">
-                    </div -->
-                        inside the <code>Start()</code> function, add in this command to initialize an animator object.
+                    <img src="images/idle.gif">
+                    
+                    <p>inside the <code>Start()</code> function, add in this command to initialize an animator object.</p>
                         <!-- pre>
                             <code class="language-csharp">
                                 void Start() {
@@ -523,10 +575,25 @@ void Update() {
                                 }
                             </code>
                         </pre -->
-                    <!--div class="snapshots-container">
-                        <img src="images/idle-walk-state.gif">
-                    </div -->
-            
+                    <img src="images/idle-walk-state.gif">
+<pre><code class="language-csharp">
+using System.Collections;
+using UnityEngine;
+
+public class Bullet : MonoBehaviour {
+    public int damageCast = 1;
+
+    private IEnumerator ShotEffect() {
+        laserLine.enabled = true;
+        yield return shotDuration;
+        laserLine.enabled = false;
+    }
+
+    void Start() {
+        laserLine = GetComponent&lt;LineRenderer&gt;();
+        fpsCam = GetComponentInParent&lt;Camera&gt;();
+    }
+}</code></pre>
                     <section id="references">
                         <h4>References</h4>
                         <ol>
@@ -555,5 +622,27 @@ void Update() {
     <footer class="layout-footer">
         &copy; 2020 pehcy
     </footer>
+    <script>
+        // sticky nav sidebar
+        let mainNavLinks = document.querySelectorAll("nav ul li a");
+        let mainSections = document.querySelectorAll("main section");
+
+        let lastId;
+        let cur = [];
+        window.addEventListener("scroll", event => {
+            let fromTop = window.scrollY;
+
+            mainNavLinks.forEach(link => {
+                let section = document.querySelector(link.hash);
+
+                if(section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop){
+                    link.classList.add("current");
+                }
+                else {
+                    link.classList.remove("current");
+                }
+            });
+        });
+    </script>
 </body>
 </html>
