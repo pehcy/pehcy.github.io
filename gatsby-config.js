@@ -15,6 +15,19 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-theme-ui`,
     {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `disqus-shortname`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [`gatsby-remark-autolink-headers`],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
@@ -32,6 +45,16 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              offset: `100`,
+              removeAccents: true,
+              maintainCase: false,
+              className: `custom-name`,
+              elements: [`h2`, `h3`],
+            },
+          },
           {
             resolve: `gatsby-remark-images`,
             options: {

@@ -7,78 +7,12 @@ import { rhythm, scale } from "../utils/typography"
 import { useColorMode } from 'theme-ui'
 import { FaAdjust } from 'react-icons/fa'
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ location, title, children, sidebar}) => {
   const rootPath = `${__PATH_PREFIX__}/`
+
+  const [colorMode, setColorMode] = useColorMode();
+  const nextColorMode = colorMode === 'light' ? 'dark' : 'light';
   
-  const [colorMode, setColorMode] = useColorMode()
-  const nextColorMode = colorMode === 'light' ? 'dark' : 'light'
-
-  let header
-
-  const AdjustButton = styled.button`
-    border: none;
-    background-color: transparent;
-    color: inherit;
-    cursor: pointer;
-  `
-
-  if (location.pathname === rootPath) {
-    header = (
-    <>
-      <AdjustButton 
-        onClick={e => {
-        setColorMode(nextColorMode)
-      }}>
-        <FaAdjust />
-      </AdjustButton >
-      <h1
-        style={{
-          ...scale(1.5),
-          marginBottom: rhythm(1.5),
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h1>
-    </>
-    )
-  } else {
-    header = (
-    <>
-      <AdjustButton 
-        onClick={e => {
-        setColorMode(nextColorMode)
-      }}>
-        <FaAdjust />
-      </AdjustButton >
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h3>
-    </>
-    )
-  }
-
   // CSS-in-JS with gatsby emotion
   const LayoutWrapper = styled.div`
     box-flex: 1;
@@ -92,6 +26,13 @@ const Layout = ({ location, title, children }) => {
     justify-content: center;
   `
 
+  const headerSticky = css`
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    text-align: right;
+  `
+
   const footerStyling = css`
     text-decoration: none;
     color: inherit;
@@ -100,21 +41,69 @@ const Layout = ({ location, title, children }) => {
     }
   `
 
-  const SectionPage = () => {
-    return (
-      <ul>
-        <li><Link to="/">Article</Link></li>
-        <li><Link to="/">Self-learning notes</Link></li>
-      </ul>
-    )
+  const AdjustButton = styled.button`
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    color: inherit;
+    cursor: pointer;
+  `
+
+  const sectionStyling = css`
+    list-style: none;
+    &:a {
+      color:red;
+    }
+  `
+
+  const SideBar = ({rootPath, sidebar}) => {
+    {/*
+    const [listItems, setListItems] = useState(null);
+    useEffect(() => {
+        var headingList = document.querySelectorAll('h3');
+        setListItems([...headingList].map(i => <li>{ i.textContent }</li>));
+      }, []
+    );
+    */}
+
+    if (location.pathname === rootPath) {
+      return (
+        <>
+          <Bio />
+          <ul css={ sectionStyling }>
+            <Link to="/"><li>Article</li></Link>
+            <Link to="/"><li>Self-learning notes</li></Link>
+          </ul>
+        </>
+      );
+    }
+    else{
+      // If not homepage, display toc for posts
+      return (
+        <div className="toc" dangerouslySetInnerHTML={{ __html: sidebar }} />
+      );
+    }
+    
   }
+
+  const header = (
+    <>
+      <AdjustButton
+        onClick = {e => {
+          setColorMode(nextColorMode)
+        }}>
+          <FaAdjust />{ colorMode }
+      </AdjustButton>
+    </>
+  )
 
   // render view webpage
   return (
     <LayoutWrapper>
+      <header css={ headerSticky }>{header}</header>
       <ContentWrapper>
       <div
-        className = "layout-aside-bio"
+        id = "layout-aside__sticky"
         style={{
           float: `left`,
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
@@ -123,8 +112,7 @@ const Layout = ({ location, title, children }) => {
           height: `calc(100% - 2em - 2em)`,
           top: 0,
         }}>
-          <Bio />
-          <SectionPage />
+          <SideBar rootPath={rootPath} sidebar={sidebar}/>
       </div>
       <div
         style={{
@@ -133,10 +121,9 @@ const Layout = ({ location, title, children }) => {
           float: `right`,
         }}
       >
-        <header>{header}</header>
         <main>{children}</main>
         <footer css={ footerStyling }>
-          © pehcy {new Date().getFullYear()}, Built with
+          © pehcy (CheeYung) {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>

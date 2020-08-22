@@ -19,4 +19,10 @@ Oh, and here's a great quote from this Wikipedia on
 > salted duck eggs have a briny aroma, a gelatin-like egg white and a
 > firm-textured, round yolk that is bright orange-red in color.
 
+```python
+import numpy as np
+
+arr = np.array([1, 2, 3, 4])
+```
+
 ![Chinese Salty Egg](./salty_egg.jpg)
