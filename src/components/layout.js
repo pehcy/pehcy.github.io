@@ -7,7 +7,7 @@ import { rhythm, scale } from "../utils/typography"
 import { useColorMode } from 'theme-ui'
 import { FaAdjust } from 'react-icons/fa'
 
-const Layout = ({ location, title, children, sidebar}) => {
+const Layout = ({ location, title, children}) => {
   const rootPath = `${__PATH_PREFIX__}/`
 
   const [colorMode, setColorMode] = useColorMode();
@@ -77,13 +77,20 @@ const Layout = ({ location, title, children, sidebar}) => {
         </>
       );
     }
-    else{
+    else {
+      return (
+        <></>
+      );
+    }
+    {/*
+      else{
       // If not homepage, display toc for posts
       return (
         <div className="toc" dangerouslySetInnerHTML={{ __html: sidebar }} />
       );
     }
-    
+      */
+    }
   }
 
   const header = (
@@ -112,12 +119,12 @@ const Layout = ({ location, title, children, sidebar}) => {
           height: `calc(100% - 2em - 2em)`,
           top: 0,
         }}>
-          <SideBar rootPath={rootPath} sidebar={sidebar}/>
+          <SideBar rootPath={rootPath}/>
       </div>
       <div
         style={{
           maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `${rhythm(1.5)} ${rhythm(1 / 2)}`,
           float: `right`,
         }}
       >
