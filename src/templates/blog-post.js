@@ -2,33 +2,16 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import styled from "@emotion/styled"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import TableOfContents from "../components/toc"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
+
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
-  // TableOfContents in blog post
-  const Toc = styled.div`
-    position: sticky;
-    top: 0;
-    font-size: 80%;
-    height: 0px;
-    width: calc(-4em - 340px + 50vw);
-    ul {
-      transform: translateX(calc(-100% - 2em)) translateY(6em);
-      display: inline-block;
-      list-style: none;
-    };
-    ul li {
-      color: inherit;
-    }
-  `
-
-  // sidebar={post.tableOfContents}
   return (
     <Layout location={location} title={siteTitle} >
       <SEO
@@ -55,7 +38,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
             {post.frontmatter.date}
           </p>
         </header>
-        <Toc dangerouslySetInnerHTML={{ __html: post.tableOfContents }}/>
+        {/*<Toc className="Toc" dangerouslySetInnerHTML={{ __html: post.tableOfContents }}/> */}
+        <TableOfContents html={post.tableOfContents}/>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
           style={{

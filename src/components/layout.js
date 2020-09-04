@@ -56,15 +56,7 @@ const Layout = ({ location, title, children}) => {
     }
   `
 
-  const SideBar = ({rootPath, sidebar}) => {
-    {/*
-    const [listItems, setListItems] = useState(null);
-    useEffect(() => {
-        var headingList = document.querySelectorAll('h3');
-        setListItems([...headingList].map(i => <li>{ i.textContent }</li>));
-      }, []
-    );
-    */}
+  const SideBar = ({rootPath}) => {
 
     if (location.pathname === rootPath) {
       return (
@@ -81,15 +73,6 @@ const Layout = ({ location, title, children}) => {
       return (
         <></>
       );
-    }
-    {/*
-      else{
-      // If not homepage, display toc for posts
-      return (
-        <div className="toc" dangerouslySetInnerHTML={{ __html: sidebar }} />
-      );
-    }
-      */
     }
   }
 
@@ -123,9 +106,10 @@ const Layout = ({ location, title, children}) => {
       </div>
       <div
         style={{
-          maxWidth: rhythm(24),
+          maxWidth: rhythm(26),
           padding: `${rhythm(1.5)} ${rhythm(1 / 2)}`,
           float: `right`,
+          margin: `0rem 0rem 0rem 4rem`,
         }}
       >
         <main>{children}</main>
