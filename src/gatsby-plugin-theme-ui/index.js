@@ -1,6 +1,10 @@
+const fontsList = ['"Inter"', 'system-ui', '-apple-system', 
+                'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 
+                '"Helvetica Neue"', 'sans-serif'];
+
 export default {
-    initialColorModeName: 'light',
     useLocalStorage: false,
+    initialColorModeName: 'light',
     colors: {
         text: "#333",
         background: '#fff',
@@ -14,5 +18,22 @@ export default {
             },
         },
     },
+    fonts: {
+        body: fontsList.join(','),
+        heading: 'system-ui',
+    },
+    text: {
+        heading: {
+            fontFamily: 'heading',
+        },
+    },
+    styles: {
+        root: {
+            fontFamily: "body",
+        },
+        h3: {
+            fontFamily: 'system-ui',
+        }
+    }
 }
 

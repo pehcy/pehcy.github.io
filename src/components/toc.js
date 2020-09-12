@@ -1,10 +1,9 @@
 import React, { useEffect, useMemo } from "react"
 import { useActiveHash } from "../components/use-active-hash"
-import {css} from "@emotion/core"
+import { css } from "@emotion/core"
 //import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser'
 
-export default function TableOfContents({ html }) {
-
+function TableOfContents({ html }) {
   //var parseToHTML = require('react-html-parser');
 
   // toc styled css 
@@ -72,3 +71,5 @@ export default function TableOfContents({ html }) {
     <div className="Toc" dangerouslySetInnerHTML={{ __html: html }} css={tocStyle}/>
   )
 }
+
+export default TableOfContents

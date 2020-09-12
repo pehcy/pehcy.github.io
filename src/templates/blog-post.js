@@ -12,6 +12,19 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
+
+  // media queries
+  const breakpoints = [576, 768, 992, 1200];
+  const mq = breakpoints.map(
+    bp => `@media (min-width: ${bp}px)`
+  )
+
+  const mq2 = n => {
+    const bpArray = bpArray.reduce((acc, [name, size]) => {
+      if (n === name) return [...acc, `@media ()`]
+    })
+  }
+
   return (
     <Layout location={location} title={siteTitle} >
       <SEO

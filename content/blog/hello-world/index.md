@@ -19,10 +19,22 @@ Oh, and here's a great quote from this Wikipedia on
 > salted duck eggs have a briny aroma, a gelatin-like egg white and a
 > firm-textured, round yolk that is bright orange-red in color.
 
-```python
-import numpy as np
+```JSX
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-arr = np.array([1, 2, 3, 4])
+class Child extends Component {
+  render() {
+    return (
+        <p className="App-intro">
+          I'm a childish component
+        </p>
+    );
+  }
+}
+
+export default Child;
 ```
 
 ![Chinese Salty Egg](./salty_egg.jpg)

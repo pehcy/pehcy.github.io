@@ -1,21 +1,16 @@
 import Typography from "typography"
 import Wordpress2016 from "typography-theme-wordpress-2016"
+import { render } from "react-dom"
 
-/*
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
-    },
-  }
-}
-*/
-Wordpress2016.overrideThemeStyles = () => ({
+Wordpress2016.overrideThemeStyles = ({rhythm}, styles) => ({
   "a.gatsby-resp-image-link": {
     boxShadow: `none`,
   },
-  body: {
-    fontFamily: 'Inter',
+  "h1,h2,h3,h4,h5,h6": {
+    fontFamily: `inherit`,
+  },
+  blockquote: {
+    borderLeft: `${rhythm(1/5.45)} solid black`,
   },
 });
 
