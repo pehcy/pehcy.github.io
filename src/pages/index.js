@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -10,7 +9,8 @@ const BlogIndex = ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout location={location}>
+      <SEO title="Homepage" />
       <h3>Experience</h3>
       I previously interned as Java and PHP full-stack developer in a startup company for 3 months.
       I'm helping to develop web application and Android mobile apps for 
@@ -18,14 +18,14 @@ const BlogIndex = ({ data, location }) => {
       this period.
       <br/><br/>
       <strong>Softwares:</strong>{` `}
-      Java and Android Studio, PHP, MySQL for back-end, CSS and Laravel Framework for front end. 
+      Java and Android Studio, PHP; UNIX cron job and MySQL for server database, CSS and Laravel Framework for front end. 
 
       <h3>Affiliation</h3>
       I am one of the members of Functional Programming Club Malaysia.
+      <a href={`mailto:cheeyung.peh@gmail.com`} rel="noopener noreferrer nofollow">Contact me</a>
       <br/><br/>
       <hr/>
       <h3>Posts</h3>
-      <SEO title="All posts" />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
