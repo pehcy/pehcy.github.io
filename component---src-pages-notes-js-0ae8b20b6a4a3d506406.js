@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{FWeN:function(t,e,n){"use strict";n.r(e);n("q1tI");var c=n("vrFN"),a=n("Bl7J"),o=n("qKvR");e.default=function(t){t.data;var e=t.location;return Object(o.c)(a.a,{location:e},Object(o.c)(c.a,{title:"Notes"}),Object(o.c)("h3",null,"Self-learning Notes"))}}}]);
+//# sourceMappingURL=component---src-pages-notes-js-0ae8b20b6a4a3d506406.js.map
