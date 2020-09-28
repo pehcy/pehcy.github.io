@@ -64,12 +64,14 @@ const tocStyle = css`
     text-transform: uppercase;
     line-height: 1.2;
   };
+  > ul { padding-left: 0; }
   ul {
     width: 187px;
+
     li{
       display: inline-block;
       list-style: outside none none;
-      
+      margin-bottom: 12.5px;
       a {
         color: #88A0A8;
         box-shadow: none;
@@ -78,6 +80,10 @@ const tocStyle = css`
       .isActive{
         color: black;
       }
+    }
+
+    li:last-child {
+      margin-bottom: 0px;
     }
   };
 `

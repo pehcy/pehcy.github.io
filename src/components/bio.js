@@ -11,8 +11,6 @@ import { FaGithub, FaTwitter, FaLinkedinIn, FaRss, FaDiscord } from "react-icons
 import { IconContext } from "react-icons"
 import Avatar from "../components/avatar"
 
-import { rhythm } from "../utils/typography"
-
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
@@ -62,11 +60,7 @@ const Bio = () => {
   }
 
   return (
-    <div
-      style={{
-        marginBottom: rhythm(2.5),
-      }}
-    >
+    <div>
       <div 
         style={{
           display: `flex`,
