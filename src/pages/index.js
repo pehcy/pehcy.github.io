@@ -1,60 +1,27 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import IntroContext from "../components/Intro"
+import Layout from "../components/Layout"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+import SocialLinks from "../components/SocialLinks"
+import ArticleFeed from "../components/Articles"
+import { Global } from '@emotion/core'
+import { globalStyles } from '../utils/global-css' 
+//import SEO from "../components/SEO"
+//import { rhythm } from "../utils/typography"
 
-const BlogIndex = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMarkdownRemark.edges
+const BlogIndex = ({ data, pageContext }) => {
+  //const siteTitle = data.site.siteMetadata.title
 
   return (
-    <Layout location={location}>
-      <SEO title="Homepage" />
-      <h3>Experience</h3>
-      I previously interned as Java and PHP full-stack developer in a startup company for 3 months.
-      I'm helping to develop web application and Android mobile apps for 
-      cryptocurrency mining (legally) and a real-time airflight booking system during 
-      this period.
-      <br/><br/>
-      <strong>Softwares:</strong>{` `}
-      Java and Android Studio, PHP; UNIX cron job and MySQL for server database, CSS and Laravel Framework for front end. 
-
-      <h3>Affiliation</h3>
-      I am one of the members of Functional Programming Club Malaysia.
-      <a href={`mailto:cheeyung.peh@gmail.com`} rel="noopener noreferrer nofollow">Contact me</a>
-      <br/><br/>
-      <hr/>
-      <h3>Posts</h3>
-      {posts.map(({ node }) => {
-        const title = node.frontmatter.title || node.fields.slug
-        return (
-          <article key={node.fields.slug}>
-            <header>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ 
-                    boxShadow: `none`,
-                  }}                  
-                  to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-            </header>
-            <section>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </section>
-          </article>
-        )
-      })}
+    <Layout>
+      <Global styles={ globalStyles } />
+      <Header/>
+      <IntroContext/>
+      <SocialLinks social={data.site.siteMetadata.social}/>
+      <ArticleFeed edges={data.allMarkdownRemark.edges}/>
+      <Footer/>
     </Layout>
   )
 }
@@ -65,10 +32,22 @@ export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
-        title
+        author {
+          name
+          summary
+        }
+        social {
+          twitter
+          linkedin
+          discord
+          rss
+        }
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC },
+      filter: { frontmatter: { template: { eq: "post" }}}
+      ){
       edges {
         node {
           excerpt

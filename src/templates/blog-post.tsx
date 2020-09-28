@@ -1,41 +1,33 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Layout from "../components/Layout"
 import Bio from "../components/bio"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
-import TableOfContents from "../components/toc"
+import TableOfContents from "../components/Toc"
+import Footer from '../components/Footer'
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+import styled from '@emotion/styled'
+import { Global } from "@emotion/core"
+import { globalStyles } from '../utils/global-css'
 
+const BlogPostTemplate = ({ data, pageContext }) => {
   const post = data.markdownRemark
-  const siteTitle = data.site.siteMetadata.title
+  //const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
-
-  // media queries
-  const breakpoints = [576, 768, 992, 1200];
-  const mq = breakpoints.map(
-    bp => `@media (min-width: ${bp}px)`
-  )
-
-  const mq2 = n => {
-    const bpArray = bpArray.reduce((acc, [name, size]) => {
-      if (n === name) return [...acc, `@media ()`]
-    })
-  }
-
   return (
-    <Layout location={location} title={siteTitle} >
+    <Layout>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <article>
+      <Global styles={ globalStyles }/>
+      <Wrapper>
+      <TableOfContents html={post.tableOfContents}/>
+      <BlogBody>
         <header>
           <h1
             style={{
-              marginTop: rhythm(1),
               marginBottom: 0,
             }}
           >
@@ -43,26 +35,19 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </h1>
           <p
             style={{
-              ...scale(-1 / 5),
               display: `block`,
-              marginBottom: rhythm(1),
             }}
           >
             {post.frontmatter.date}
           </p>
         </header>
-        {/*<Toc className="Toc" dangerouslySetInnerHTML={{ __html: post.tableOfContents }}/> */}
-        <TableOfContents html={post.tableOfContents}/>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr/>
         <footer>
           <Bio />
         </footer>
-      </article>
+      </BlogBody>
+      </Wrapper>
 
       <nav>
         <ul
@@ -90,24 +75,21 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </li>
         </ul>
       </nav>
+      <Footer/>
     </Layout>
   )
 }
 
-export default BlogPostTemplate
-
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        title
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
+      html
       excerpt(pruneLength: 160)
       tableOfContents
-      html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
@@ -115,4 +97,20 @@ export const pageQuery = graphql`
       }
     }
   }
+`
+
+export default BlogPostTemplate
+
+const Wrapper = styled.div`
+  justify-content: center;
+  display: flex;
+`
+
+const BlogBody = styled.article`
+  position: relative;
+  transition: background 0.2s linear;
+  margin: 0px 64px;
+  max-width: 680px;
+  width: 100%;
+  min-width: 0px;
 `

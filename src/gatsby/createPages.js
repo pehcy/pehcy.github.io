@@ -1,13 +1,14 @@
 const path = require('path')
 
-exports.createPages = async ({ graphql, actions: { createPage } }) => {
+module.exports = async ({ graphql, actions: { createPage } }) => {
   
   const result = await graphql(`
     {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
         limit: 1000
-      ){
+      )
+      {
         edges {
           node {
             tableOfContents(
@@ -41,6 +42,21 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       context: { slug: edge.node.fields.slug }
     })
   })
-}
 
-exports.onCreateNode = require('./src/gatsby/on-create-node')
+  {/*
+  posts.forEach((post, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
+
+    createPage({
+      path: post.node.fields.slug,
+      component: blogPost,
+      context: {
+        slug: post.node.fields.slug,
+        //previous,
+        //next,
+      },
+    })
+  })
+*/}
+}

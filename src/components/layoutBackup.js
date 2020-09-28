@@ -2,14 +2,12 @@ import React from "react"
 import { Link } from "gatsby"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
-import Bio from "../components/bio"
-import { rhythm, scale } from "../utils/typography"
+//import { rhythm, scale } from "../utils/typography"
 import { useColorMode } from 'theme-ui'
 import { FaAdjust } from 'react-icons/fa'
 
-const Layout = ({ location, title, children}) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-
+const Layout = ({ location, children}) => {
+  
   const [colorMode, setColorMode] = useColorMode();
   const nextColorMode = colorMode === 'light' ? 'dark' : 'light';
   
@@ -52,29 +50,19 @@ const Layout = ({ location, title, children}) => {
   const sectionStyling = css`
     list-style: none;
     &:a {
+      menuLinks:[
+        {
+          name:'home',
+          link:'/',
+        },
+        {
+          name:'notes',
+          link:'/notes',
+        }
+      ],
       color:red;
     }
   `
-
-  const SideBar = ({rootPath}) => {
-
-    if (location.pathname === rootPath) {
-      return (
-        <>
-          <Bio />
-          <ul css={ sectionStyling }>
-            <Link to="/"><li>Article</li></Link>
-            <Link to="/"><li>Self-learning notes</li></Link>
-          </ul>
-        </>
-      );
-    }
-    else {
-      return (
-        <></>
-      );
-    }
-  }
 
   const header = (
     <>
@@ -93,21 +81,9 @@ const Layout = ({ location, title, children}) => {
       <header css={ headerSticky }>{header}</header>
       <ContentWrapper>
       <div
-        id = "layout-aside__sticky"
         style={{
-          float: `left`,
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          maxWidth: rhythm(12.85),
-          position: `sticky`,
-          height: `calc(100% - 2em - 2em)`,
-          top: 0,
-        }}>
-          <SideBar rootPath={rootPath}/>
-      </div>
-      <div
-        style={{
-          maxWidth: rhythm(26),
-          padding: `${rhythm(1.5)} ${rhythm(1 / 2)}`,
+          //maxWidth: rhythm(26),
+          //padding: `${rhythm(1.5)} ${rhythm(1 / 2)}`,
           float: `right`,
           margin: `0rem 0rem 0rem 4rem`,
         }}

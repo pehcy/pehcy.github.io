@@ -1,42 +1,11 @@
 import React, { useEffect, useMemo } from "react"
-import { useActiveHash } from "../components/use-active-hash"
+import { useActiveHash } from "./use-active-hash"
 import { css } from "@emotion/core"
-import styled from "@emotion/styled"
+
 //import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser'
 
 function TableOfContents({ html }) {
   //var parseToHTML = require('react-html-parser');
-
-  // toc styled css 
-  const tocStyle = css`
-    position: sticky;
-    top: 76px;
-    font-size: 85%;
-    height: 0px;
-    font-weight: 600;
-    > ul::before { 
-      content: "contents";
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      line-height: 1.2;
-    };
-    ul {
-      width: 187px;
-      li{
-        display: inline-block;
-        list-style: outside none none;
-      
-        a {
-          color: #88A0A8;
-          box-shadow: none;
-        }
-
-        .isActive{
-          color: black;
-        }
-      }
-    };
-  `
 
   const targetedIds = useMemo(() => {
     let val = []
@@ -77,3 +46,38 @@ function TableOfContents({ html }) {
 }
 
 export default TableOfContents
+
+const tocStyle = css`
+  position: sticky;
+  top: 76px;
+  font-size: 85%;
+  height: 0px;
+  font-weight: 600;
+  
+  @media (max-width: 960px) {
+    display: none;
+  }
+  
+  > ul::before { 
+    content: "contents";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.2;
+  };
+  ul {
+    width: 187px;
+    li{
+      display: inline-block;
+      list-style: outside none none;
+      
+      a {
+        color: #88A0A8;
+        box-shadow: none;
+      }
+
+      .isActive{
+        color: black;
+      }
+    }
+  };
+`

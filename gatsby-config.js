@@ -1,18 +1,25 @@
 module.exports = {
   siteMetadata: {
+    pathPrefix: '/',
     title: `pehcy's blog`,
     author: {
       name: `pehcy (CheeYung)`,
-      summary: `I am a computer science student who interested in web development and wished to become a software engineer in the future.`,
+      summary: `I am a computer science student who interested in web development and wished to 
+      become a software engineer in the future.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://pehcy.github.io/`,
     social: {
       twitter: `CheeYungPeh`,
+      linkedin: `Chee Yung`,
+      discord: `Chee Yung`,
+      rss: `rss`,
     },
+    copyright: `© All rights reserved | Made with Typescript + GatsbyJS`,
   },
   plugins: [
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-theme-ui`,
     {
       resolve: `gatsby-plugin-disqus`,
@@ -30,8 +37,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content/`,
+        name: `pages`,
       },
     },
     {
@@ -101,13 +108,12 @@ module.exports = {
         icon: `content/assets/gatsby-icon.png`,
       },
     },
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
+    //{
+    //  resolve: `gatsby-plugin-typography`,
+    //  options: {
+    //    pathToConfigModule: `src/utils/typography`,
+    //  },
+    //},
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -2,21 +2,20 @@ import Typography from "typography"
 import Wordpress2016 from "typography-theme-wordpress-2016"
 import { render } from "react-dom"
 
+delete Wordpress2016.googleFonts
+Wordpress2016.headerFontFamily = [`inherit`]
+Wordpress2016.headerWeight = 700
+
 Wordpress2016.overrideThemeStyles = ({rhythm}, styles) => ({
   "a.gatsby-resp-image-link": {
     boxShadow: `none`,
-  },
-  "h1,h2,h3,h4,h5,h6": {
-    fontFamily: `inherit`,
   },
   blockquote: {
     borderLeft: `${rhythm(1/5.45)} solid black`,
   },
 });
 
-delete Wordpress2016.googleFonts
-
-const typography = new Typography(Wordpress2016)
+const typography = new Typography()
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== `production`) {

@@ -20,20 +20,12 @@ export default {
     },
     fonts: {
         body: fontsList.join(','),
-        heading: 'system-ui',
-    },
-    text: {
-        heading: {
-            fontFamily: 'heading',
-        },
+        heading: 'inherit',
     },
     styles: {
         root: {
             fontFamily: "body",
         },
-        h3: {
-            fontFamily: 'system-ui',
-        }
     }
 }
 

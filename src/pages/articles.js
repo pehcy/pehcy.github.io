@@ -1,10 +1,13 @@
 import React from "react"
 import SEO from "../components/seo"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
+import Header from "../components/Header"
 
-const NotesPage = ({data, location}) => {
+const NotesPage = ({data}) => {
+
   return (
-    <Layout location={location}>
+    <Layout>
+      <Header/>
       <SEO title="Notes" />
       <h3>Self-learning Notes</h3>
     </Layout>

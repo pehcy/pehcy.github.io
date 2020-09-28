@@ -7,22 +7,15 @@
 
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { FaGithub, FaTwitter, FaLinkedinIn } from "react-icons/fa"
+import { FaGithub, FaTwitter, FaLinkedinIn, FaRss, FaDiscord } from "react-icons/fa"
 import { IconContext } from "react-icons"
-import Image from "gatsby-image"
+import Avatar from "../components/avatar"
 
 import { rhythm } from "../utils/typography"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-        childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
       site {
         siteMetadata {
           author {
@@ -40,6 +33,7 @@ const Bio = () => {
   const { author, social } = data.site.siteMetadata
   
   const socialIconsBar = (social) => {
+    
     return (
       <IconContext.Provider value={{ style: {fontSize: '23px', color: "#bcc7daa1"}}}>
         <div>
@@ -56,6 +50,12 @@ const Bio = () => {
           <a href={`https://twitter.com/${social.twitter}`} style={{boxShadow: 'none'}}>
             <FaLinkedinIn />
           </a>
+        </div>
+        <div>
+          <a href={``} style={{boxShadow: 'none'}}><FaDiscord /></a>
+        </div>
+        <div>
+          <a href={``} style={{boxShadow: 'none'}}><FaRss /></a>
         </div>
       </IconContext.Provider>
     )
@@ -75,19 +75,7 @@ const Bio = () => {
           boxShadow: `none`
         }}
       >
-        <Image
-          fixed={data.avatar.childImageSharp.fixed}
-          //alt={author.name}
-          style={{
-            marginRight: rhythm(1 / 2),
-            marginBottom: 0,
-            minWidth: 50,
-            borderRadius: `100%`,
-          }}
-          imgStyle={{
-            borderRadius: `50%`,
-          }}
-        />
+        <Avatar/>
         { socialIconsBar(social) }
         </div>
         <div>
