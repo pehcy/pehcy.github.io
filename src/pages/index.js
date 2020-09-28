@@ -1,11 +1,14 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+
 import IntroContext from "../components/Intro"
 import Layout from "../components/Layout"
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import SocialLinks from "../components/SocialLinks"
 import ArticleFeed from "../components/Articles"
+import RepositoriesList from "../components/Repo"
+
 import { Global } from '@emotion/core'
 import { globalStyles } from '../utils/global-css' 
 //import SEO from "../components/SEO"
@@ -21,6 +24,7 @@ const BlogIndex = ({ data, pageContext }) => {
       <IntroContext/>
       <SocialLinks social={data.site.siteMetadata.social}/>
       <ArticleFeed edges={data.allMarkdownRemark.edges}/>
+      <RepositoriesList/>
       <Footer/>
     </Layout>
   )
