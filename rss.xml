@@ -1,18 +1,274 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[pehcy's blog]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://pehcy.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 29 Sep 2020 11:39:27 GMT</lastBuildDate><item><title><![CDATA[About Me]]></title><description><![CDATA[Experience I previously interned as Java and PHP full-stack developer 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[pehcy's blog]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://pehcy.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 01 Oct 2020 09:32:23 GMT</lastBuildDate><item><title><![CDATA[About Me]]></title><description><![CDATA[Experience I previously interned as Java and PHP full-stack developer 
 in a startup company for 3 months. I’m helping to develop 
-web…]]></description><link>https://pehcy.github.io/pages/intro/</link><guid isPermaLink="false">https://pehcy.github.io/pages/intro/</guid><content:encoded>&lt;h2 id=&quot;experience&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#experience&quot; aria-label=&quot;experience permalink&quot; class=&quot;custom-name before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Experience&lt;/h2&gt;
+web…]]></description><link>https://pehcy.github.io/pages/intro/</link><guid isPermaLink="false">https://pehcy.github.io/pages/intro/</guid><content:encoded>&lt;h2 id=&quot;experience&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#experience&quot; aria-label=&quot;experience permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Experience&lt;/h2&gt;
 &lt;p&gt;I previously interned as Java and PHP full-stack developer
 in a startup company for 3 months. I’m helping to develop
 web application and Android apps for cryptocurrency mining
 (legally) and a real-time airflight booking system during
 this period.&lt;/p&gt;
-&lt;h2 id=&quot;affiliation&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#affiliation&quot; aria-label=&quot;affiliation permalink&quot; class=&quot;custom-name before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Affiliation&lt;/h2&gt;
-&lt;p&gt;I am one of the members of Fucntional Programming Club Malaysia.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in…]]></description><link>https://pehcy.github.io/posts/new-beginnings/</link><guid isPermaLink="false">https://pehcy.github.io/posts/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
+&lt;h2 id=&quot;affiliation&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#affiliation&quot; aria-label=&quot;affiliation permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Affiliation&lt;/h2&gt;
+&lt;p&gt;I am one of the members of Fucntional Programming Club Malaysia.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[My Second Post!]]></title><description><![CDATA[Data Science Primer Did you know that “despite its name, salted duck eggs can also be made from
+chicken eggs, though the taste and texture…]]></description><link>https://pehcy.github.io/posts/my-second-post/</link><guid isPermaLink="false">https://pehcy.github.io/posts/my-second-post/</guid><pubDate>Wed, 30 Sep 2020 23:46:37 GMT</pubDate><content:encoded>&lt;h2 id=&quot;data-science-primer&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#data-science-primer&quot; aria-label=&quot;data science primer permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Data Science Primer&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;TableOfContents&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Did you know that “despite its name, salted duck eggs can also be made from
+chicken eggs, though the taste and texture will be somewhat different, and the
+egg yolk will be less rich.”?
+(&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Yeah, I didn’t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[AI Study Notes (Temporary)]]></title><description><![CDATA[Supervised Learning The supervised learning used to label training data. 
+Examples:  Classification(KNN algorithm, Support Vector Machine…]]></description><link>https://pehcy.github.io/posts/ai-notes/</link><guid isPermaLink="false">https://pehcy.github.io/posts/ai-notes/</guid><pubDate>Wed, 30 Sep 2020 22:12:03 GMT</pubDate><content:encoded>&lt;h2 id=&quot;supervised-learning&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#supervised-learning&quot; aria-label=&quot;supervised learning permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Supervised Learning&lt;/h2&gt;
+&lt;p&gt;The supervised learning used to label training data.
+Examples: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Classification(KNN algorithm, Support Vector Machine)&lt;/li&gt;
+&lt;li&gt;Regression (Linear Regression, Lasso, Ridge)&lt;/li&gt;
+&lt;li&gt;Neural Networks (Convolutional Neural Network)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;data-type&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#data-type&quot; aria-label=&quot;data type permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Data Type&lt;/h3&gt;
+&lt;p&gt;The raw data consists of these few types:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Discrete&lt;/strong&gt;: The discrete data only take certain values. Like throwing a dice, you obtained only 1,2,…,6. These
+integers are discrete.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Continuous&lt;/strong&gt;: These data are continuous and can have any real values within an interval.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ordinal&lt;/strong&gt;: You cannot compare such ordinal data. For instance, gender, street name, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Nominal&lt;/strong&gt;: Nominal data allowed you to rank their numerical values. Example: exam ranking.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Interval&lt;/strong&gt;: In interval data, the zero value has its own meaning. For instance, 0 degree celsius
+doesn’t implies no temperature exists. It just used to differentiate whether temperature values
+are positive or negative.&lt;/li&gt;
+&lt;li&gt;Ratio: In ratio data, the zero values doesn’t contain any meaning. For instance, when someone
+getting 0% in a test, and his marks really contain nothing.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&quot;overfitting-underfitting&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#overfitting-underfitting&quot; aria-label=&quot;overfitting underfitting permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Overfitting, Underfitting&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5491d50bee7466b41b0dc3aedd51b745/6bbf7/fitting.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 33.108108108108105%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAABe0lEQVQoz02R6U7DMBCE8/5PwxsgIUDqAZS06UGaq0nqXK1zNXcZdo2E+GGt5dF+ntnV+q5DlpdwvBPCIEBd1yiKAkIIjOOIjvS+71Vt2xbjMMDyfJwziVvT4Ha7qZ6qqpDnOTRuzi4XfOo65vM5XNdFVZbQjR1CEeN+n/6gDQHwfce78YWH5zWyskHzD8gsbWf7SK+Sfqff6goTuSoI6PsBRJwiI22afp0O5G4ae7ztXSx2DrwwwtC1qAjI4JKBRd1guTFhBglk3cI4mDgx7Hwmd3dY7kk5ZWdb06HR+JhtHcRXSmEF0A8Wue/gUs/Tcg1toChMXqzWeP0wsNzZyIsSUSSUI9Y3exOzlYGZvsc09Hg1XIhUoif9Y3vE42yFl7c1zJOAJqWElDlyqmmaqHlcKWZAC+K5lBSfaxQnakYccUlxA3JdlYWa91lEiJMElyyDxkvgY9u22qzv+wS8EjxFGIbqsB5FkdL4nXW+s3Y8WvA8D67jwLIs/ADNGQpJc2hbHwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Fitting&quot;
+        title=&quot;Fitting&quot;
+        src=&quot;/static/5491d50bee7466b41b0dc3aedd51b745/fcda8/fitting.png&quot;
+        srcset=&quot;/static/5491d50bee7466b41b0dc3aedd51b745/12f09/fitting.png 148w,
+/static/5491d50bee7466b41b0dc3aedd51b745/e4a3f/fitting.png 295w,
+/static/5491d50bee7466b41b0dc3aedd51b745/fcda8/fitting.png 590w,
+/static/5491d50bee7466b41b0dc3aedd51b745/6bbf7/fitting.png 716w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The &lt;strong&gt;underfitting&lt;/strong&gt; (The left one) occured when your data is poorly trained (You can observed that the fitting curve is linear),
+and this implies that your model do not “learn” enough. The bias for underfitting is higher, but it has a lower variance.&lt;/p&gt;
+&lt;p&gt;When you run an &lt;strong&gt;overfitting model&lt;/strong&gt; (the right figure), your error (distance from each point to the line) will become
+smaller with more iterations. This is because your fitting curve almost connect up every single
+point of the data (Our task is fitting a model, not connect them together). The bias for underfitting is lower, but it has a higher variance.&lt;/p&gt;
+&lt;p&gt;You can check the cross validate scores of your model. If your tested scores is around 75-80, then it is a right fitting model.
+Otherwise, if the cross validate scores is &lt;strong&gt;extremely high (99-100 percent)&lt;/strong&gt;, then this considered as overfitting.&lt;/p&gt;
+&lt;h3 id=&quot;data-transformation&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#data-transformation&quot; aria-label=&quot;data transformation permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Data Transformation&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Standard Scaler&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Please take note that you cannot directly applied
+&lt;code class=&quot;language-text&quot;&gt;sklearn.preprocessing&lt;/code&gt; on 1D-array (like assignment 2 Q2). You need to define your
+own methods for scaling.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; np
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;standard_scaler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# data is array type&lt;/span&gt;
+  mu &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;mean&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  std &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;std&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; ddof&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; val &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;val &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; mu&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; std&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;MinMax Scaler&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; np
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;minmax_scaler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# data is array type&lt;/span&gt;
+  max_value &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  min_value &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; val &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;val &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; min_value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;max_value &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; min_value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Max Absolute Scaler&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; np
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;max_abs_scaler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# data is array type&lt;/span&gt;
+  max_value &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;abs&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; max_value&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Robust Scaler&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; numpy &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; np
+
+&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;robust_scaler&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;# data is array type&lt;/span&gt;
+  q1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;percentile&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  q2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;percentile&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  q3 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; np&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;percentile&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;75&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; val &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;val &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; q2&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;q3 &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; q1&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;One-hot encoding&lt;/strong&gt;: Convert your data into binary values. Data type: &lt;code class=&quot;language-text&quot;&gt;int&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;bool&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ordinal encoding&lt;/strong&gt;: Convert your data into ordinal integers.
+Data type: &lt;code class=&quot;language-text&quot;&gt;int&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;char&lt;/code&gt; (Char is 1 byte = 8 bits, you can use &lt;code class=&quot;language-text&quot;&gt;Char&lt;/code&gt; if number of classes is less than 8) &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Logistic Regression&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Logistic Regression &lt;strong&gt;is not really about regression&lt;/strong&gt;. Instead, it is a classification,
+and also a binary classifier.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&quot;confusion-matrix&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#confusion-matrix&quot; aria-label=&quot;confusion matrix permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Confusion Matrix&lt;/h3&gt;
+&lt;p&gt;Confusion matrix used to visualize the number of true positive (TP),
+true negative (TN), false positive (FP) and false negative (FN). &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/00f2916d791dbebfcf0b127f3a6a394f/136a2/confusion.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 43.91891891891892%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAACMUlEQVQozz2SWU9TURSF73/UBI0RHiClCYkPTbTEBkETjU8YE4fQB8UAmmBCAq3ghFJMjZRgC53pPN3OlA63xdLmc98r8rByTs45e+111l5KsVikUqlwcnJCV+ugtVtEQkFCAT/1WpXh4Jy63KWyWXIFlXgqZewbrRZat0tL1tPTU2q1GuVyGaVardJsNg1k8lKQKXBwFGTP6yeezpPKF8kcH5MNhchFIqSDQQM5OdM6HbpC2pFVr6/X6yjJZJKgPCgVVV65otjWjrj33oPtrZu5NR/3HSHc0zP8njSxazLxfWKCvUkzfouFmDRpiLpyqYSqFsmKciWRSOD1elHzORa+hbFtRLCt7nN7yc2DD9JgPYDLYiVsNuEeH2d7bIwjsxnf1BQ+j4ey2JUTonQ6TTweQykJe1FVqYlPP57bcVru4rDOGticnmPrzgwvXq7x9PVnntg3mF9YZ97u5NmbLxRLFfr9vuFlu902vFR8os61s0NMzI4+eoj/+gi710b4evUKh6M3CYze4PG7X1g/Zbi19BOTfRvrxjGzH5Okcypnva7hX6PRQJ+Hooo6fTq6wsjmJtHlFUIrKxwuLhJfXSWwvMyWy4vzII3TE8MhcO4ncOxFqVRrkgzNINRToqdFMWIjzPqEmnKpDQbURX5GznvDIb3BkPM/Z5yfdS/R72kGtIvp6ur02Oj2Kfl8nsssCmlJFEfCYVIyfbVQMIrabUHnArJvScOmkb9/yv5nUP/tX4RNbFhnwCA8AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Confusion&quot;
+        title=&quot;Confusion&quot;
+        src=&quot;/static/00f2916d791dbebfcf0b127f3a6a394f/fcda8/confusion.png&quot;
+        srcset=&quot;/static/00f2916d791dbebfcf0b127f3a6a394f/12f09/confusion.png 148w,
+/static/00f2916d791dbebfcf0b127f3a6a394f/e4a3f/confusion.png 295w,
+/static/00f2916d791dbebfcf0b127f3a6a394f/fcda8/confusion.png 590w,
+/static/00f2916d791dbebfcf0b127f3a6a394f/136a2/confusion.png 884w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If we predicted someone being infected by virus, and he really is, then
+this is consider as TP. If we predicted he is healthy and he isn’t infected,
+then this is TN.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;On the other hand, if we wrongly predicted, for instance,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If the test subject is healthy but we wrongly predicted him an infected, then
+this situation is called FP. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The type I and type II errors are not only occured test of hypotheses in statistics.
+They can be occured when performing A/B testing (or split-run testing). A/B testing
+usually applied in marketing or digital products (Mobile apps UI design, apps features, etc.).
+It tests randomly on two customers A and B, then we compare their experience.&lt;/p&gt;
+&lt;h3 id=&quot;roc-curve-auc-curve&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#roc-curve-auc-curve&quot; aria-label=&quot;roc curve auc curve permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;ROC Curve, AUC Curve&lt;/h3&gt;
+&lt;p&gt;The ROC curve defined how good is your model. If your tested score is above the diagonal line,
+then yours should be a robust model.&lt;/p&gt;
+&lt;p&gt;The AUC denotes the area under ROC curve. Its area described how accurate is your True Positive.&lt;/p&gt;
+&lt;h2 id=&quot;unsupervised-learning&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#unsupervised-learning&quot; aria-label=&quot;unsupervised learning permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Unsupervised Learning&lt;/h2&gt;
+&lt;p&gt;The different between unsupervised learning and supervised learning is: supervised learning consists
+of labeled training data and some training examples, which the pattern has been determined. For
+unsupervised learning, we are given the clusters (or group), but the tested data has unidentified
+pattern. &lt;/p&gt;
+&lt;p&gt;Examples: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Clustering (K Means, mixture models)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;dimensionality-reduction&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dimensionality-reduction&quot; aria-label=&quot;dimensionality reduction permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Dimensionality Reduction&lt;/h3&gt;
+&lt;p&gt;To prevent the &lt;strong&gt;curse of dimensionality&lt;/strong&gt;, you should eliminate the unwanted features. The cost
+for training dataset will increase exponentially akin to the number of features. We can manually
+select the features that are highly correlated or applied &lt;strong&gt;principle component analysis (PCA)&lt;/strong&gt;
+on dataset.&lt;/p&gt;
+&lt;h2 id=&quot;genetic-algorithm&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#genetic-algorithm&quot; aria-label=&quot;genetic algorithm permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Genetic Algorithm&lt;/h2&gt;
+&lt;p&gt;Generally, the genetic algorithm involved 3 operations: &lt;strong&gt;crossover&lt;/strong&gt;, &lt;strong&gt;mutation&lt;/strong&gt;, and &lt;strong&gt;selection&lt;/strong&gt;.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;crossover: Swapping two chromosomes (bit-array) randomly.&lt;/li&gt;
+&lt;li&gt;mutation: Flipping the value in gene. For instance: 101 -&gt; 010&lt;/li&gt;
+&lt;li&gt;selection: we choose the best solution and inherits to next step.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Once finished the three operations above, the process will repeat again until the iterations over.&lt;/p&gt;
+&lt;p&gt;In fact, GA algorithm has been depreciated since it cannot effectively solve problem.
+For instance, you’ll found that no hill to climb in &lt;strong&gt;gradient descent&lt;/strong&gt;. Even the random
+tree search algorithm is faster than GA!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Historical fact:&lt;/strong&gt; The 2006 NASA ST5 spacecraft has adopted GA algorithm to create
+the best radiation pattern for &lt;a href=&quot;https://en.wikipedia.org/wiki/Evolved_antenna&quot;&gt;evolved antenna&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;selection-pressure&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#selection-pressure&quot; aria-label=&quot;selection pressure permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Selection Pressure&lt;/h3&gt;
+&lt;p&gt;The fitness function is defined as below:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 183px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/4f9213f422de40c7703c3cfb54588b82/e6f05/fitness_func.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 45.94594594594595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAABZ0lEQVQoz3VSa2+CQBD0//8T/dg2qW21D6uN1lgQRBRoAYmgqBVFQHlNDyKiVie53HK3zM3ObgEEcRwfVvad4Tg+RQzHdZFdZ3mFc8LzlWDruVhaFqhOG9XnV+jGBPXaC94bzT1ZlBNeV5C/as0naH22cXd7A3U8hchReKs34W39k7xkTxX+zmcol8ukBC8txfU8RFH+UBSF0Mdj7Hwf5tQAPxQPJEEQ7OM4LT8l5BgKj5UXmKaJ5WKGp0oV7nYHRZZB0zRYloEgSlBVFZIkQZaVNBZFAepohCHfJ5ascg839hpBGMHQ9fQwDMN0F3gOXzSDTqsBhZSaYGLokL9FFIslMNwAwqCPUrGIxcq+7OFxMzSFKOyymM/MtBH2ygLTpYl/H+j1WNi2g8rDPX5G2uH/f11OjMj8E4c8arU6ujQFVdPAMCzW6zU2jkuM9SEIAhxvdyKkcEnZtfnzyNzljSKjchzv8/8AXpmt8LtEGZ8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Fitness Function&quot;
+        title=&quot;Fitness Function&quot;
+        src=&quot;/static/4f9213f422de40c7703c3cfb54588b82/e6f05/fitness_func.png&quot;
+        srcset=&quot;/static/4f9213f422de40c7703c3cfb54588b82/12f09/fitness_func.png 148w,
+/static/4f9213f422de40c7703c3cfb54588b82/e6f05/fitness_func.png 183w&quot;
+        sizes=&quot;(max-width: 183px) 100vw, 183px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Given that:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;P1’=0.05, P2’=0.11, P3’=0.12, P4’=0.24, P5’=0.48, and beta=0.5.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Use the fitness function above, find P1, P2, P3, P4, and P5.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ANSWER: P1=0.1073, P2=0.1591, P3=0.1662, P4=0.2350, P5=0.3324 (total sum=1).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;neural-network&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#neural-network&quot; aria-label=&quot;neural network permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Neural Network&lt;/h2&gt;
+&lt;p&gt;The neural network has 3 layers: &lt;strong&gt;Input layer&lt;/strong&gt;, &lt;strong&gt;Hidden layer&lt;/strong&gt;, &lt;strong&gt;Output layer&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You might heard of “black box”. The hidden layer is also similar to it.
+The Convolutional Neural Network (CNN) uses multiple hidden layers (or perceptrons).
+Inside these hidden layers, it perform &lt;a href=&quot;https://en.wikipedia.org/wiki/Cross-correlation&quot;&gt;sliding dot products&lt;/a&gt; to
+tensors input.&lt;/p&gt;
+&lt;h3 id=&quot;training-process&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#training-process&quot; aria-label=&quot;training process permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Training Process&lt;/h3&gt;
+&lt;p&gt;The “training” mentioned that the weights are adjusted to
+more accurate output, and the process that adjust these
+weights is known as &lt;strong&gt;backpropagation&lt;/strong&gt;. &lt;/p&gt;
+&lt;h2 id=&quot;conclusion-shameless-plug&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#conclusion-shameless-plug&quot; aria-label=&quot;conclusion shameless plug permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Conclusion: Shameless Plug&lt;/h2&gt;
+&lt;p&gt;In my own opinion: FA calculations might be: (They are easier for calculation)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Confusion matrix (Accuracy score, specificity, etc.)&lt;/li&gt;
+&lt;li&gt;Selection Pressure&lt;/li&gt;
+&lt;li&gt;Neural Network&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(I didn’t prepare much, since the FA is similar to assignment 2)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[New Beginnings]]></title><description><![CDATA[According a funnily until pre-set or arrogant well cheerful Far far away, behind the word mountains, far from the countries Vokalia and…]]></description><link>https://pehcy.github.io/posts/new-beginnings/</link><guid isPermaLink="false">https://pehcy.github.io/posts/new-beginnings/</guid><pubDate>Thu, 28 May 2015 22:40:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;according-a-funnily-until-pre-set-or-arrogant-well-cheerful&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#according-a-funnily-until-pre-set-or-arrogant-well-cheerful&quot; aria-label=&quot;according a funnily until pre set or arrogant well cheerful permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;According a funnily until pre-set or arrogant well cheerful&lt;/h2&gt;
+&lt;p&gt;Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
 Duden flows by their place and supplies it with the necessary regelialia.&lt;/p&gt;
-&lt;h2 id=&quot;on-deer-horse-aboard-tritely-yikes-and-much&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#on-deer-horse-aboard-tritely-yikes-and-much&quot; aria-label=&quot;on deer horse aboard tritely yikes and much permalink&quot; class=&quot;custom-name before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;On deer horse aboard tritely yikes and much&lt;/h2&gt;
+&lt;h2 id=&quot;on-deer-horse&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#on-deer-horse&quot; aria-label=&quot;on deer horse permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;On deer horse&lt;/h2&gt;
 &lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
 Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
 didn’t listen. She packed her seven versalia, put her initial into the belt and
@@ -32,7 +288,7 @@ view back on the skyline of her hometown &lt;em&gt;Bookmarksgrove&lt;/em&gt;, th
 &lt;a href=&quot;http://google.com&quot;&gt;Alphabet Village&lt;/a&gt; and the subline of her own road, the Line
 Lane. Pityful a rhetoric question ran over her cheek, then she continued her
 way. On her way she met a copy.&lt;/p&gt;
-&lt;h3 id=&quot;overlaid-the-jeepers-uselessly-much-excluding&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#overlaid-the-jeepers-uselessly-much-excluding&quot; aria-label=&quot;overlaid the jeepers uselessly much excluding permalink&quot; class=&quot;custom-name before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Overlaid the jeepers uselessly much excluding&lt;/h3&gt;
+&lt;h3 id=&quot;overlaid-the-jeepers&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#overlaid-the-jeepers&quot; aria-label=&quot;overlaid the jeepers permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Overlaid the jeepers&lt;/h3&gt;
 &lt;p&gt;But nothing the copy said could convince her and so it didn’t take long until a
 few insidious Copy Writers ambushed her, made her drunk with
 &lt;a href=&quot;http://google.com&quot;&gt;Longe and Parole&lt;/a&gt; and dragged her into their agency, where
@@ -47,7 +303,7 @@ right at the coast of the Semantics, a large language ocean.&lt;/p&gt;
 mouth. Even the all-powerful Pointing has no control about the blind texts it is
 an almost unorthographic life One day however a small line of blind text by the
 name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/p&gt;
-&lt;h2 id=&quot;according-a-funnily-until-pre-set-or-arrogant-well-cheerful&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#according-a-funnily-until-pre-set-or-arrogant-well-cheerful&quot; aria-label=&quot;according a funnily until pre set or arrogant well cheerful permalink&quot; class=&quot;custom-name before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;According a funnily until pre-set or arrogant well cheerful&lt;/h2&gt;
+&lt;h2 id=&quot;according-a-funnily&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#according-a-funnily&quot; aria-label=&quot;according a funnily permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;According a funnily&lt;/h2&gt;
 &lt;p&gt;The Big Oxmox advised her not to do so, because there were thousands of bad
 Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
 didn’t listen. She packed her seven versalia, put her initial into the belt and
@@ -76,7 +332,7 @@ and dragged her into their agency, where they abused her for their projects
 again and again. And if she hasn’t been rewritten, then they are still using
 her. Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts.&lt;/p&gt;
-&lt;h2 id=&quot;silent-delightfully-including-because-before-one-up-barring-chameleon&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#silent-delightfully-including-because-before-one-up-barring-chameleon&quot; aria-label=&quot;silent delightfully including because before one up barring chameleon permalink&quot; class=&quot;custom-name before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Silent delightfully including because before one up barring chameleon&lt;/h2&gt;
+&lt;h2 id=&quot;silent-delightfully-including-because-before-one-up-barring-chameleon&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#silent-delightfully-including-because-before-one-up-barring-chameleon&quot; aria-label=&quot;silent delightfully including because before one up barring chameleon permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Silent delightfully including because before one up barring chameleon&lt;/h2&gt;
 &lt;p&gt;Separated they live in Bookmarksgrove right at the coast of the Semantics, a
 large language ocean. A small river named Duden flows by their place and
 supplies it with the necessary regelialia. It is a paradisematic country, in
@@ -86,34 +342,21 @@ almost unorthographic life One day however a small line of blind text by the
 name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
 advised her not to do so, because there were thousands of bad Commas, wild
 Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.&lt;/p&gt;
-&lt;h2 id=&quot;wherever-far-wow-thus-a-squirrel-raccoon-jeez-jaguar-this-from-along&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#wherever-far-wow-thus-a-squirrel-raccoon-jeez-jaguar-this-from-along&quot; aria-label=&quot;wherever far wow thus a squirrel raccoon jeez jaguar this from along permalink&quot; class=&quot;custom-name before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Wherever far wow thus a squirrel raccoon jeez jaguar this from along&lt;/h2&gt;
+&lt;h2 id=&quot;wherever-far-wow-thus-a-squirrel-raccoon-jeez-jaguar-this-from-along&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#wherever-far-wow-thus-a-squirrel-raccoon-jeez-jaguar-this-from-along&quot; aria-label=&quot;wherever far wow thus a squirrel raccoon jeez jaguar this from along permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Wherever far wow thus a squirrel raccoon jeez jaguar this from along&lt;/h2&gt;
 &lt;p&gt;She packed her seven versalia, put her initial into the belt and made herself on
 the way. When she reached the first hills of the Italic Mountains, she had a
 last view back on the skyline of her hometown Bookmarksgrove, the headline of
 Alphabet Village and the subline of her own road, the Line Lane. Pityful a
 rhetoric question ran over her cheek, then she continued her way. On her way she
 met a copy.&lt;/p&gt;
-&lt;h2 id=&quot;slapped-cozy-a-that-lightheartedly-and-far&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#slapped-cozy-a-that-lightheartedly-and-far&quot; aria-label=&quot;slapped cozy a that lightheartedly and far permalink&quot; class=&quot;custom-name before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Slapped cozy a that lightheartedly and far&lt;/h2&gt;
+&lt;h2 id=&quot;slapped-cozy-a-that-lightheartedly-and-far&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#slapped-cozy-a-that-lightheartedly-and-far&quot; aria-label=&quot;slapped cozy a that lightheartedly and far permalink&quot; class=&quot;custom-name before&quot;&gt;#&lt;/a&gt;Slapped cozy a that lightheartedly and far&lt;/h2&gt;
 &lt;p&gt;The copy warned the Little Blind Text, that where it came from it would have
 been rewritten a thousand times and everything that was left from its origin
 would be the word “and” and the Little Blind Text should turn around and return
 to its own, safe country. But nothing the copy said could convince her and so it
 didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
 with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[My Second Post!]]></title><description><![CDATA[UseMemo in ReactJS Did you know that “despite its name, salted duck eggs can also be made from
-chicken eggs, though the taste and texture…]]></description><link>https://pehcy.github.io/posts/my-second-post/</link><guid isPermaLink="false">https://pehcy.github.io/posts/my-second-post/</guid><pubDate>Wed, 06 May 2015 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;UseMemo in ReactJS&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;TableOfContents&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Did you know that “despite its name, salted duck eggs can also be made from
-chicken eggs, though the taste and texture will be somewhat different, and the
-egg yolk will be less rich.”?
-(&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;Wikipedia Link&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Yeah, I didn’t either.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://pehcy.github.io/posts/hello-world/</link><guid isPermaLink="false">https://pehcy.github.io/posts/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
+for their projects again and again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://pehcy.github.io/posts/hello-world/</link><guid isPermaLink="false">https://pehcy.github.io/posts/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
 &lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
 &lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
 &lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
