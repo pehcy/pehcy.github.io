@@ -3,6 +3,32 @@ import { Container } from '../Container'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from '@emotion/styled'
 
+const githubQuery = graphql`
+{
+  github {
+    viewer {
+      repositories (first: 10) {
+        edges {
+          node {
+            id
+            name
+            description
+            forkCount
+            primaryLanguage {
+              name
+            }
+            stargazers {
+              totalCount
+            }
+            url
+          }
+        }
+      }
+    }
+  }
+}
+`
+
 const RepositoriesList = () => {
   const { 
     github:{
@@ -10,36 +36,18 @@ const RepositoriesList = () => {
         repositories: { edges },
       },
     },
-  } = useStaticQuery(
-    graphql`
-    {
-      github {
-        viewer {
-          repositories (first: 8) {
-            edges {
-              node {
-                id
-                name
-                url
-                description
-                forkCount
-              }
-            }
-          }
-        }
-      }
-    }
-    `
-  )
+  } = useStaticQuery(githubQuery)
 
   return (
     <Container>
+      <h2>Repositories</h2>
       <Grid>
         { edges.map(({ node }) => (
             <a href={node.url} target="_blank" rel="noopener noreferrer">
               <GridItem>
                 <GridContent>
                 <h3>{ node.name }</h3>
+                <p>{node.description}</p>
                 </GridContent>
               </GridItem>
             </a>
@@ -76,5 +84,5 @@ const GridItem = styled.div`
 `
 
 const GridContent = styled.div`
-  padding: 1rem 0;
+  padding: 1rem 1rem;
 `
