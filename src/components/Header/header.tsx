@@ -9,7 +9,7 @@ const Header = () => {
       <WrapperOverlay>
         <Container>
         <AnchorContainer>
-        <a href="" rel="noopener noreferrer" target="_blank">GitHub</a>
+        <a href="https://github.com/pehcy" rel="noopener noreferrer" target="_blank">GitHub</a>
         <Link to="/">Home</Link>
         <Link to="/articles">Articles</Link>
         </AnchorContainer>

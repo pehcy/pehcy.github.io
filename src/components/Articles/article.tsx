@@ -39,16 +39,13 @@ const ArticleFeed = ({edges}) => {
   return (
     <Container>
     <Grid>
-    { edges.map(({ node }) =>{
+    { edges.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
+          <Link to={node.fields.slug}>
           <GridItem>
           <GridContent>
-            <h3 style={{ marginBottom: 10, }}>
-              <Link style={{ boxShadow: `none`,}} to={node.fields.slug}>
-                { title }
-              </Link>
-            </h3>
+            <h3 style={{ marginBottom: 10, }}>{title}</h3>
             <small>{ node.frontmatter.date }</small>
             <section>
               <p
@@ -59,9 +56,23 @@ const ArticleFeed = ({edges}) => {
             </section>
           </GridContent>
           </GridItem>
+          </Link>
         )
       })
     }
+    </Grid>
+    <Grid>
+      <a href="https://observablehq.com/@pehcy/monte-carlo-simulation-serving-time-in-bank" target="_blank" rel="noopener noreferrer">
+      <GridItem>
+        <GridContent>
+          <h3>Monte-Carlo Simulation: Serving Time in Bank</h3>
+          <small>August 30, 2020</small>
+          <section>
+            <p>Visualize the serving time of a poorly maintained bank in Observable Notebook.</p> 
+          </section>
+        </GridContent>
+      </GridItem>
+      </a>
     </Grid>
     </Container>
   )

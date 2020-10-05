@@ -1,3 +1,5 @@
+const config = require('./src/gatsby/data/config')
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -5,21 +7,14 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     pathPrefix: '/',
-    title: `pehcy's blog`,
-    author: {
-      name: `pehcy (CheeYung)`,
-      summary: `I am a computer science student who interested in web development and wished to 
-      become a software engineer in the future.`,
-    },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://pehcy.github.io/`,
-    social: {
-      twitter: `CheeYungPeh`,
-      linkedin: `Chee Yung`,
-      discord: `Chee Yung`,
-      rss: `rss`,
-    },
-    copyright: `© All rights reserved | Made with Typescript + GatsbyJS`,
+    title: config.siteTitle,
+    author: config.author,
+    description: config.defaultDescription,
+    siteUrl: config.url,
+    canonical: config.canonicalURL,
+    social: config.social,
+    copyright: config.defaultCopyright,
+    disqusShortname: config.disqus,
   },
   plugins: [
     `gatsby-plugin-emotion`,
@@ -78,8 +73,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
-              offset: `50`,
+              offsetY: `50`,
               removeAccents: true,
+              icon: '#',
               maintainCase: false,
               className: `custom-name`,
               elements: [`h2`, `h3`],

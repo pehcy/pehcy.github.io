@@ -20,14 +20,14 @@ const IntroContext = () => {
       }
     `
   )
-  const hero : authorProps = data.site.siteMetadata.author
+  const author : authorProps = data.site.siteMetadata.author
 
   return (
     <Wrapper>
       <IntroWrapper>
       <DetailsContainer>
         <Container>
-        <h1 className="Hero__summary" dangerouslySetInnerHTML={{ __html:hero.summary}}/>
+        <h1 className="Hero__summary" dangerouslySetInnerHTML={{ __html:author.summary}}/>
         <Button>
           Resume
         </Button>

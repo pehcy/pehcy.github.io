@@ -1,7 +1,5 @@
 import React from 'react'
 import { FaGithub, FaTwitter, FaLinkedinIn, FaRss, FaDiscord } from "react-icons/fa"
-import { IconContext } from 'react-icons/lib'
-import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 
 const icons = {
@@ -16,10 +14,10 @@ const SocialLinks = ({ social }) => (
   <SocialWrapper>
     <Wrapper>
     <SocialInnerGrid>
-      { Object.entries(social).map(([key, value]) => {
+      { Object.entries(social).map(([key, value] : [string, string]) => {
           return (
             <BtnIconRounded>
-            <a href="" >
+            <a href={ value } target='_blank' rel='noopener noreferrer'>
               { icons[key] }
             </a>
             </BtnIconRounded>
@@ -40,7 +38,13 @@ const SocialInnerGrid = styled.div`
   gap: 1.5rem;
   margin-left: auto;
   margin-right: 0;
-  pointer-events: auto; 
+  pointer-events: auto;
+
+  @media (max-width: 680px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 `
 
 const BtnIconRounded = styled.div`
@@ -57,6 +61,11 @@ const SocialWrapper = styled.div`
   top: 32.5%;
   margin-right: 70px;
   pointer-events: none;
+
+  @media (max-width: 680px) {
+    position: relative;
+    height: 3rem;
+  }
 `
 const Wrapper = styled.div`
   margin: 0px 64px;

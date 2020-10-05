@@ -2,11 +2,7 @@ import React, { useEffect, useMemo } from "react"
 import { useActiveHash } from "./use-active-hash"
 import { css } from "@emotion/core"
 
-//import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser'
-
 function TableOfContents({ html }) {
-  //var parseToHTML = require('react-html-parser');
-
   const targetedIds = useMemo(() => {
     let val = []
     if(typeof document !== 'undefined'){
@@ -58,7 +54,7 @@ const tocStyle = css`
     display: none;
   }
   
-  > ul::before { 
+  ::before { 
     content: "contents";
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -71,14 +67,18 @@ const tocStyle = css`
     li{
       display: inline-block;
       list-style: outside none none;
-      margin-bottom: 12.5px;
+      padding-top: 16px;
       a {
         color: #88A0A8;
         box-shadow: none;
       }
 
+      p {
+        margin: 0;
+      }
+
       .isActive{
-        color: black;
+        color: #111;
       }
     }
 

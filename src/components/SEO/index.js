@@ -31,7 +31,7 @@ const SEO = ({
   return ( 
     <Helmet
       title={ title }
-      titleTemplate={ site.siteMetadata?.title ? title : null }
+      //titleTemplate={ site.siteMetadata?.title ? title : null }
       htmlAttributes = {{ lang, }}
       meta={[
         { name: 'description', content: metaDescription },
@@ -46,7 +46,7 @@ const SEO = ({
     > 
       <script type="application/ld+json">{ siteSchema }</script>
       { site.siteMetadata.canonical && 
-        <link rel="canonical" href={site.siteMetadata.canonical }/>
+        <link rel="canonical" href={ site.siteMetadata.canonical }/>
       }
     </Helmet>
   )
@@ -55,7 +55,6 @@ const SEO = ({
 SEO.defaultProps = {
   lang: 'en',
   meta: [],
-  title: '',
   description: '',
 }
 

@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import Bio from "../components/bio"
 import SEO from "../components/seo"
 import TableOfContents from "../components/Toc"
+import Header from "../components/Header"
 import Footer from '../components/Footer'
 
 import styled from '@emotion/styled'
@@ -17,11 +18,14 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      {/*
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      */}
       <Global styles={ globalStyles }/>
+      <Header/>
       <Wrapper>
       <TableOfContents html={post.tableOfContents}/>
       <BlogBody>
@@ -41,7 +45,7 @@ const BlogPostTemplate = ({ data, pageContext }) => {
             {post.frontmatter.date}
           </p>
         </header>
-        <section dangerouslySetInnerHTML={{ __html: post.html }} />
+        <section dangerouslySetInnerHTML={{ __html: post.html }}/>
         <hr/>
         <footer>
           <Bio />
@@ -113,4 +117,8 @@ const BlogBody = styled.article`
   max-width: 680px;
   width: 100%;
   min-width: 0px;
+
+  a {
+    color: #4361ee;
+  }
 `

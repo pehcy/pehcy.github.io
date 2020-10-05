@@ -12,6 +12,7 @@ export const IntroWrapper = styled.div`
 
   @media (max-width: 960px) {
     flex-direction: column;
+    padding: 1rem 0;
   }
 `
 

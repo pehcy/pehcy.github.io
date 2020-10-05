@@ -20,6 +20,7 @@ const githubQuery = graphql`
             stargazers {
               totalCount
             }
+            openGraphImageUrl
             url
           }
         }
