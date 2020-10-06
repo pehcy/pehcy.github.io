@@ -47,23 +47,19 @@ export default function RepositoriesList() {
             <GridItem>
               <a href={node.url} target="_blank" rel="noopener noreferrer">
                 <Card>
-                <GridContent>
-                <h3>{ node.name }</h3>
-                <p>{node.description}</p>
-                </GridContent>
+                  <GridContent>
+                    <h3>{ node.name }</h3>
+                    <p>{node.description}</p>
+                  </GridContent>
                 </Card>
-                </a>
-              </GridItem>
+              </a>
+            </GridItem>
           ))
         }
       </Grid>
     </Container>
   )
 }
-
-const Wrapper = styled.div`
-  padding: 2rem 0;
-`
 
 const Grid = styled.div`
   display: grid;
