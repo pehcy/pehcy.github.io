@@ -30,7 +30,7 @@ const githubQuery = graphql`
 }
 `
 
-const RepositoriesList = () => {
+export default function RepositoriesList() {
   const { 
     github:{
       viewer: {
@@ -44,22 +44,26 @@ const RepositoriesList = () => {
       <h2>Repositories</h2>
       <Grid>
         { edges.map(({ node }) => (
-            <a href={node.url} target="_blank" rel="noopener noreferrer">
-              <GridItem>
+            <GridItem>
+              <a href={node.url} target="_blank" rel="noopener noreferrer">
+                <Card>
                 <GridContent>
                 <h3>{ node.name }</h3>
                 <p>{node.description}</p>
                 </GridContent>
+                </Card>
+                </a>
               </GridItem>
-            </a>
           ))
         }
       </Grid>
     </Container>
   )
-} 
+}
 
-export default RepositoriesList 
+const Wrapper = styled.div`
+  padding: 2rem 0;
+`
 
 const Grid = styled.div`
   display: grid;
@@ -84,6 +88,11 @@ const GridItem = styled.div`
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, .11);
 `
 
+const Card = styled.div`
+  padding: 1rem;
+  height: 100%;
+`
+
 const GridContent = styled.div`
-  padding: 1rem 1rem;
+  padding: 1rem 0;
 `
