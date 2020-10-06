@@ -1,5 +1,5 @@
 import React from "react"
-import SEO from "../components/seo"
+import SEO from "../components/SEO"
 import Layout from "../components/Layout"
 import Header from "../components/Header"
 import ArticleFeed from "../components/Articles"

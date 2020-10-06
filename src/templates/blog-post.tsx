@@ -1,8 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
-import Bio from "../components/bio"
-import SEO from "../components/seo"
+//import Bio from "../components/Bio"
+import SEO from "../components/SEO"
 import TableOfContents from "../components/Toc"
 import Header from "../components/Header"
 import Footer from '../components/Footer'
@@ -18,12 +18,10 @@ const BlogPostTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      {/*
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      */}
       <Global styles={ globalStyles }/>
       <Header/>
       <Wrapper>
