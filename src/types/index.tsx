@@ -12,3 +12,7 @@ export type authorProps = {
   name:     string,
   summary?: string,
 }
+
+export type iconProps = {
+  image?:  string;
+}

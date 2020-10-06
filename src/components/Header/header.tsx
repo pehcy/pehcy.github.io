@@ -2,6 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import { Container } from '../Container'
+import DarkModeToggle from './toggle'
 
 const Header = () => {
   return (
@@ -12,6 +13,7 @@ const Header = () => {
         <a href="https://github.com/pehcy" rel="noopener noreferrer" target="_blank">GitHub</a>
         <Link to="/">Home</Link>
         <Link to="/articles">Articles</Link>
+        <DarkModeToggle/>
         </AnchorContainer>
         </Container>
       </WrapperOverlay>

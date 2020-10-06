@@ -11,13 +11,11 @@ export default function DarkModeToggle() {
   }
 
   return (
-    <>
-      <button
-        onClick = { toggleTheme }
-        aria-label={ isLight ? 'Light mode activated' : 'Dark mode activated'} 
-      >
-        Toggle
-      </button>
-    </>
+    <button
+      onClick = { toggleTheme }
+      aria-label={ isLight ? 'Light mode activated' : 'Dark mode activated'} 
+    >
+      Toggle
+    </button>
   )
 }

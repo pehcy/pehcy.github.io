@@ -2,9 +2,14 @@ const fontsList = ['"Inter"', 'system-ui', '-apple-system',
                 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 
                 '"Helvetica Neue"', 'sans-serif'];
 
+const colorTransition = 
+    'background 0.25s var(--ease-in-out-quad), color 0.25s var(--ease-in-out-quad)'
+
 export default {
     useLocalStorage: false,
+    useCustomProperties: true,
     initialColorModeName: 'light',
+    colorModeTransition: colorTransition,
     colors: {
         text: "#333",
         background: '#fff',
