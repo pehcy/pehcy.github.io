@@ -1,7 +1,8 @@
 import React from 'react'
+import { BtnWrapper,  DayNight, IconLayer } from './styles'
 import { useColorMode } from 'theme-ui'
 
-export default function DarkModeToggle() {
+export default function NightModeToggle() {
   const [colorMode, setColorMode] = useColorMode()
   const isLight = colorMode === 'light'
 
@@ -11,11 +12,12 @@ export default function DarkModeToggle() {
   }
 
   return (
-    <button
+    <BtnWrapper
       onClick = { toggleTheme }
       aria-label={ isLight ? 'Light mode activated' : 'Dark mode activated'} 
     >
-      Toggle
-    </button>
+      <DayNight isLight={ isLight }/>
+      <IconLayer isLight={ isLight }/>
+    </BtnWrapper>
   )
 }
