@@ -1,9 +1,9 @@
 {
   "name": "gatsby-starter-blog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "A simple frontend for my website",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "pehcy <cheeyung.peh@gmail.com>",
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
@@ -49,15 +49,21 @@
     "prettier": "2.0.5",
     "typescript": "^4.0.3"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/pehcy/pehcy.github.io#readme",
   "keywords": [
-    "gatsby"
+    "blog",
+    "website",
+    "notes",
+    "minimalistic-theme",
+    "developer-portfolio",
+    "gatsby-site",
+    "reactjs"
   ],
-  "license": "0BSD",
+  "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/pehcy/pehcy.github.io"
   },
   "scripts": {
     "build": "gatsby build",
