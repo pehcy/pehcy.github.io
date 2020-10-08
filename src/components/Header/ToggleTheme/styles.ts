@@ -80,6 +80,6 @@ export const IconLayer = styled.div<themeProps>`
   border: 0;
   background: ${p => p.theme.colors.background};
   transform: translate(${p => (p.isLight ? "14px, -14px" : "0, 0")});
-  transition: ${p => p.theme.colors.primary}, transform 0.45s ease;
+  transition: ${p => p.theme.styles.root}, transform 0.45s ease;
   opacity: ${p => (p.isLight ? 0 : 1)};
 `

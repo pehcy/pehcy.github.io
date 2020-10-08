@@ -23,6 +23,13 @@ export default merge(baseTheme, {
                 primary: '#3cf',
             },
         },
+    },
+    styles: {
+        root: {
+            transitionProperty: 'background',
+            transitionTimingFunction: 'var(--ease-in-out-quad)',
+            transitionDuration: '.45s'
+        }
     }
 })
 
