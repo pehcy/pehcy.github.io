@@ -1,16 +1,31 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import { Container } from '../Container'
 import NightModeToggle from './ToggleTheme'
 
 const Header = () => {
+  const { site } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          author {
+            contacts {
+              github
+            }
+          }
+        }
+      }  
+    }
+  `)
+  const githubLink = site.siteMetadata.author.contacts.github
+
   return (
     <Wrapper>
       <WrapperOverlay>
         <Container>
         <AnchorContainer>
-        <a href="https://github.com/pehcy" rel="noopener noreferrer" target="_blank">GitHub</a>
+        <a href={ githubLink } rel="noopener noreferrer" target="_blank">GitHub</a>
         <Link to="/">Home</Link>
         <Link to="/articles">Articles</Link>
         <NightModeToggle/>
