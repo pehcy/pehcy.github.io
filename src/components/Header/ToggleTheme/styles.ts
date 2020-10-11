@@ -34,20 +34,6 @@ export const DayNight = styled.div<themeProps>`
   transition: all 0.45s ease;
   overflow: ${p => (p.isLight ? "visible" : "hidden")};
 
-  &::after {
-    content: '';
-    position: absolute;
-    right: -9px;
-    top: -9px;
-    height: 24px;
-    width: 24px;
-    border: 2px solid ${p => p.theme.colors.primary};
-    border-radius: 50%;
-    transform: translate(${p => (p.isLight ?  "0, 0" : "14px, -14px")});
-    transition: transform 0.45s ease;
-    opacity: ${p => (p.isLight ? 0 : 1 )};
-  }
-
   &::before {
     content: '';
     width: 8px;
@@ -67,6 +53,20 @@ export const DayNight = styled.div<themeProps>`
                 -15px -15px 0 ${p => p.theme.colors.primary};
     transform: scale(${p => (p.isLight ? 1 : 0)});
     transition: all 0.35s ease;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    right: -9px;
+    top: -9px;
+    height: 24px;
+    width: 24px;
+    border: 2px solid ${p => p.theme.colors.primary};
+    border-radius: 50%;
+    transform: translate(${p => (p.isLight ?  "0, 0" : "14px, -14px")});
+    transition: transform 0.45s ease;
+    opacity: ${p => (p.isLight ? 0 : 1 )};
   }
 `
 

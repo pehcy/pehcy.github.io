@@ -1,13 +1,12 @@
-import baseTheme from './'
-import { merge } from 'theme-ui'
+import { merge } from 'lodash'
 
 const fontsList = ['"Inter"', 'system-ui', '-apple-system', 
                 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 
                 '"Helvetica Neue"', 'sans-serif'];
 
-const colorTransition = 'background 0.25s var(--ease-in-out-quad), color 0.25s var(--ease-in-out-quad)'
+//const colorTransition = 'background 0.25s var(--ease-in-out-quad), color 0.25s var(--ease-in-out-quad)'
 
-export default merge(baseTheme, {
+export default merge({
     useLocalStorage: false,
     useCustomProperties: true,
     initialColorModeName: 'light',
@@ -19,7 +18,8 @@ export default merge(baseTheme, {
         modes: {
             dark: {
                 text: '#fff',
-                background: '#060606',
+                //background: '#060606',
+                background: '#111216',
                 primary: '#3cf',
             },
         },
