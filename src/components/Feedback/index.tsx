@@ -4,13 +4,15 @@ import axios from 'axios'
 
 interface feedbackProps {
   fullname: string;
-  email: string;
-  message: string;
-  hidden?: string;
+  email:    string;
+  message:  string;
+  hidden?:  string;
 }
 
 export default function FeedbackForm() {
   const [isRobot, setIsRobot] = useState<boolean>(false)
+  const [fieldError, setFieldError] = useState<object>({})
+
   const [inputs, setInputs] = useState<feedbackProps>({
     fullname: '',
     email: '',
@@ -27,9 +29,20 @@ export default function FeedbackForm() {
     setIsRobot(!setInputs['hidden'].value.length)
   }
 
+  const validateScheme = {
+    fullname: val => !!val,
+    email: val => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val),
+    message: msg => !!msg,
+    hidden: val => !val
+  }
+
+  function isValid() : boolean {
+    const errors = Object.keys(inputs).filter(attr => !validateScheme[attr](inputs[attr]))
+    return errors.hasOwnProperty('key')
+  }
+
   useEffect(() => {
     if (Object.keys()){
-
     }
   }, [inputs])
 
@@ -42,7 +55,7 @@ export default function FeedbackForm() {
           url: "https://formspree.io/YOUR_FORM_ID",
           data: JSON.stringify(inputs),
         })
-        .then()
+        .then(res => console.log(res))
         setTimeout(() => resetForm(), 4000)
       }
       catch(e){
@@ -68,6 +81,7 @@ export default function FeedbackForm() {
           <input
             id="email"
             name="email"
+            onChange={ handleOnChange }
           />
           <label htmlFor="message">Message</label>
           <textarea
@@ -75,6 +89,7 @@ export default function FeedbackForm() {
             value = { inputs.message }
             onChange={ handleOnChange }
           />
+          <input type="hidden" id="_gotcha"/>
         </fieldset>
       </form>
     </Container>
