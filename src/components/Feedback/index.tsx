@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Container } from '../Container'
+import { author } from '../../gatsby/data/config'
 import axios from 'axios'
 
 interface feedbackProps {
@@ -36,23 +37,25 @@ export default function FeedbackForm() {
     hidden: val => !val
   }
 
-  function isValid() : boolean {
+  const isValid = () : boolean => {
     const errors = Object.keys(inputs).filter(attr => !validateScheme[attr](inputs[attr]))
+    setFieldError(prev => ({ ...prev, ...errors}))
     return errors.hasOwnProperty('key')
   }
 
   useEffect(() => {
-    if (Object.keys()){
+    if (Object.keys(fieldError).length > 0){
+      isValid()
     }
   }, [inputs])
 
   async function handleOnSubmit(event: React.FormEvent<HTMLElement>){
     event.preventDefault()
-    if(!setIsRobot) {
+    if(isValid() || !setIsRobot) {
       try{
         await axios({
           method: "POST",
-          url: "https://formspree.io/YOUR_FORM_ID",
+          url: `https://formspree.io/${author.contacts.email}`,
           data: JSON.stringify(inputs),
         })
         .then(res => console.log(res))
@@ -64,7 +67,7 @@ export default function FeedbackForm() {
     }
   }
 
-  const resetForm = () => {
+  function resetForm() {
     Object.keys(setInputs).forEach(attr => setInputs[attr] = '')
   }
 
@@ -77,10 +80,10 @@ export default function FeedbackForm() {
             id="fullname"
             type="text"
           />
-          <label htmlFor="email">Email</label>
+          <label htmlFor="_replyto">Email</label>
           <input
-            id="email"
-            name="email"
+            id="_replyto"
+            name="_replyto"
             onChange={ handleOnChange }
           />
           <label htmlFor="message">Message</label>
