@@ -7,7 +7,7 @@ interface feedbackProps {
   fullname: string;
   email:    string;
   message:  string;
-  hidden?:  string;
+  _gotcha:  string;
 }
 
 export default function FeedbackForm() {
@@ -18,7 +18,7 @@ export default function FeedbackForm() {
     fullname: '',
     email: '',
     message: '',
-    hidden: '',
+    _gotcha: '',
   })
 
   function handleOnChange(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -27,17 +27,17 @@ export default function FeedbackForm() {
       ...prev,
       [event.target.id]: event.target.value,
     }))
-    setIsRobot(!setInputs['hidden'].value.length)
+    //setIsRobot(!setInputs['hidden'].value.length)
   }
 
   const validateScheme = {
     fullname: val => !!val,
     email: val => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val),
     message: msg => !!msg,
-    hidden: val => !val
+    _gotcha: val => !val
   }
 
-  const isValid = () : boolean => {
+  const isValid = () => {
     const errors = Object.keys(inputs).filter(attr => !validateScheme[attr](inputs[attr]))
     setFieldError(prev => ({ ...prev, ...errors}))
     return errors.hasOwnProperty('key')
@@ -51,7 +51,7 @@ export default function FeedbackForm() {
 
   async function handleOnSubmit(event: React.FormEvent<HTMLElement>){
     event.preventDefault()
-    if(isValid() || !setIsRobot) {
+    if(isValid() || !isRobot) {
       try{
         await axios({
           method: "POST",
@@ -79,20 +79,31 @@ export default function FeedbackForm() {
           <input
             id="fullname"
             type="text"
+            value = { inputs.fullname }
+            onChange={ handleOnChange }
           />
           <label htmlFor="_replyto">Email</label>
           <input
-            id="_replyto"
+            id="email"
             name="_replyto"
+            value = { inputs.email }
             onChange={ handleOnChange }
           />
           <label htmlFor="message">Message</label>
           <textarea
+            name="message"
+            id="message"
             placeholder="Leave your message here..."
             value = { inputs.message }
             onChange={ handleOnChange }
           />
-          <input type="hidden" id="_gotcha"/>
+          <input type="hidden" id="_gotcha" name="_gotcha" 
+            value={ inputs._gotcha }
+            onChange={ handleOnChange } 
+          />
+          <button type="submit">
+            Submit
+          </button>
         </fieldset>
       </form>
     </Container>
