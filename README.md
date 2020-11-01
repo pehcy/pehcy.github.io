@@ -15,14 +15,14 @@ GitHub page.
 - Disqus Comment Session for posts
 - RSS feed
 - SEO helmet with Metadata and Schema.org
-- Formik contact form connected to formspree
+- ~~Formik contact form connected to formspree~~
 
 ## Built with
 ---
 
 This theme built with the following libraries
 - Dotenv
-- Formik
+- ~~Formik~~
 - Gatsby
 - React + GraphQL
 - Theme UI
@@ -34,13 +34,13 @@ This theme built with the following libraries
 
 In `gatsby-cli`, run this command to have a quick start
 
-  ```bash
+  ```shell
   gatsby new gatsby-mentos https://github.com/pehcy/gatsby-theme-mentos
   ```
 
 You can also `git clone` this starter:
   
-  ```bash
+  ```shell
   git clone git@github.com:pehcy/gatsby-theme-mentos.git gatsby-mentos
   cd gatsby-mentos
   yarn
