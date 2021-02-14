@@ -1,10 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 ![gatsby](./gatsby-light.png)
 
-<h1 align="center">
-  Gatsby-theme-mentos
-</h1>
-
 A minimal styling theme built for Gatsby blog. I intended to build it for my own 
 GitHub page.
 
@@ -27,26 +23,6 @@ This theme built with the following libraries
 - React + GraphQL
 - Theme UI
 - TypeScript
-
-
-## Getting started
----
-
-In `gatsby-cli`, run this command to have a quick start
-
-  ```shell
-  gatsby new gatsby-mentos https://github.com/pehcy/gatsby-theme-mentos
-  ```
-
-You can also `git clone` this starter:
-  
-  ```shell
-  git clone git@github.com:pehcy/gatsby-theme-mentos.git gatsby-mentos
-  cd gatsby-mentos
-  yarn
-  ```
-
-If you managed to deploy to your GitHub page, use `npm run deploy` instead.
 
 ## Some Requirements
 Before 
