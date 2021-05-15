@@ -5,7 +5,6 @@ import { MDXProvider } from '@mdx-js/react'
 
 const BlogPostTemplate = ({data, pageContext}) => {
   const { frontmatter, body, excerpt, tableOfContents } = data.mdx
-  console.info("toc: ", tableOfContents)
 
   return (
     <>

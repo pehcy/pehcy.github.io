@@ -1,29 +1,42 @@
-import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import Layout from '../components/layout'
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
-    <Seo title="Home" />
-    <h1 className="text-red-500">Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <div>
+      {
+        data.allMdx.nodes.map(({excerpt, frontmatter, fields}) => (
+          <Link to={fields.slug}>
+            <h1>{ frontmatter.title }</h1>
+            <p>{ frontmatter.date }</p>
+            <p>{ excerpt }</p>
+          </Link>
+        ))
+      }
+    </div>
   </Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  query {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { published: { eq: true } }}
+    ) {
+      nodes {
+        id
+        excerpt(pruneLength: 160)
+        frontmatter {
+          title
+          date
+        }
+        fields {
+          slug
+        }
+      }
+    }
+  }
+`
