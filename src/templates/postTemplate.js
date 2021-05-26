@@ -1,26 +1,34 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import Img from 'gatsby-image'
+import Header from '../components/Header'
+import Articles from '../components/Articles'
 import { MDXProvider } from '@mdx-js/react'
 
 const BlogPostTemplate = ({data, pageContext}) => {
   const { frontmatter, body, excerpt, tableOfContents } = data.mdx
+  let featuredImgFluid = frontmatter.featuredImage.childImageSharp.fluid
 
   return (
     <>
-      <h1>{frontmatter.title}</h1>
-      <MDXRenderer>{body}</MDXRenderer>
-      <hr/>
-      <ul>
-      {
-        tableOfContents.items.map(i => (
-            <li>
-              {i.title}
-            </li>
+      <Header />
+      <Articles>
+        <h1>{frontmatter.title}</h1>
+        <Img fluid={featuredImgFluid} />
+        <MDXRenderer>{body}</MDXRenderer>
+        <hr/>
+        <ul>
+        {
+          tableOfContents.items.map(i => (
+              <li>
+                {i.title}
+              </li>
+            )
           )
-        )
-      }
-      </ul>
+        }
+        </ul>
+      </Articles>
     </>
   )
 }
@@ -38,6 +46,13 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         date(formatString: "YYYY MM DD")
       }
     }
