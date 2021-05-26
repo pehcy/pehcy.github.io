@@ -12,7 +12,7 @@ const Header = () => (
 )
 */
 const Header = () => (
-  <header className="sticky w-full top-0 bg-gray-400 shadow-lg">
+  <header className="sticky w-full top-0 bg-gray-400 shadow-lg z-50">
     <div className="flex items-center justify-between max-w-5xl mx-auto sm:px-6 px-4 py-4 md:space-x-10">
       <div className="flex-none">
         <span className="text-white">pehcy</span>
