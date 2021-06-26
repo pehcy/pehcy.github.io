@@ -27,7 +27,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        gatsbyRemarkPlugins: []
+        gatsbyRemarkPlugins: [`gatsby-remark-autolink-headers`]
       }
     },
     `gatsby-transformer-sharp`,

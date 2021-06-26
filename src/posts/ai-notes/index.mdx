@@ -1,8 +1,49 @@
 ---
-title: AI Study Notes (Temporary)
+title: Setup my Manjaro Linux workstation
+featuredImage: manjaro.png
 date: "2020-09-30T22:12:03.284Z"
 published: true
 ---
+
+## Installing Fcitx for chinese input
+```bash
+pkgs = "adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts fcitx 
+        kcm-fcitx fcitx-gtk2 fcitx-gtk3 fcitx-qt4 fcitx-qt5 fcitx-ui-light 
+        fcitx-table-other"
+```
+This will store all the required libraries into a variable called `pkgs`.
+```bash
+sudo yay -S $pkgs --noconfirm
+```
+
+### Configuration
+Edit `.xinitrc` file. Copy the following to the bottom of file.
+```bash
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+```
+
+Update the system via `sudo pacman -Syu` and check whether fcitx icon appear at the bottom right corner (I'm using KDE). 
+
+## Verify CUDA GPU
+Type in the following command to verify your GPU
+```sh
+lspci | grep -i nvidia
+```
+
+If it got output... congrats, your Manjaro had detected GPU successfully. 
+Otherwise, you need to figured it out by yourself.
+
+For instance, I am using GeForce RTX 3060 (Non-Ti version) on my machine. I need to get the 
+latest driver version from the [Unix Driver Archive](https://www.nvidia.com/en-us/drivers/unix/), the
+most compatible version for mine is 460.80.
+
+Through pacman, you can simply install with one line.
+```bash
+sudo pacman -S mhwd-nvidia-460.80
+```
+
 
 ## Supervised Learning
 The supervised learning used to label training data. 
@@ -45,6 +86,7 @@ Otherwise, if the cross validate scores is **extremely high (99-100 percent)**, 
 > Please take note that you cannot directly applied
 > `sklearn.preprocessing` on 1D-array (like assignment 2 Q2). You need to define your 
 > own methods for scaling.
+
 ```python
 import numpy as np
 
@@ -57,6 +99,7 @@ def standard_scaler(data):
 ```
 
 **MinMax Scaler**
+
 ```python
 import numpy as np
 

@@ -5,7 +5,6 @@ import Header from '../components/Header'
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Header />
     <div className="m-auto md:max-w-5xl py-6">
       <h1>Recent Posts</h1>
       <div>

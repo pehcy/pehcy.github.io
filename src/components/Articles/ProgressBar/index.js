@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const progressBar = ({ target }) => {
+const ProgressBar = ({ target }) => {
   const [scrolledProgress, setScrolledProgress] = useState(0)
 
   const onScrollListener = () => {
@@ -20,7 +20,7 @@ const progressBar = ({ target }) => {
     return () => window.removeEventListener('scroll', onScrollListener)
   })
 
-  return <div className="sticky block top-0 h-1 md:1.5 z-50 overflow-hidden" style={{ width: `${scrolledProgress}%` }}/>
+  return <div className="sticky block top-0 h-1 md:1.5 z-50 overflow-hidden bg-red-500" style={{ width: `${scrolledProgress}%` }}/>
 }
 
-export default progressBar
+export default ProgressBar
