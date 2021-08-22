@@ -1,1 +1,0 @@
-{"errors":[{"message":"You must provide a `first` or `last` value to properly paginate the `repositories` connection.","locations":[{"line":4,"column":7}],"path":["github","viewer","repositories"]}],"data":null}
