@@ -44,7 +44,7 @@ function useActiveId(itemIDs) {
 
 function renderItems(itemList, activeId) {
   return (
-    <ul className="font-light text-sm font-serif text-gray-300 overflow-x-hidden">
+    <ul className="font-normal text-sm font-serif text-gray-300 overflow-x-hidden">
       {
         itemList.map((item) => (
           <li key={item.url}>

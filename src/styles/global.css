@@ -19,9 +19,3 @@
     --text-secondary: #b8b8b9;
     --accent: #fc7753;
 }
-
-.gatsby-highlight pre[class*='language-']{
-    background-color: transparent;
-    float: left;
-    min-width: 100%;
-}

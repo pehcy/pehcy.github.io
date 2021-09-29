@@ -1,0 +1,30 @@
+---
+title: Start Microservices on NestJS
+featuredImage: nest.png
+date: "2020-09-30T22:12:03.284Z"
+published: true
+---
+
+## Prerequisites
+
+First of all, you need to install the Nest CLI via node package manager.
+
+```bash
+npm i -g @nestjs/cli
+```
+
+Create a new project call order-microservice, you can choose any package manager you like.
+In this post I'll use `yarn` 
+
+```typescript
+import { NestFactory } from "@nestjs/core";
+import { Transport } from "@nestjs/microservices";
+
+async function bootstrap() {
+  const app = await NestFactory.createMicroservice<MicroserviceOptions>(
+    AppModule,
+    microserviceOptions
+  )
+}
+bootstrap()
+```
