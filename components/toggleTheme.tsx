@@ -1,18 +1,6 @@
 import React, { useState } from "react";
 import { useSpring, animated, CSS } from "react-spring";
 
-interface SpringAnimation {
-  light: {
-    [key: string]: number | string
-  };
-  dark: {
-    [key: string]: number | string
-  };
-  springConfig?: {
-    [key: string]: number | string
-  };
-}
-
 type ThemeEnums = keyof SpringAnimation;
 
 const properties : SpringAnimation = {
