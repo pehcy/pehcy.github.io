@@ -20,22 +20,3 @@ a {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.toggle_btn_wrapper {
-  opacity: 0.65;
-  border-radius: 5px;
-  width: 40px;
-  height: 25px;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.3s ease;
-  margin-left: 15px;
-}
-
-.day {
-  cursor: pointer;
-  position: relative;
-  height: 24px;
-  width: 24px;
-}

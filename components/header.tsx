@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import ToggleTheme from './toggleTheme';
 
 const Header = () : JSX.Element => {
   const [expanded, setExpanded] = useState<boolean>(false);
@@ -14,27 +15,27 @@ const Header = () : JSX.Element => {
         max-w-6xl mx-auto sm:px-6 px-4 pb-1 pt-5
         md:space-x-10 font-medium border-b border-black bg-white'
       >
-        <nav className="flex flex-row">
-          <ul className="flex flex-row pt-5 pb-2 md:visible invisible">
+        <nav className='flex flex-row'>
+          <ul className='flex flex-row pt-5 pb-2 md:visible invisible'>
             <Link href='/'>
               <li>About Me</li>
             </Link>
             <Link href='/'>
-              <li className="ml-6">Posts</li>
+              <li className='ml-6'>Posts</li>
             </Link>
             <Link href='/'>
-              <li className="ml-6">GitHub</li>
+              <li className='ml-6'>GitHub</li>
             </Link>
           </ul>
           <button
             onClick={handleClick}
-            className="inline-flex p-3 rounded lg:hidden text-black 
-            mr-auto outline-none"
+            className='inline-flex p-3 rounded lg:hidden text-black
+            mr-auto outline-none'
           >
             <svg
               className={`w-6 h-6 ${expanded ? 'rotate-90' : 'transform-none'} transition-all`}
               fill='none'
-              stroke='black'
+              stroke='currentColor'
               viewBox='0 0 24 24'
               xmlns='http://www.w3.org/2000/svg'
             >
@@ -47,7 +48,7 @@ const Header = () : JSX.Element => {
             </svg>
           </button>
         </nav>
-        <button>Toggle</button>
+        <ToggleTheme />
       </div>
     </header>
   );
