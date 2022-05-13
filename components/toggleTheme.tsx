@@ -1,7 +1,21 @@
 import React, { useState } from "react";
-import { useSpring, animated } from "react-spring";
+import { useSpring, animated, CSS } from "react-spring";
 
-const properties = {
+interface SpringAnimation {
+  light: {
+    [key: string]: number | string
+  };
+  dark: {
+    [key: string]: number | string
+  };
+  springConfig?: {
+    [key: string]: number | string
+  };
+}
+
+type ThemeEnums = keyof SpringAnimation;
+
+const properties : SpringAnimation = {
   light: {
     r: 9,
     transform: 'rotate(40deg)',
@@ -28,41 +42,42 @@ const ToggleTheme = () : JSX.Element => {
 
   const { r, transform, cx, cy, opacity } : any = properties[isDarkMode ? 'dark' : 'light']
 
-  const svgContainerProps = useSpring({ transform, config: properties.springConfig });
-  const centerCircleProps = useSpring({ r, config: properties.springConfig });
-  const maskedCircleProps = useSpring({ cx, cy, config: properties.springConfig });
-  const linesProps = useSpring({ opacity, config: properties.springConfig });
+  const svgContainerProps = useSpring<CSS.Properties>({ transform, config: properties.springConfig });
+  const centerCircleProps = useSpring<CSS.Properties>({ r, config: properties.springConfig });
+  const maskedCircleProps = useSpring<CSS.Properties>({ cx, cy, config: properties.springConfig });
+  const linesProps = useSpring<CSS.Properties>({ opacity, config: properties.springConfig });
 
   function toggleDarkMode() {
-    setDarkMode(previous => !previous)
+    setDarkMode(!isDarkMode)
   };
 
   return (
     <animated.svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="28"
+      height="28"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      style={{ cursor: "pointer", transform: "rotate(40deg)" }}
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      style={{ 
+        cursor: "pointer",
+        ...svgContainerProps
+      }}
       onClick={toggleDarkMode}
     >
       <mask id="mask">
         <rect x="0" y="0" width="100%" height="100%" fill="white" />
         <animated.circle
-          // @ts-ignore
           style={maskedCircleProps} cx="12" cy="4" r="9" fill="black" 
         />
       </mask>
       <animated.circle 
         fill="black" 
         cx="12" 
-        cy="12" 
-        // @ts-ignore
+        cy="12"
         style={centerCircleProps} 
         r="9" mask="url(#mask)" 
       />
