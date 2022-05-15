@@ -47,7 +47,7 @@ const ToggleTheme = () : JSX.Element => {
   const maskedCircleProps = useSpring<CSS.Properties>({ cx, cy, config: properties.springConfig });
   const linesProps = useSpring<CSS.Properties>({ opacity, config: properties.springConfig });
 
-  function toggleDarkMode() {
+  const toggleDarkMode = () : void => {
     setDarkMode(!isDarkMode)
   };
 
@@ -71,15 +71,17 @@ const ToggleTheme = () : JSX.Element => {
       <mask id="mask">
         <rect x="0" y="0" width="100%" height="100%" fill="white" />
         <animated.circle
-          style={maskedCircleProps} cx="12" cy="4" r="9" fill="black" 
+          style={maskedCircleProps}
+          r="9"
+          fill="black" 
         />
       </mask>
       <animated.circle 
-        fill="black" 
+        fill="black"
         cx="12" 
         cy="12"
         style={centerCircleProps} 
-        r="9" mask="url(#mask)" 
+        mask="url(#mask)" 
       />
       <animated.g stroke="currentColor" style={linesProps}>
         <line x1="12" y1="1" x2="12" y2="3" />
@@ -92,7 +94,7 @@ const ToggleTheme = () : JSX.Element => {
         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
       </animated.g>
     </animated.svg>
-  )
+  );
 }
 
 export default ToggleTheme;
