@@ -23,7 +23,9 @@ export default (): JSX.Element => (
       </p>
     </div>
     <div className="flex justify-center py-20">
-      <div className="animate-bounce p-2 w-10 h-10">
+      <div className="animate-bounce p-2 w-12 h-12 
+        rounded-full items-center justify-center ring-2 ring-black flex"
+      >
         <svg
           className="w-10 h-10"
           fill="none"
