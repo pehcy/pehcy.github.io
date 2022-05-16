@@ -23,9 +23,9 @@ const Header = () : JSX.Element => {
             <Link href='/'>
               <li className="ml-6">Posts</li>
             </Link>
-            <Link href='/'>
+            <a href='https://github.com/pehcy'>
               <li className="ml-6">GitHub</li>
-            </Link>
+            </a>
           </ul>
           <button
             onClick={handleClick}
